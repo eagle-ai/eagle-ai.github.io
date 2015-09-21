@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
         maxHeight = Math.max.apply(null, heights);
 
     $(".well2").height(maxHeight);
- 
+
 
     /************** Menu Content Opening *********************/
     $(".main_menu a, .responsive_menu a").click(function() {
@@ -112,7 +112,7 @@ jQuery(document).ready(function($) {
 
     //on scolling, show/animate timeline blocks when enter the viewport
     $(window).on('scroll', function() {
-     
+        animationPage();
         $timeline_block.each(function() {
             if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden')) {
                 $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
@@ -133,3 +133,22 @@ $(".navbar-collapse").css({
 });
 
 
+function animationPage() {
+
+    var scrollT = $(window).scrollTop();
+    var currentPosition = scrollT + 480;
+    var imageIcon = $('.usecaseimage').offset().top;
+    if (imageIcon < currentPosition) {
+        $(".usecaseimage").addClass('animated bounceIn');
+    } else {
+        $(".usecaseimage").removeClass('animated bounceIn');
+    }
+
+    var modules = $(".well2").offset().top;
+    if (modules < currentPosition) {
+        $(".well2").addClass('animated bounce');
+    } else {
+        $(".well2").removeClass('animated bounce');
+    }
+
+};

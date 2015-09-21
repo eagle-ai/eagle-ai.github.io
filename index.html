@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 
 <head>
-<title>Eagle</title>
+<title>Eagleio</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1">
-<link rel="shortcut icon" href="images/favicon.png">
+
 <!-- Style Sheets -->
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/misc.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-
 
 </head>
 <body>
@@ -34,10 +32,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right" id="top-menu">
                 <li><a class="menu" href="#home_page">HOME</a></li>
-                <li><a class="menu" href="#product_page">PRODUCTS</a></li>
+                <li><a class="menu" href="#about_page">ABOUT</a></li>
                 <li><a class="menu" href="#diagram_page">ARCHITECTURE</a></li>
                 <li><a class="menu" href="#modules_page">MODULES</a></li>
-        
+                <li><a class="menu" href="#usecase_page">USE CASES</a></li>
               </ul>
             </div>
             <!-- /.navbar-collapse --> 
@@ -51,81 +49,103 @@
     <div class="flexslider">
       <ul class="slides">
         <li><img src="images/slider/1.jpg" alt="Slide 1"></li>
-  
+        <li><img src="images/slider/2.jpg" alt="Slide 2"></li>
       </ul>
     </div>
-    
-      <div class="arrow_indicator_wrapper" ><a href="#product_page"  class="arrow_indicator" id="arrow_down"><img src="images/arrow_down.png" width="60px;"id="arrowpng"  ></a></div>
-      
   </div>
   <div class="slider-caption">
     <div class="homewrapper">
-      <div class="hometitle"> EAGLE </div>
+      <div class="hometitle"> Apache Eagle </div>
       <div class="hometext">
-        <p>an open source monitoring platform</p>
-        Eagle is an open source real-time monitoring platform from eBay that provides monitoring, alerting and remediation capabilities for Hadoop. </div>
+        <p>Secure Hadoop in Real Time</p>
+        Eagle is an open source monitoring framework from eBay Inc that provides monitoring and alerting capabilities for securing hadoop platform. </div>
     </div>
-   <!--  <div class="download"><a href="#">Watch Intro Video</a></div> -->
-   
+    
+     <div class="download"><a href="#">DOWNLOAD</a></div>
   </div>
 </div>
 <!-- header end -->
 
-<div class="clear"></div>
 <!-- team start -->
-<div class="workwrapper" id="product_page">
+<div class="workwrapper" id="about_page">
   <div class="container">
     <div class="row">
-      <h2>PRODUCTS</h2>
-      
-        <p class="subtitlte">Eagle provides various monitoring applications for Hadoop eocosystem.</p>
+ 
+      <div class="row" style="margin-top:50px;">
+        <div class="col-md-3 workmargin">
        
-
-    </div>
-    
-    
-       <div class="row" style="margin-top:20px;">
-      <div class="col-md-3 wow fadeInDown" data-wow-delay="0.3s">
-        <div class="well1">
-          <h4><img src="images/home/security_icon.png" width="108px" class="product_image"></h4>
-          <h4>Eagle DAM</h4>
-          <p>Data Activities Monitoring - Secure the Hadoop cluster in real-time.                      
-                                          
-          </p>
-          <a href="security.html"><div class="viewbutton">VIEW</div></a>
+          <h3 style="margin-bottom:30px">Ease Of Use</h3>
+          <h4> Start using Eagle in few minutes</h4>
+          <p>Eagle can be installed as an Ambari plugin. And you can use one instance of eagle to monitor multiple clusters.</p>
         </div>
-      </div>
-      <div class="col-md-3 wow fadeInDown" data-wow-delay="0.5s">
-        <div class="well1">
-        <h4><img src="images/home/map_reduce.png" width="108px" class="product_image"></h4>
-          <h4>Eagle MapReduce</h4>
-        <p>Job Performance Monitoring - Optimize the job to meet the SLA.  </p>
-        </div>
+        <div class="col-md-3 workmargin">
         
-          <div class="viewbutton">VIEW</div>
-      </div>
-      <div class="col-md-3 wow fadeInDown" data-wow-delay="0.7s">
-        <div class="well1">
-        <h4><img src="images/home/hbase_icon.png" width="108px" class="product_image"></h4>
-          <h4>Eagle HBase</h4>
-          <p>HBase Performance Monitoring - Enhance the HBase Performance.</p>
+         <h3 style="margin-bottom:30px">Policy Management</h3>
+          <h4> Create complex monitoring policies</h4>
+          <p>Eagle offers wide variety of policies on HDFS, Hive data sets. It is easy to create and deploy policies with few clicks. </p>
         </div>
-          <div class="viewbutton">VIEW</div>
-      </div>
-   
-         <div class="col-md-3 wow fadeInDown" data-wow-delay="1.0s">
-        <div class="well1">
-        <h4><img src="images/home/hdfs_icon.png" width="108px" class="product_image"></h4>
-          <h4>Eagle HDFS</h4>
-          <p>HDFS Performance Monitoring- Enhanec the HDFS Performance.</p>
+        <div class="col-md-3 workmargin">
+         
+         <h3 style="margin-bottom:30px">Scalability</h3>
+          <h4> Scale for Big Data </h4>
+          <p> Eagle processes access events in a scalable way to support billions of events and thousands of policies.</p>
         </div>
-          <div class="viewbutton">VIEW</div>
+        <div class="col-md-3 workmargin">
+         
+         <h3 style="margin-bottom:30px">Extensibility</h3>
+          <h4> Eagle is extensible at all levels </h4>
+          <p>Easy to integrate with data classification and hadoop access control products. Eagle backend can support data sources other than hadoop.</p>
+        </div>
       </div>
-      
-      
-      
+    </div>
+  </div>
+</div>
+<!-- team end --> 
+
+
+<div class="clear"></div>
+<!-- team start -->
+<div class="servicewrapper" id="about_page">
+  <div class="container">
+    <div class="row">
+      <h2>ABOUT EAGLE</h2>
+      <div class="col-md-12">
+        <p style="width:80%; margin-left:auto; margin-right:auto;">Apache Eagle is an Open Source monitoring solution for
+ Hadoop to instantly identify access to sensitive data, recognize attacks and malicious activities in hadoop and block access in real time.
+</p>
+        <p>Eagle secures Hadoop in realtime in 3 steps:</p>
       </div>
-  
+    </div>
+    <section id="cd-timeline" class="cd-container" style="margin-top:-3px;">
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-picture"> <img src="images/step1.png" alt="Picture"> </div>
+        <div class="cd-timeline-content service-box-content">
+          <h3>Step 1</h3>
+          <p>Listens to the various user generated signals by streaming through the Hadoop Audit and System logs. </p>
+        </div>
+      </div>
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-movie"> <img src="images/step2.png" alt="Picture"> </div>
+        <div class="cd-timeline-content service-box-content">
+          <h3>Step 2</h3>
+          <p>Analyzes these signals to detect anomalies based on predefined security policies and machine learning models according to the user's past behavior.</p>
+        </div>
+      </div>
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-icon"> <img src="images/step3.png" alt="Picture"> </div>
+        <div class="cd-timeline-content service-box-content">
+          <h3>Step 3</h3>
+          <p>Generates Alerts on detection of anomalies and remediates user activity/access if necessary. </p>
+        </div>
+      </div>
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-location"> <img src="images/step4.png" alt="Picture"> </div>
+        <div class="cd-timeline-content service-box-content">
+          <h3>Additional Bonus</h3>
+          <p>Eagle also provides an extensible architecture and framework for developers to easily onboard new use cases into the framework.</p>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 </div>
@@ -135,12 +155,12 @@
 <div class="clear"></div>
 <!-- diagram start -->
 
-<div class="servicewrapper" id="diagram_page">
+<div class="workwrapper" id="diagram_page">
   <div class="container">
     <div class="row">
       <h2>ARCHITECTURE</h2>
-      <p class="subtitlte">Eagle has a full stack monitoring framework which is extenable.</p>
-      <div class="col-md-12 marginbot wow fadeInDown" data-wow-delay="0.4s"> <img src="images/diagram5.png" style="border-radius: 10px; margin-top:10px;"> </div>
+      <p style="width:80%; margin-left:auto; margin-right:auto;">Eagle Data Activity Monitoring</p>
+      <div class="col-md-12 marginbot"> <img src="images/diagram2.png" style="border-radius: 10px; margin-top:10px;"> </div>
     </div>
   </div>
 </div>
@@ -149,48 +169,48 @@
 <div class="clear"></div>
 <!-- diagram start -->
 
-<div class="workwrapper" id="modules_page">
+<div class="client_wrapper" id="modules_page">
   <div class="container">
     <div class="row">
       <h2>MODULES</h2>
-      <p class="subtitlte">Eagle is built using big data solutions to scale for big data use cases.</p>
+      <p style="width:80%; margin-left:auto; margin-right:auto;">Eagle is built using big data open source products to scale for big data use cases.</p>
     </div>
     <div class="row" style="margin-top:20px;">
-      <div class="col-md-4 wow bounceIn"  data-wow-delay="0.4s">
+      <div class="col-md-4">
         <div class="well2">
-          <h4>Data Stream Processing</h4>
-          <p>Eagle listens and processes large metrics and event stream in real time.</p>
+          <h4>Realtime data stream processing engine</h4>
+          <p>Eagle listens and processes various logs and access patterns in real-time using open source big data products like STORM, Kafka, Hbase and Druid.</p>
         </div>
       </div>
-      <div class="col-md-4 wow bounceIn" data-wow-delay="0.4s">
+      <div class="col-md-4">
         <div class="well2">
-          <h4>Policy Engine</h4>
-          <p>Eagle evalutes the pre-defined policy with complex business logic on the fly.  </p>
+          <h4>Policy Manager</h4>
+          <p>Expressive language - Users can create and modify policies for alerting and remediation on certain data activity monitoring events.</p>
         </div>
       </div>
-      <div class="col-md-4 wow bounceIn" data-wow-delay="0.4s">
+      <div class="col-md-4">
         <div class="well2">
-          <h4>Machine Learning Engine</h4>
-          <p>Eagle predicts anomalies via a built-in machine learning engine</p>
-       
+          <h4>Machine learning Models</h4>
+          <p>1. Anomaly detection</p>
+          <p>2. User profiling - Eagle creates user profiles consisting of multiple dimensions. These user profiles automatically help build the policies for monitoring and alerting.</p>
         </div>
       </div>
-      <div class="col-md-4 wow bounceIn" data-wow-delay="0.4s">
+      <div class="col-md-4">
         <div class="well2">
-          <h4>Remediation Engine</h4>
-          <p>Eagle integrates with 3rd parties applications like Apache Ranger, Hadoop Robot, etc to trigger auto remediation workflow.</p>
+          <h4>Data classification</h4>
+          <p>You can import data classification standards and policies from tools like dataguise dg secure and apache ranger. </p>
         </div>
       </div>
-      <div class="col-md-4 wow bounceIn" data-wow-delay="0.4s">
+      <div class="col-md-4">
         <div class="well2">
-          <h4>Data Storage</h4>
-          <p>Eagle supports HBase, Durid and Elastic Search as data storage by default. RDBMS like MySQL or Oracle are supported with JDBC.</p>
+          <h4>Remediation</h4>
+          <p>Eagle provides the ability to detect and stop a threat. For example, If a malicious users is trying to copy data from the hadoop cluster to local system eagle alerts the admins and also stops the user from copying the data.</p>
         </div>
       </div>
-      <div class="col-md-4 wow bounceIn" data-wow-delay="0.4s">
+      <div class="col-md-4">
         <div class="well2">
-          <h4>Generic Dashboard</h4>
-          <p>Eagle provides a customized generic dashboard to allow user to visulaze their metrics with historical trend and drill down capabilities.</p>
+          <h4>User activity Exploration</h4>
+          <p>Eagle provides the ability to drill down into alert details to understand the data security threat. It provides a simple intuitive user interface to help analyze the threat to a greater detailed extent. </p>
         </div>
       </div>
     </div>
@@ -200,32 +220,43 @@
 
 <div class="clear"></div>
 
-
+<!-- team start -->
+<div class="workwrapper" id="usecase_page">
+  <div class="container">
+    <div class="row">
+      <h1>USE CASES</h1>
+      <div class="row" style="margin-top:50px;">
+        <div class="col-md-3 workmargin">
+          <div><img src="images/usecases/1.png" class="usecaseimage"></div>
+          <h4>Data loss prevention</h4>
+          <p>Get alerted and stop a malicious user trying to copy, delete, move sensitive data from the hadoop cluster. </p>
+        </div>
+        <div class="col-md-3 workmargin">
+          <div><img src="images/usecases/2.png" class="usecaseimage"></div>
+          <h4>Malicious Logins</h4>
+          <p>Detect login when malicious user tries to guess password. Eagle creates user profiles using machine learning algorithm to detect anomalies. This anomaly detection together with the policy for user logins would trigger an alert and block this user from accessing sensitive datasets.</p>
+        </div>
+        <div class="col-md-3 workmargin">
+          <div><img src="images/usecases/3.png" class="usecaseimage"></div>
+          <h4>Unauthorized access</h4>
+          <p>Detect and stop a malicious user trying to access classified data without privilege. Unauthorized access is one fact of Eagle user profiles, and machine learning algorithm will detect anomaly. This anomaly detection together with the policy of user access to classified data without authorization would trigger an alert to user's manager.</p>
+        </div>
+        <div class="col-md-3 workmargin">
+          <div><img src="images/usecases/4.png" class="usecaseimage"></div>
+          <h4>Malicious user operation</h4>
+          <p>Detect and stop a malicious user trying to delete large amount of data. Operation type is one parameter of Eagle user profiles. Eagle supports multiple native operation types.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- team end --> 
 
 <!-- footer start -->
 <div class="footerwrapper">
   <div class="container">
-  
-                   
-    <div class="row" >
-  <ul class="icons" style="text-align:center">
-						<li><a href="https://twitter.com/eaglemonitoring 
-" class="icon fa fa-twitter"></a></li>
-						<li><a href="https://www.facebook.com/eaglemonitoring 
-" class="icon fa fa-facebook"></a></li>
-						<li><a href="https://plus.google.com/b/104369402247957347642/104369402247957347642/about 
-" class="icon fa fa-google-plus"></a></li>
-						<li><a href="https://github.com/eaglemonitoring/eagle 
-" class="icon fa fa-github"></a></li>
-                        <li><a mailto="#" class="icon fa fa-envelope-o"></a></li>
-                        
-				
-</ul>
-  </div>					
-                    
-                    
     <div class="row">
-      <div class="col-md-12" style="text-align:center;  padding: 10px 0px 0px 30px;"><div >Copyright &copy; 2015 <a href="#">eBay</a> | 2211 N 1st st, San Jose, CA </div></div>
+      <div class="col-md-12"><div style="margin-left:auto; margin-right:auto; text-align:center">Copyright &copy; 2015 <a href="#">eBay</a> | 2065 Hamilton Ave, San Jose, CA </div></div>
     </div>
   </div>
 </div>
@@ -238,12 +269,8 @@
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/modernizr.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/wow.min.js"></script>
 
 <script>
- new WOW().init();
-
 
 var lastId,
     topMenu = $("#top-menu"),
@@ -266,20 +293,10 @@ menuItems.click(function(e) {
     }, 300);
     e.preventDefault();
 });
-
-$("#arrow_down").click(function(e) {
-    var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-    $('html, body').stop().animate({
-        scrollTop: offsetTop
-    }, 300);
-    e.preventDefault();
-});
-
-
-
 // Bind to scroll
 $(window).scroll(function() {
+	
+
     // Get container scroll position
     var fromTop = $(this).scrollTop() + topMenuHeight;
     // Get id of current scroll item
@@ -301,29 +318,6 @@ $(window).scroll(function() {
 
 
 });
-
-
-
-/****function animationPage() {
-
-    var scrollT = $(window).scrollTop();
-    var currentPosition = scrollT + 480;
-  
-
-    var modules = $(".well2").offset().top;
-    if (modules < currentPosition) {
-        $(".well2").addClass('animated bounce');
-    } else {
-        $(".well2").removeClass('animated bounce');
-    }
-	
-	
-	
-};****/
-
-
-
-
 
 
 
