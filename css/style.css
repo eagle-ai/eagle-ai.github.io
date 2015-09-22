@@ -107,7 +107,7 @@ Flexslider Overrides
 .flexslider ul li{padding:0;}
 .flexslider .slides{}
 .slider-caption{position:absolute; vertical-align:middle; width:100%; text-align:center; z-index:8; color:#fff; top:180px;}
-.slider-caption h2{font-size:48px; text-transform:uppercase; font-weight:800; margin-bottom:30px;}
+.slider-caption h2{font-size:44px;  font-weight:300; margin-bottom:30px;}
 .slider-caption p{font-size:16px; text-transform:uppercase; letter-spacing:2px; width:50%; margin:0 auto 30px auto; line-height:1.8em;}
 .flexslider{background-color:#08214a; overflow:hidden; margin:0;}
 .flexslider img{position:relative; opacity:0.35; width:100%; z-index:7;}
@@ -754,3 +754,27 @@ Media Queries
   background: rgba(255,255,255,0.25);
   border: 1px solid #fff;
 }
+
+.particles {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;                        
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+	opacity:0.4;
+    z-index: 1;
+}
+
+.featuretext{
+	margin-bottom:30px; font-weight: 300; color: #126acb
+	}
+
+.featureexplain{
+	font-weight:300;
+	}
+	
+.sectiontile{
+	font-weight:300;}
