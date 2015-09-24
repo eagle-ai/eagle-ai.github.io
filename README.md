@@ -1,5 +1,5 @@
 # eagle site
-Welcome to the Spark documentation!
+Welcome to the Eagle documentation!
 
 ## Prerequisites
 
@@ -17,7 +17,26 @@ Point your browser to [http://localhost:4000](http://localhost:4000)
 
 By default, jekyll will generate the site in a `_site` directory.
 
-## Publishing the Website
+## Editing documentations
+1. Create a markdown file and add following content in header
+
+        ---
+        layout: doc
+        title:  "Eagle Overview" 
+        permalink: /docs/some-new-doc.html
+        ---
+        
+        More content here ..
+    
+2. Register the link in documentations side navigation
+
+        documentations:
+          - category: "Some category"
+            links:
+              - title: Some new doc
+                url: /docs/some-new-doc.html
+
+## Publishing the Apache Website
 In order to publish the website, you must have committer access to Eagle's subversion repository.
 
 The Eagle website is published using Apache svnpubsub. Any changes committed to subversion will be automatically published to eagle.apache.org.
