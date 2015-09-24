@@ -1,4 +1,4 @@
-# eagle site
+# Eagle Documentation Site
 Welcome to the Eagle documentation!
 
 ## Prerequisites
