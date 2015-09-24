@@ -4,8 +4,8 @@ body{font-size:14px; font-family: 'Roboto', sans-serif; color:#666; font-weight:
 p{font-size:16px; line-height:30px;}
 a,a:hover,a:focus{text-decoration:none; -webkit-transition:all 150ms ease-in; -moz-transition:all 150ms ease-in; -o-transition:all 150ms ease-in; transition:all 150ms ease-in;}
 h1,h2,h3,h4,h5,h6{font-family: 'Roboto', sans-serif; font-weight:400;}
-h2{width:100%; font-size:28px; text-align:center;}
-h3{font-size:24px;  text-align:center; margin-top:-2px;}
+h2{width:100%; font-size:28px; }
+h3{font-size:24px;  ; margin-top:-2px;}
 h4{font-size:18px;  font-weight:500;}
 .blue{color:#06F; font-weight:normal;}
 .green{color:#0A0; font-weight:normal;}
@@ -20,6 +20,10 @@ h4{font-size:18px;  font-weight:500;}
 .titlewrapper{top:0; width:100%; left:0;}
 .title{position:absolute;  float:left; display:block; width:100%;  top:0px; left:30px; line-height:40px;}
 
+
+
+#home_page h2{text-align:center;}
+#home_page h3{text-align:center;}
 
 @media (min-width:1200px){
 	.title{font-size:50px; }

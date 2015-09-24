@@ -8,7 +8,7 @@ layout: page
       <!-- sidebar -->
       <div class="col-xs-6 col-sm-3" id="sidebar" role="navigation">
         <ul class="nav" id="adminnav">
-        {% for doc in site.documentations %} 
+        {% for doc in site.developments %} 
         <li class="heading">{{ doc.category }}</li>
         {% for link in doc.links %}
           <li class="sidenavli"><a href="{{ link.url }}" id="{{link.id}}">{{ link.title }}</a></li>

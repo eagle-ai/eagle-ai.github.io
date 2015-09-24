@@ -11,3 +11,55 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+documentations:
+  - category: "Get Started"
+    links:
+      - title: Overview
+        url: /docs/index.html
+      - title: Release Notes
+        url: /docs/release-notes.html
+      - title: FAQ
+        url: /docs/faq.html
+      - title: Events
+        url: /docs/events.html
+      - title: Terminology
+        url: /docs/terminology.html
+  - category: Installation
+    links:
+      - title: Installation Guide
+        url: /docs/install/installation-guide.html
+      - title: Ambari Plugin
+        url: /docs/install/ambari-plugin.html
+  - category: Tutorial
+    links:
+      - title: How to define Eagle Policy
+        url: /docs/tutorial/how-to-define-eagle-policy.html
+      - title: How to use REST API
+        url: /docs/tutorial/how-to-use-rest-api.html
+
+developments:
+  - category: "Get Started"
+    links:
+      - title: Overview
+        url: /docs/index.html
+      - title: Release Notes
+        url: /docs/release-notes.html
+      - title: FAQ
+        url: /docs/faq.html
+      - title: Events
+        url: /docs/events.html
+      - title: Terminology
+        url: /docs/terminology.html
+  - category: Installation
+    links:
+      - title: Installation Guide
+        url: /docs/install/installation-guide.html
+      - title: Ambari Plugin
+        url: /docs/install/ambari-plugin.html
+  - category: Tutorial
+    links:
+      - title: How to define Eagle Policy
+        url: /docs/tutorial/how-to-define-eagle-policy.html
+      - title: How to use REST API
+        url: /docs/tutorial/how-to-use-rest-api.html
