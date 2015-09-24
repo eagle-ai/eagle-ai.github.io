@@ -28,7 +28,7 @@ By default, jekyll will generate the site in a `_site` directory.
         
         More content here ..
     
-2. Register the link in documentations side navigation
+2. Register the link in documentations sidebar navigation
 
         documentations:
           - category: "Some category"
