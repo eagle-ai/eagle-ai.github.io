@@ -1,12 +1,12 @@
 ---
 layout: doc
-title:  "Overview" 
+title:  "Eagle Overview" 
 permalink: /docs/index.html
 ---
 
 Overview about Eagle.
 
-# Sytax Highlighting
+## Sytax Highlighting
 
 {% highlight java %}
 def print_hi(name)

@@ -44,3 +44,59 @@ img{border:0; max-width:100%;}
 .clearfix{display:inline-block; width:100%;}
 html[xmlns] .clearfix{display:block;}
 * html .clearfix{height:1%;}
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300);
+
+
+	
+#sidebar {
+    padding-top:0;
+  }
+  #sidebar .nav>li {
+    color: #ddd;
+    
+  }
+  #sidebar .nav>li:first-child {
+    border-top:0;
+  }
+  #sidebar .nav>li>a {
+    /***color: #ddd;***/
+  }
+  
+  .sidenavli:hover {
+    text-decoration: none;
+    color: #008CBA;  
+	margin-right: 20px;
+	background-color:#efefef;
+  }
+  
+  #sidebar li.divider {
+    margin: 16px 20px 16px 0px;
+}
+  
+.divider{
+	border-top: 1px solid;
+    height: 0;
+    list-style: none;
+    padding: 0;
+    border-top-color: #e6e6e6;
+}
+
+#sidebar li.heading {
+    color: #008CBA;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#sidebar .heading{
+    padding: 2px 0px;
+}
+
+.page-content {
+	padding-top: 30px ;
+  padding-bottom: 40px ;
+}
+
+.page-main-content h1,h2,h3,h4,h5,h6 {
+  text-align: left
+}

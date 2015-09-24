@@ -1,43 +1,37 @@
 ---
-layout: default
+layout: page
 ---
 
-<div class="container">
-<div class="row">
-  <div class="col-md-9 post" role="main">
-    <article class="post-content">
-      <h1 class="page-header" style="margin-top: auto">
-        <a class="anchorjs-link " href="#overview" aria-label="Anchor link for: overview" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
-        {{ page.title }}
-      </h1>
-      {{ content }}
-    </article>
-  </div>
-
-  <div class="col-md-3" role="complementary" style="margin-top: 20px">
-    <nav class="hidden-print hidden-xs hidden-sm affix-top">
-      <ul class="nav docs-sidenav">
-        <li class="">
-          <a href="#overview">Eagle Overview</a>
-          <ul class="nav">
-            <li class=""><a href="#overview-doctype">What's Eagle</a></li>
-            <li class=""><a href="#overview-mobile">Mobile first</a></li>
-            <li class=""><a href="#overview-type-links">Typography and links</a></li>
-            <li class=""><a href="#overview-normalize">Normalize.css</a></li>
-            <li class=""><a href="#overview-container">Containers</a></li>
-          </ul>
-        </li>
-        <li class="">
-          <a href="#overview">How to use Eagle</a>
-          <ul class="nav">
-            <li class=""><a href="#overview-doctype">What's Eagle</a></li>
-            <li class=""><a href="#overview-mobile">Mobile first</a></li>
-            <li class=""><a href="#overview-type-links">Typography and links</a></li>
-            <li class=""><a href="#overview-normalize">Normalize.css</a></li>
-            <li class=""><a href="#overview-container">Containers</a></li>
-          </ul>
-        </li>
-      </ul>
+<div class="container-fluid page-content">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1"> 
+      <!-- sidebar -->
+      <div class="col-xs-6 col-sm-3" id="sidebar" role="navigation">
+        <ul class="nav" id="adminnav">
+          <li class="heading">AuthZ policy</li>
+          <li class="sidenavli"><a href="#" id="mypolicy">My AuthZ Policies </a></li>
+          <li class="sidenavli"><a href="#" id="createpolicy">Create Policy </a></li>
+          <li class="divider"></li>
+          <li class="heading">User Group </li>
+          <li class="sidenavli"><a href="#" id="myusergroup">My User Groups</a></li>
+          <li class="sidenavli"><a href="#" id="createusergroup">Create User Group</a></li>
+          <li class="divider"></li>
+          <li class="heading">Table/Resource </li>
+          <li class="sidenavli"><a href="#" id="myresources">My Resources</a></li>
+          <li class="sidenavli"><a href="#" id="sharedresource">Shared Resource</a></li>
+          <li class="sidenavli"><a href="#" id="createresource">Create Resource</a></li>
+          <li class="divider"></li>
+          <li class="heading">Private Host </li>
+          <li class="sidenavli"><a href="#" id="privatehost">My Private Hosts </a></li>
+          <li class="sidenavli"><a href="#"  id="createhost">Create Private Host </a></li>
+        </ul>
+      </div>
+      <div class="col-xs-6 col-sm-9 page-main-content" id="loadcontent">
+        <h1 class="page-header" style="margin-top: 0px">{{ page.title }}</h1>
+        {{ content }}
+      </div><!--end of loadcontent-->  
+    </div>
+    <!--end of centered content--> 
   </div>
 </div>
-</div>
+<!--end of container-->
