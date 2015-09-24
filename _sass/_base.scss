@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -23,8 +21,6 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -32,7 +28,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 4;
 }
 
 
@@ -64,7 +60,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: $list-spacing-unit;
 }
 
 li {
@@ -72,6 +68,7 @@ li {
     > ol {
          margin-bottom: 0;
     }
+    
 }
 
 
@@ -199,6 +196,36 @@ pre {
 
         path {
             fill: $grey-color;
+        }
+    }
+}
+
+/**
+ * Documentations
+ */
+.docs-sidenav.nav > li {
+    > a {
+        display: block;
+        padding: 4px 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #146fd1;
+
+        &:hover {
+            /*padding-left: 19px;*/
+            /*color: #1756a9;*/
+            text-decoration: none;
+            /**background-color: transparent;*/
+        }
+    }
+
+    ul li {
+        a {
+            display: block;
+            padding: 4px 20px;
+            font-size: 16px;
+            font-weight: 300;
+            color: #146fd1;
         }
     }
 }
