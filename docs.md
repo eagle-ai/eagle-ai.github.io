@@ -1,5 +1,7 @@
 ---
 layout: default
+title:  "Documentation" 
+permalink: /docs/
 ---
 
 <div class="home">
