@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Eagle Overview" 
+title:  "Eagle Docs | Overview" 
 permalink: /docs/index.html
 ---
 
