@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Eagle Use Cases" 
+title:  "Use Cases" 
 permalink: /docs/usecase.html
 ---
 
