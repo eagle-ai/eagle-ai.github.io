@@ -3,6 +3,7 @@
 <body>
 <!-- header start -->
 <div id="home_page">
+  {% include nav.html %}
   <div class="headerimage">
     <div class="flexslider">
       <ul class="slides">
@@ -10,15 +11,14 @@
       </ul>
     </div>
   </div>
-    <div class="particles" style="height:40%"> </div><!---particles-->
-  <div class="slider-caption" style="top:35px;">
+  <div class="particles" style="height:40%"> </div><!---particles-->
+  <div class="slider-caption" style="top:80px;">
     <div class="homewrapper">
-      <div class="hometitle"> <img src="{{ "/images/feather.png" | prepend: site.baseurl }}" height="60px"> </div>
+      <div class="hometitle"> <img src="{{ "/images/feather.png" | prepend: site.baseurl }}" height="80px"> </div>
       <div class="hometext">
         <h2>Secure Hadoop in Real Time</h2>
      </div>
-    </div>     
-    <div class="download"><a href="/">Back to Eagle Homepage</a></div>   
+    </div>      
   </div>
 </div>
 <!-- header end -->
