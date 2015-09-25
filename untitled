@@ -15,37 +15,10 @@ markdown: kramdown
 documentations:
   - category: Overview
     links:
-      - title: What is Eagle
+      - title: Use Cases
         url: /docs/index.html
       - title: Use Cases
-        url: /docs/usecase.html        
-  - category: Installation
-    links:
-      - title: Pre-requisites
-        url: /docs/installation.html
-      - title: Deploying Eagle
-        url: /docs/install/ambari-plugin.html
-  - category: Policy Management
-    links:
-      - title: HDFS Policies
-        url: /docs/tutorial/how-to-define-eagle-policy.html
-      - title: Hive Policies
-        url: /docs/tutorial/how-to-use-rest-api.html
-  - category: User Profiles
-    links:
-      - title: Offline Training
-        url: /docs/tutorial/how-to-define-eagle-policy.html
-      - title: Online Processing
-        url: /docs/tutorial/how-to-use-rest-api.html
-  - category: Data Classification
-    links:
-      - title: HDFS
-        url: /docs/tutorial/how-to-define-eagle-policy.html
-      - title: Hive
-        url: /docs/tutorial/how-to-use-rest-api.html
-developments:
-  - category: Overview
-    links:
+        url: /docs/index.html
       - title: Use Cases
         url: /docs/index.html
   - category: Installation
@@ -60,15 +33,40 @@ developments:
         url: /docs/tutorial/how-to-define-eagle-policy.html
       - title: Hive Policies
         url: /docs/tutorial/how-to-use-rest-api.html
-  - category: User Profiles
+- category: User Profiles
     links:
       - title: Offline Training
         url: /docs/tutorial/how-to-define-eagle-policy.html
       - title: Online Processing
         url: /docs/tutorial/how-to-use-rest-api.html
-  - category: Data Classification
+- category: Data Classification
     links:
-      - title: HDFS
+      - title: Classify HDFS 
         url: /docs/tutorial/how-to-define-eagle-policy.html
-      - title: Hive
+      - title: Classify Hive data
+        url: /docs/tutorial/how-to-use-rest-api.html
+developments:
+  - category: Get Started
+    links:
+      - title: Overview
+        url: /docs/index.html
+      - title: Release Notes
+        url: /docs/release-notes.html
+      - title: FAQ
+        url: /docs/faq.html
+      - title: Events
+        url: /docs/events.html
+      - title: Terminology
+        url: /docs/terminology.html
+  - category: Installation
+    links:
+      - title: Installation Guide
+        url: /docs/install/installation-guide.html
+      - title: Ambari Plugin
+        url: /docs/install/ambari-plugin.html
+  - category: Tutorial
+    links:
+      - title: How to define Eagle Policy
+        url: /docs/tutorial/how-to-define-eagle-policy.html
+      - title: How to use REST API
         url: /docs/tutorial/how-to-use-rest-api.html
