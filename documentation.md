@@ -4,8 +4,6 @@ title:  "Eagle Overview"
 permalink: /docs/index.html
 ---
 
-Start to write from here with [`markdown`](http://daringfireball.net/projects/markdown/)
-
 ## Some example
 
 

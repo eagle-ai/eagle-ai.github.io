@@ -23,22 +23,22 @@ documentations:
       - title: Pre-requisites
         url: /docs/installation.html
       - title: Deploying Eagle
-        url: /docs/install/ambari-plugin.html
+        url: /docs/standaloneinstall.html
   - category: Policy Management
     links:
       - title: HDFS Policies
-        url: /docs/tutorial/how-to-define-eagle-policy.html
+        url: /docs/hdfspolicy.html
       - title: Hive Policies
-        url: /docs/tutorial/how-to-use-rest-api.html
+        url: /docs/hivepolicy.html
   - category: User Profiles
     links:
       - title: Offline Training
-        url: /docs/tutorial/how-to-define-eagle-policy.html
+        url: /docs/userprofileoverview.html
       - title: Online Processing
-        url: /docs/tutorial/how-to-use-rest-api.html
+        url: /docs/machinelearning.html
   - category: Data Classification
     links:
       - title: HDFS
-        url: /docs/tutorial/how-to-define-eagle-policy.html
+        url: /docs/hdfsclassify.html
       - title: Hive
-        url: /docs/tutorial/how-to-use-rest-api.html
+        url: /docs/hiveclassify.html
