@@ -19,6 +19,5 @@ mv eagle-0.1.0 eagle
 ln -s /usr/hdp/2.2.4.2-2/eagle
 
 
-
 how to make it?
 [https://jekyllrb.com/docs/templates/](https://jekyllrb.com/docs/templates/)

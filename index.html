@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-<title>Eagle</title>
+<title>Eagleio</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta charset="utf-8">
@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="css/misc.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="shortcut icon" href="/images/favicon.png">
+
 </head>
 <body>
 <!-- header start -->
@@ -32,7 +32,6 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right" id="top-menu">
                 <li><a class="menu" href="#home_page">HOME</a></li>
-                <li><a class="menu" href="/docs/">DOCS</a></li>
                 <li><a class="menu" href="#about_page">ABOUT</a></li>
                 <li><a class="menu" href="#diagram_page">ARCHITECTURE</a></li>
                 <li><a class="menu" href="#modules_page">MODULES</a></li>
@@ -46,23 +45,25 @@
       </div>
     </div>
   </div>
-
   <div class="headerimage">
     <div class="flexslider">
+
       <ul class="slides">
+      
         <li><img src="images/slider/3.jpg" alt="Slide 1"></li>
       </ul>
     </div>
   </div>
-  <div class="particles"> </div><!---particles-->
+    <div class="particles"> </div><!---particles-->
   <div class="slider-caption">
     <div class="homewrapper">
-      <div class="hometitle"> <img src="images/feather.png" height="60px"> </div>
+      <div class="hometitle"> <img src="images/feather.png" height="60px"> </div>
       <div class="hometext">
         <h2>Secure Hadoop in Real Time</h2>
      </div>
     </div>
-     <div class="download"><a href="#">GITHUB</a></div>
+    
+     <div class="download"><a href="#">GITHUB</a></div>   <div class="download" style="margin-left:10px;"><a href="docs/">DOCS</a></div>
   </div>
 </div>
 
@@ -72,9 +73,14 @@
 
 <div class="workwrapper" id="about_page">
   <div class="container">
+
     <div class="row">
+        
+
+ 
       <div class="row" style="margin-top:50px;">
         <div class="col-md-3 workmargin">
+       
           <h3 class="featuretext">Ease Of Use</h3>
           <h4 class="featureexplain"> Start using Eagle in few minutes</h4>
           <p>Eagle can be installed as an Ambari plugin. And you can use one instance of eagle to monitor multiple clusters.</p>
@@ -182,39 +188,39 @@
     <div class="row" style="margin-top:20px;">
       <div class="col-md-4">
         <div class="well2">
-          <h4>Realtime data stream processing engine</h4>
-          <p>Eagle listens and processes various logs and access patterns in real-time using open source big data products like STORM, Kafka, Hbase and Druid.</p>
+          <h4>Processing Engine</h4>
+          <p>Eagle stream processing API is an abstraction of Apache Storm, extensible with other streaming engine. Eagle processing is built to scale to large number of events and policies.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well2">
+          <h4>Alerting Framework</h4>
+          <p>Eagle’s ostensible policy engine framework allows developer to plugin a new policy engine with a few lines of codes. Eagle supports WSO2 Siddhi CEP engine.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well2">
+          <h4>Machine Learning module</h4>
+         
+          <p>Eagle provides capabilities to define user profiles for Hadoop users based on the user behavior. Eagle uses real-time Storm framework for near real-time anomaly detection.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well2">
+          <h4>Data Classification</h4>
+          <p>Eagle allows you to easily classify HDFS and Hive data based on sensitivity of the data. Eagle can also be easily extended to import data classification from other tools. </p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="well2">
           <h4>Policy Manager</h4>
-          <p>Expressive language - Users can create and modify policies for alerting and remediation on certain data activity monitoring events.</p>
+          <p>Eagle policy manager provides a easy to use interface and Restful API for user to define policy with a few clicks. Eagle supports window functions to create complex policies.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="well2">
-          <h4>Machine learning Models</h4>
-          <p>1. Anomaly detection</p>
-          <p>2. User profiling - Eagle creates user profiles consisting of multiple dimensions. These user profiles automatically help build the policies for monitoring and alerting.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="well2">
-          <h4>Data classification</h4>
-          <p>You can import data classification standards and policies from tools like dataguise dg secure and apache ranger. </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="well2">
-          <h4>Remediation</h4>
-          <p>Eagle provides the ability to detect and stop a threat. For example, If a malicious users is trying to copy data from the hadoop cluster to local system eagle alerts the admins and also stops the user from copying the data.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="well2">
-          <h4>User activity Exploration</h4>
-          <p>Eagle provides the ability to drill down into alert details to understand the data security threat. It provides a simple intuitive user interface to help analyze the threat to a greater detailed extent. </p>
+          <h4>Query Service</h4>
+          <p>Eagle provides SQL-like service API to support comprehensive computation for huge set of data, for example filtering, field projection, aggregation, histogram, sorting, top, arithmetical expression etc.</p>
         </div>
       </div>
     </div>
@@ -304,7 +310,7 @@ menuItems.click(function(e) {
 });
 // Bind to scroll
 $(window).scroll(function() {
-	
+  
 
     // Get container scroll position
     var fromTop = $(this).scrollTop() + topMenuHeight;
@@ -323,7 +329,13 @@ $(window).scroll(function() {
             .parent().removeClass("active")
             .end().filter("[href=#" + id + "]").parent().addClass("active");
     }
+  
+
+
 });
+
+
+
 
 </script>
 </body>
