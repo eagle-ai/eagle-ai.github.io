@@ -11,7 +11,7 @@ h4{font-size:18px;  font-weight:500;}
 .green{color:#0A0; font-weight:normal;}
 .clear{clear:both;}
 .marginbot{margin-bottom:50px;}
-.topbar{width:100%; background-color:#146fd1; opacity:0.95; height:60px; position:fixed; z-index:10; top:0;}
+.topbar{width:100%; background-color:#4285f4; opacity:0.95; height:60px; position:fixed; z-index:10; top:0;}
 
 .headerimage{width:100%; position:relative;}
 .headerimage img{width:100%;}
@@ -98,7 +98,7 @@ h4{font-size:18px;  font-weight:500;}
 .contactwrapper textarea{height:120px;}
 .sendbtn{background:#e46142; color:#fff; padding:7px 25px; float:left;}
 
-.footerwrapper{background:#146fd1; color:#fff; width:100%; padding:20px 0; /**margin-top:50px;**/}
+.footerwrapper{background:#4285f4; color:#fff; width:100%; padding:20px 0; /**margin-top:50px;**/}
 .footerwrapper a{color:#fff;}
 .footerwrapper a:hover{color:#FC3;}
 .social{width:125px; margin:0 auto; padding:0;}
