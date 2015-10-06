@@ -24,6 +24,10 @@ documentations:
         url: /docs/installation.html
       - title: Deploying Eagle
         url: /docs/standaloneinstall.html
+      - title: Deolying in Sandbox
+        url: /docs/deploymentInSandbox.html
+      - title: Deolying in the Production
+        url: /docs/deploymentInProduction.html
   - category: Policy Management
     links:
       - title: HDFS Policies
