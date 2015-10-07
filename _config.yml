@@ -20,14 +20,12 @@ documentations:
         url: /docs/usecase.html        
   - category: Installation
     links:
-      - title: Pre-requisites
-        url: /docs/installation.html
-      - title: Deploying Eagle
-        url: /docs/standaloneinstall.html
       - title: Deolying in Sandbox
         url: /docs/deploymentInSandbox.html
       - title: Deolying in the Production
         url: /docs/deploymentInProduction.html
+      - title: Import log data into Kafka
+        url: /docs/importHDFSAuditLog.html
   - category: Policy Management
     links:
       - title: HDFS Policies

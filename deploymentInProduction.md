@@ -5,14 +5,22 @@ permalink: /docs/deploymentInProduction.html
 ---
 
 
-### Pre-requisites
+### **Pre-requisites**
 
-*   HBase: 0.98 or later
-*   Storm: 09.93 or later
-*   Kafka: 0.8.x or later
-*   Java: 1.7
+##### Environment
+> * HBase: 0.98 or later
+> * Storm: 0.9.3 or later
+> * Kafka: 0.8.x or later
+> * Java: 1.7.x
 
-### Steps of installing Eagle
+##### Prepare the audit log data for Eagle (Only for HDFSAuditLog Monitoring)
+1. Make sure a Kafka topic has been created in which Eagle reads the data.
+2. Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data into kafka.
+
+
+### **Steps of installing Eagle**
+
+Step 0: prepare the data, please refer to [here](/docs/importHDFSAuditLog.html) if you want to enable HDFS audit log monitoring.
 
 Step 1: edit configuration files
 
@@ -36,7 +44,7 @@ Step 1: edit configuration files
         # default is "hbase"
         storage-type="hbase"
 
-        # hbase configuration: hbase.zookeeper.quorum, the format is as host1:host2,host3,...
+        # hbase configuration: hbase.zookeeper.quorum, the format is as host1,host2,host3,...
         # default is "localhost"
         hbase-zookeeper-quorum="localhost"
 
@@ -63,15 +71,15 @@ Step 2: Start Eagle services
         # start eagle service
         bin/eagle-service.sh start
 
-* start a eagle topology
+* start an eagle topology
 
         bin/eagle-topology-init.sh
 
         # start eagle topology
         bin/eagle-topology.sh --jar <topologyJar> --main <mainClass> --config <path-to-config> start
 
-        e.g. bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main com.ebay.eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
-
+        # Here is an example
+        #bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main com.ebay.eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
 
 
 
