@@ -25,8 +25,8 @@ permalink: /docs/deploymentInSandbox.html
 ![Restart Services](/images/docs/startStorm.png "Services")
 
 ##### Prepare the audit log data for Eagle (Only for HDFSAuditLog Monitoring)
-> Make sure a Kafka topic has been created in which Eagle reads the data.
-> Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data into kafka.
+> 1. Make sure a Kafka topic has been created in which Eagle reads the data.
+> 2. Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data into kafka.
 
 ### Steps of Eagle Installation
 
