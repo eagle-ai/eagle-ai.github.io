@@ -30,24 +30,22 @@ permalink: /docs/deploymentInSandbox.html
 
 ### Steps of Eagle Installation
 
-Step 1: Import Eagle tarball into Sandbox
+Step 1: Download Eagle tarball
 
 * Option 1: build form source code [eagle github](https://github.corp.ebay.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
 
-        cd eagle
         mvn clean install -DskipTests=true
-
 
 * Option 2: download the successful built package through the Internet.
 
+Step 2: Extract Eagle tarball package
+
+        # copy the package into sandbox
         scp -P 2222 eagle-0.1.0-bin.tar.gz root@127.0.0.1:/usr/hdp/current/.
-
-
-Step 2: Extract eagle tarball package
-
-    cd /usr/hdp/current
-    tar -zxvf eagle-0.1.0-bin.tar.gz
-    mv eagle-0.1.0 eagle
+        # extract the package
+        cd /usr/hdp/current
+        tar -zxvf eagle-0.1.0-bin.tar.gz
+        mv eagle-0.1.0 eagle
 
 
 Step 3: Install Eagle service in sandbox
