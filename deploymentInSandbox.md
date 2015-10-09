@@ -7,7 +7,7 @@ permalink: /docs/deploymentInSandbox.html
 ### Pre-requisites
 
 ##### Environment
-> To install eagle on a sandbox you need a HDP sandbox image imported in a virtual machine.
+> To install eagle on a sandbox you need a HDP sandbox image imported in a virtual machine with 8GB memory recommended.
 >
 > 1. [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install) two options
 > 2. [Hortonworks Sandbox](http://hortonworks.com/products/hortonworks-sandbox/#install) v 2.2.4 or later.
@@ -88,6 +88,26 @@ Step 4: Install Eagle services in sandbox
             examples/sample-sensitivity-resource-create.sh
             examples/sample-policy-create.sh
 
-Now Eagle is installed and please visit [Eagle homepage](localhost:9098) and [Eagle topology](localhost:8744).
+Now Eagle is installed and Here is [Eagle UI](http://sandbox.hortonworks.com:9099/eagle-service) and [Eagle topology UI](http://sandbox.hortonworks.com:8744).
 
 ### **Q & A**
+
+Q1. Not able to access storm worker log via browser
+
+A1: add the following line in host machine's hosts file
+
+      127.0.0.1 sandbox.hortonworks.com
+
+Q2. Not able send data into kafka using kafka console producer: /usr/hdp/current/kafka-broker/bin/kafka-console-producer.sh --broker-list localhost:6667 --topic sandbox_hdfs_audit_log
+
+A2: kafka broker are binding to host sandbox.hortonworks.com
+
+       /usr/hdp/current/kafka-broker/bin/kafka-console-producer.sh --broker-list sandbox.hortonworks.com:6667 --topic sandbox_hdfs_audit_log
+       cat /etc/hosts
+       127.0.0.1 localhost.localdomain localhost
+       10.0.2.15 sandbox.hortonworks.com sandbox ambari.hortonworks.com
+
+Q3. Cannot open eagle service url localhost:9099
+
+A3: If your network is NAT, then you need to add forwarding port 9099 for eagle service
+
