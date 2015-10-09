@@ -79,7 +79,7 @@ Step 1: edit configuration files
         "eagleServicePort" : 9099,
 
         # SMTP server
-        "mail.host" : "mx.vip.ebay.com",
+        "mail.host" : "mx.xyz.com",
         "mail.smtp.port":"25",
 
 
@@ -104,7 +104,7 @@ Step 2: Start Eagle services
         bin/eagle-topology.sh --jar <topologyJar> --main <mainClass> --config <path-to-config> start
 
         # Here is an example
-        #bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main com.ebay.eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
+        #bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
 
 
 

@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Deploy Eagle in Sandbox"
+title:  "Deploying Eagle in Sandbox"
 permalink: /docs/deploymentInSandbox.html
 ---
 
@@ -32,7 +32,7 @@ permalink: /docs/deploymentInSandbox.html
 
 Step 1: Download Eagle tarball
 
-* Option 1: build form source code [eagle github](https://github.corp.ebay.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
+* Option 1: build form source code [eagle github](https://github.xyz.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
 
         mvn clean install -DskipTests=true
 
@@ -47,28 +47,47 @@ Step 2: Extract Eagle tarball package
         tar -zxvf eagle-0.1.0-bin.tar.gz
         mv eagle-0.1.0 eagle
 
+Step 3: edit configuration files
 
-Step 3: Install Eagle service in sandbox
+* edit conf/eagle-service.conf
+
+        # hbase configuration: zookeeper.znode.parent
+    	# default is "/hbase-unsecure"
+    	zookeeper-znode-parent="/hbase-unsecure"
+
+* edit conf/sandbox-hdfsAuditLog-application.conf, here are some important properties.
+
+        # make sure this topic has been created
+        "topic" : "sandbox_hdfs_audit_log"
+
+* edit conf/sandbox-hiveQueryLog-application.conf
+
+        "RMEndPoints" : "http://localhost:8088/",
+        "HSEndPoint" : "http://localhost:19888/",
+
+Step 4: Install Eagle services in sandbox
 
 * Option 1: start with eagle command line
 
         example/eagle-sandbox-starter.sh
 
 * Option 2: start with eagle Ambari plugin
-1. `/usr/hdp/current/eagle/bin/eagle-ambari.sh`
 
-2. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
+    1. `/usr/hdp/current/eagle/bin/eagle-ambari.sh`
 
-3. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
+    2. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
 
-    ![AddService](/images/docs/AddService.png "AddService")
-    ![Eagle Services](/images/docs/EagleServiceSuccess.png "Eagle Services")
+    3. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
 
-4. Add Policies and meta data required by running below script.
+        ![AddService](/images/docs/AddService.png "AddService")
+        ![Eagle Services](/images/docs/EagleServiceSuccess.png "Eagle Services")
 
-        cd eagle
-        examples/sample-sensitivity-resource-create.sh
-        examples/sample-policy-create.sh
+    4. Add Policies and meta data required by running below script.
 
+            cd eagle
+            examples/sample-sensitivity-resource-create.sh
+            examples/sample-policy-create.sh
+
+Now Eagle is installed and please visit [Eagle homepage](localhost:9098) and [Eagle topology](localhost:8744).
 
 ### **Q & A**
