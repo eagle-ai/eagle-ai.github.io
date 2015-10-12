@@ -7,15 +7,10 @@ permalink: /docs/deploymentInSandbox.html
 ### Pre-requisites
 
 ##### Environment
-> To install eagle on a sandbox you need a HDP sandbox image imported in a virtual machine with 8GB memory recommended.
+> To install eagle on a sandbox you need to run a HDP sandbox image in a virtual machine with 8GB memory recommended.
 >
 > 1. Get a [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install) vmware or virtualbox 
 > 2. Get [Hortonworks Sandbox](http://hortonworks.com/products/hortonworks-sandbox/#install) v 2.2.4 or later.
-
-##### Register HDP sandbox
-> 1. [Register](http://127.0.0.1:8888/) Hortonworks sandbox.
-> 2. [Enable Ambari](http://127.0.0.1:8000/). Click on Enable Button.
-> 3. [Login](http://127.0.0.1:8080) as admin/admin.
 
 ##### Start Storm, Spark, HBase & Kafka via Ambari
 > 1. Add root as a HBase superuser via [Ambari](http://127.0.0.1:8080/#/main/services/HBASE/configs) (Optional, a user can operate HBase by sudo su hbase, as an alternative).
@@ -23,10 +18,6 @@ permalink: /docs/deploymentInSandbox.html
     ![Hbase User](/images/docs/AmbariHbaseConfig.png "Hbase User")
 > 2. Start HBase, Storm & Kafka from Ambari UI. Using Storm as an example
 ![Restart Services](/images/docs/startStorm.png "Services")
-
-##### Install Eagle Ambari plugin to manage Eagle via Ambari (Optional)
-> 1. `/usr/hdp/current/eagle/bin/eagle-ambari.sh install`
-> 2. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
 
 ##### Prepare the audit log data for Eagle (For HDFS)
 > 1. Make sure a Kafka topic has been created in which Eagle reads the data.
@@ -36,24 +27,21 @@ permalink: /docs/deploymentInSandbox.html
 
 ### Steps of Eagle Installation
 
-Step 1: Download Eagle tarball
+#####Step 1: Download Eagle tarball
 
 * Option 1: build form source code [eagle github](https://github.xyz.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
 
         mvn clean install -DskipTests=true
 
-* Option 2: Download eagle jar from here.
+* Option 2: Download eagle jar from [here](http://xyz.com).
 
-        Step 2: Extract Eagle tarball package
+######Step 2: Copy the tarball into sandbox and extract it
 
-        # copy the eagle package into sandbox
-        scp -P 2222 eagle-0.1.0-bin.tar.gz root@127.0.0.1:/usr/hdp/current/.
-        # extract the eagle package
-        cd /usr/hdp/current
         tar -zxvf eagle-0.1.0-bin.tar.gz
         mv eagle-0.1.0 eagle
+        mv eagle /usr/hdp/current
 
-Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
+######Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
 
 * Option 1: start with eagle command line
 
@@ -61,19 +49,23 @@ Step 3: Install Eagle service and three monitoring topologies, including HdfsAud
 
 * Option 2: start with eagle Ambari plugin
 
-    1. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
+    1. `/usr/hdp/current/eagle/bin/eagle-ambari.sh install`
+
+    2. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
+
+    3. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
 
         ![AddService](/images/docs/AddService.png "AddService")
         ![Eagle Services](/images/docs/EagleServiceSuccess.png "Eagle Services")
 
-    2. Add Policies and meta data required by running the below script.
+    4. Add Policies and meta data required by running the below script.
 
             cd eagle
             examples/sample-sensitivity-resource-create.sh
             examples/sample-policy-create.sh
 
 Up to now, you have successfully installed Eagle and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
-Login account is `admin/secret`
+Login account is `admin/secret`.
 
 ### **Q & A**
 
