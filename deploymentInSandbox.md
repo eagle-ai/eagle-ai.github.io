@@ -26,6 +26,8 @@ permalink: /docs/deploymentInSandbox.html
 
 ##### Prepare the audit log data for Eagle (Only for HDFSAuditLog Monitoring)
 > 1. Make sure a Kafka topic has been created in which Eagle reads the data.
+>
+        /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 > 2. Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data into kafka.
 
 ### Steps of Eagle Installation
