@@ -43,7 +43,7 @@ Step 2: Create a logstash configuration file under ${LOGSTASH_HOME}/conf. Here i
                         format => "%{message}"
                     }
                     broker_list => "localhost:9092"
-                    topic_id => "hdfs_audit_log"
+                    topic_id => "sandbox_hdfs_audit_log"
                     request_required_acks => 0
                     request_timeout_ms => 10000
                     producer_type => "async"
@@ -65,10 +65,7 @@ Step 3: Start Logstash
         cd path/to/logstash
         bin/logstash -f conf/sample.conf
 
-Step 4: Validate it works
-
-* Check name node is correctly started without log4j related exception.
-* Check whether logs are flowing into the kafka topic specified by `topic_id`
+Step 4: Check whether logs are flowing into the kafka topic specified by `topic_id`
 
 
 
@@ -98,10 +95,10 @@ Step 3: Add logstash kafka jars into Hadoop classpath by appending the following
 
 Step 4: restart the namenode
 
-Step 5: Validate it works
+Step 5: Validate if it works
 
 * Check name node is correctly started without log4j related exception.
-* Check whether logs are flowing into Kafka with Kafka command line `bin/kafka-console-consumer.sh`
+* Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` with Kafka command line `bin/kafka-console-consumer.sh`
 
 
 
