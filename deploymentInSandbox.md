@@ -64,8 +64,7 @@ permalink: /docs/deploymentInSandbox.html
             examples/sample-sensitivity-resource-create.sh
             examples/sample-policy-create.sh
 
-Up to now, you have successfully installed Eagle and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
-Login account is `admin/secret`.
+#####Step 4: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744) with login account is `admin/secret`.
 
 ### **Q & A**
 

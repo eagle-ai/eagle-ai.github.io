@@ -117,11 +117,6 @@ Step 2: Start Eagle services
         # start User Profiles
         bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf --topology userprofile-topology start
 
-Up to now, you have successfully installed Eagle and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
-Login account is `admin/secret`
-
-
-
-
+Step 3: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744) with login account is `admin/secret`.
 
 
