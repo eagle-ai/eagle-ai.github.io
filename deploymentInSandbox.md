@@ -9,7 +9,7 @@ permalink: /docs/deploymentInSandbox.html
 ##### Environment
 > To install eagle on a sandbox you need a HDP sandbox image imported in a virtual machine.
 >
-> 1. [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install) two options
+> 1. Get a [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install) vmware or virtualbox 
 > 2. [Hortonworks Sandbox](http://hortonworks.com/products/hortonworks-sandbox/#install) v 2.2.4 or later.
 
 ##### Register HDP sandbox
