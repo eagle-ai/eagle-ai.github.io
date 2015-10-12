@@ -106,8 +106,20 @@ Step 2: Start Eagle services
         # start eagle topology
         bin/eagle-topology.sh --jar <topologyJar> --main <mainClass> --config <path-to-config> start
 
-        # Here is an example
-        #bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
+  Here are some examples
+
+        # start HDFS audilt log monitoring
+        bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
+
+        # start Hive Query Log Monitoring
+        bin/eagle-topology.sh --main eagle.security.hive.jobrunning.HiveJobRunningMonitoringMain --config ${EAGLE_HOME}/conf/sandbox-hiveQueryLog-application.conf start
+
+        # start User Profiles
+        bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf --topology userprofile-topology start
+
+Up to now, you have successfully installed Eagle and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
+Login account is `admin/secret`
+
 
 
 

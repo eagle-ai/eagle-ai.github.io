@@ -73,6 +73,7 @@ Step 3: Install Eagle service and three monitoring topologies, including HdfsAud
             examples/sample-policy-create.sh
 
 You have successfully installed Eagle and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
+Login account is `admin/secret`
 
 ### **Q & A**
 
