@@ -4,9 +4,9 @@ title:  "How to import log data into Kafka"
 permalink: /docs/importHDFSAuditLog.html
 ---
 
-As Eagle consumes the data via Kafka topics, a user need to populate its data, such as HDFS audit log, into a Kafka topic.
-There are two ways. The first is to utilize Logstash, which naturally supports Kafka as the output plugin; the second way is to
-install a namenode log4j Kafka appender. In the following part, we take HDFS audit log as an example.
+As Eagle consumes the data via Kafka topics in some applications, such as HDFS audit log monitoring, a user needs to populate its data into a Kafka topic.
+There are two ways to do that. The first one is Logstash, which naturally supports Kafka as the output plugin; the second one is to
+install a namenode log4j Kafka appender. In the following part, we take HDFS audit log as an example and give more details.
 
 ### **Logstash-kafka**
 
@@ -65,14 +65,18 @@ Step 3: Start Logstash
         cd path/to/logstash
         bin/logstash -f conf/sample.conf
 
-Step 4: Validate it works by checking whether data flows into the kafka topic specified by `topic_id`
+Step 4: Validate it works
+
+* Check name node is correctly started without log4j related exception.
+* Check whether logs are flowing into the kafka topic specified by `topic_id`
+
 
 
 ### **Log4j Kafka Appender**
 
-Notice that if you use ambari, such as in sandbox, you must following the following steps via Ambari UI.
+Notice that if you use ambari, such as in sandbox, you must following the following steps via Ambari UI. In addition, restarting namenode is required.
 
-Step 1: Configure $HADOOP_CONF_DIR/log4j.properties, and you can also refer to [log4j-template.properties](https://github.xyz.com/eagle/eagle/blob/master/eagle-external/eagle-log4jkafka/src/main/resources/log4j-template.properties)
+Step 1: Configure $HADOOP_CONF_DIR/log4j.properties, and add a log4j appender called "KAFKA_HDFS_AUDIT".
 
         log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
         log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
@@ -80,15 +84,15 @@ Step 1: Configure $HADOOP_CONF_DIR/log4j.properties, and you can also refer to [
         log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
         log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
         log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
-        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
-        log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
-        log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
+        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=sync
+        #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
+        #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
 
-Step 2: add the reference to KAFKA_HDFS_AUDIT in $HADOOP_CONF_DIR/hadoop-env.sh
+Step 2: Edit $HADOOP_CONF_DIR/hadoop-env.sh, and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
 
         -Dhdfs.audit.logger=INFO,DRFAAUDIT,KAFKA_HDFS_AUDIT
 
-Step 3: add logstash kafka jars into Hadoop classpath by appending the following command to $HADOOP_CONF_DIR/hadoop-env.sh
+Step 3: Add logstash kafka jars into Hadoop classpath by appending the following command to $HADOOP_CONF_DIR/hadoop-env.sh
 
         export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/path/to/eagle/lib/log4jkafka/lib/*
 
@@ -97,7 +101,7 @@ Step 4: restart the namenode
 Step 5: Validate it works
 
 * Check name node is correctly started without log4j related exception.
-* Check whether log is flowing into Kafka with Kafka command line `bin/kafka-console-consumer.sh`
+* Check whether logs are flowing into Kafka with Kafka command line `bin/kafka-console-consumer.sh`
 
 
 

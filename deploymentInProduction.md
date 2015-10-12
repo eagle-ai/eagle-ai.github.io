@@ -5,6 +5,9 @@ permalink: /docs/deploymentInProduction.html
 ---
 
 
+Eagle requires you to have access on Hadoop CLI, where you have full permissions to HDFS, Storm, HBase and Kafka. To make things easier, we strongly recommend you to [start Eagle on a sandbox](/docs/deploymentInSandbox.html).
+
+
 ### **Pre-requisites**
 
 ##### Environment
@@ -13,23 +16,22 @@ permalink: /docs/deploymentInProduction.html
 > * Kafka: 0.8.x or later
 > * Java: 1.7.x
 
+
 ##### Prepare the audit log data for Eagle (Only for HDFSAuditLog Monitoring)
-1. Make sure a Kafka topic has been created in which Eagle reads the data.
-2. Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data into kafka.
+> 1. Make sure a Kafka topic has been created in which Eagle reads the data.
+> 2. Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data into kafka.
 
 
 ### **Steps of installing Eagle**
-
-Step 0: prepare the data, please refer to [here](/docs/importHDFSAuditLog.html) if you want to enable HDFS audit log monitoring.
 
 Step 1: edit configuration files
 
 * edit bin/eagle-env.sh
 
-        #TODO: make sure java version is 1.7.x
+        # TODO: make sure java version is 1.7.x
         export JAVA_HOME=
 
-        # nimbus.host. Default is localhost
+        # TODO: Storm nimbus host. Default is localhost
         export EAGLE_NIMBUS_HOST=localhost
 
         # TODO: EAGLE_SERVICE_HOST, default is `hostname -f`
@@ -37,6 +39,7 @@ Step 1: edit configuration files
 
         # TODO: EAGLE_SERVICE_PORT, default is 9099
         export EAGLE_SERVICE_PORT=9099
+
 
 * edit conf/eagle-service.conf
 
@@ -56,7 +59,29 @@ Step 1: edit configuration files
         # default is "/hbase"
         zookeeper-znode-parent="/hbase"
 
-* create a configuration file for a eagle topology under conf/, and please refer to the sample versions
+* create a configuration file for each type of Eagle topology under conf/, and please refer to the [sample versions](https://github.xyz.com/eagle/eagle/tree/master/eagle-assembly/src/main/conf).
+
+        # Here are some importance configurations.
+
+        # TODO: change mode to cluster
+        "mode" : "cluster"
+
+        # TODO: make sure the kafka topic same as your topic that have been created
+        "topic" : "sandbox_hdfs_audit_log",
+
+        # TODO: update site
+        "site" : "sandbox",
+
+        # Eagle service host
+        "eagle.service.host" : "localhost",
+
+        # Eagle service port
+        "eagleServicePort" : 9099,
+
+        # SMTP server
+        "mail.host" : "mx.xyz.com",
+        "mail.smtp.port":"25",
+
 
 Step 2: Start Eagle services
 
@@ -79,7 +104,7 @@ Step 2: Start Eagle services
         bin/eagle-topology.sh --jar <topologyJar> --main <mainClass> --config <path-to-config> start
 
         # Here is an example
-        #bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main com.ebay.eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
+        #bin/eagle-topology.sh --jar lib/topology/eagle-topology-0.1.0-assembly.jar --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
 
 
 
