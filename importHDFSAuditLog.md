@@ -71,7 +71,7 @@ Step 4: Check whether logs are flowing into the kafka topic specified by `topic_
 
 ### **Log4j Kafka Appender**
 
-Notice that if you use ambari, such as in sandbox, you must following the following steps via Ambari UI. In addition, restarting namenode is required.
+Notice that if you use ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
 
 Step 1: Configure $HADOOP_CONF_DIR/log4j.properties, and add a log4j appender called "KAFKA_HDFS_AUDIT".
 

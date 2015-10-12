@@ -16,14 +16,34 @@ permalink: /docs/deploymentInSandbox.html
 > 1. Add root as a HBase superuser via [Ambari](http://127.0.0.1:8080/#/main/services/HBASE/configs) (Optional, a user can operate HBase by sudo su hbase, as an alternative).
 >
     ![Hbase User](/images/docs/AmbariHbaseConfig.png "Hbase User")
-> 2. Start HBase, Spark, Storm & Kafka from Ambari UI. Using Storm as an example
+> 2. Start HBase, Spark, Storm & Kafka from Ambari UI. Taking Storm as an example
 ![Restart Services](/images/docs/startStorm.png "Services")
 
-##### Prepare the audit log data for Eagle (For HDFS)
-> 1. Make sure a Kafka topic has been created in which Eagle reads the data.
+##### Add namenode log4j Kafka appender (For HDFS), and other option is [here](/docs/importHDFSAuditLog.html)
 >
-        /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
-> 2. Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data to kafka.
+> 1. Configure Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and add a log4j appender called "KAFKA_HDFS_AUDIT".
+>
+        log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
+        log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
+        log4j.appender.KAFKA_HDFS_AUDIT.BrokerList=sandbox.hortonworks.com:6667
+        log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
+        log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
+        log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
+        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=sync
+        #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
+        #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
+> 2. Edit Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
+>
+        -Dhdfs.audit.logger=INFO,DRFAAUDIT,KAFKA_HDFS_AUDIT
+> 3. Edit Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and append the following command
+>
+        export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/path/to/eagle/lib/log4jkafka/lib/*
+> 4. restart the namenode
+> 5. Validate if it works
+>
+* Check name node is correctly started without log4j related exception.
+* Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` with Kafka command line `bin/kafka-console-consumer.sh`
+
 
 ### Steps of Eagle Installation
 
