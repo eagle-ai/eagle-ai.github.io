@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Deploying Eagle in Sandbox"
+title:  "Deploy Eagle in Sandbox"
 permalink: /docs/deploymentInSandbox.html
 ---
 
@@ -27,7 +27,7 @@ permalink: /docs/deploymentInSandbox.html
 
 ### Steps of Eagle Installation
 
-#####Step 1: Download Eagle tarball
+Step 1: Download Eagle tarball
 
 * Option 1: build form source code [eagle github](https://github.xyz.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
 
@@ -35,36 +35,21 @@ permalink: /docs/deploymentInSandbox.html
 
 * Option 2: Download eagle jar from [here](http://xyz.com).
 
-######Step 2: Copy the tarball into sandbox and extract it
+Step 2: Copy the tarball into sandbox and extract it
 
         # extract
         tar -zxvf eagle-0.1.0-bin.tar.gz
         mv eagle-0.1.0 /usr/hdp/current/eagle
 
-######Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
+Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
 
 * Option 1: start with eagle command line
 
       example/eagle-sandbox-starter.sh
 
-* Option 2: start with eagle Ambari plugin
+* Option 2: start with [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
 
-    1. `/usr/hdp/current/eagle/bin/eagle-ambari.sh install`
-
-    2. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
-
-    3. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
-
-        ![AddService](/images/docs/AddService.png "AddService")
-        ![Eagle Services](/images/docs/EagleServiceSuccess.png "Eagle Services")
-
-    4. Add Policies and meta data required by running the below script.
-
-            cd eagle
-            examples/sample-sensitivity-resource-create.sh
-            examples/sample-policy-create.sh
-
-#####Step 4: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744) with login account is `admin/secret`.
+Step 4: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744) with login account `admin/secret`.
 
 ### **Q & A**
 

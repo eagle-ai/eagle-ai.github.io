@@ -20,12 +20,14 @@ documentations:
         url: /docs/usecase.html        
   - category: Installation
     links:
-      - title: Deolying in Sandbox
+      - title: Deploy Eagle in Sandbox
         url: /docs/deploymentInSandbox.html
-      - title: Deolying in the Production
+      - title: Deploy Eagle in the Production
         url: /docs/deploymentInProduction.html
       - title: Import log data into Kafka
         url: /docs/importHDFSAuditLog.html
+      - title: Install Eagle Ambari Plugin
+        url: /docs/ambariPluginInstall.html
   - category: Policy Management
     links:
       - title: HDFS Policies

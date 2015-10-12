@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Deploying Eagle in the Production"
+title:  "Deploy Eagle in the Production"
 permalink: /docs/deploymentInProduction.html
 ---
 
