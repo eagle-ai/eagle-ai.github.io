@@ -17,12 +17,16 @@ permalink: /docs/deploymentInSandbox.html
 > 2. [Enable Ambari](http://127.0.0.1:8000/). Click on Enable Button.
 > 3. [Login](http://127.0.0.1:8080) as admin/admin.
 
-##### Start Storm, HBase & Kafka via Ambari
+##### Start Storm, Spark, HBase & Kafka via Ambari
 > 1. Add root as a HBase superuser via [Ambari](http://127.0.0.1:8080/#/main/services/HBASE/configs) (Optional, a user can operate HBase by sudo su hbase, as an alternative).
 >
     ![Hbase User](/images/docs/AmbariHbaseConfig.png "Hbase User")
 > 2. Start HBase, Storm & Kafka from Ambari UI. Using Storm as an example
 ![Restart Services](/images/docs/startStorm.png "Services")
+
+##### Install Eagle Ambari plugin to manage Eagle via Ambari (Optional)
+> 1. `/usr/hdp/current/eagle/bin/eagle-ambari.sh install`
+> 2. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
 
 ##### Prepare the audit log data for Eagle (For HDFS)
 > 1. Make sure a Kafka topic has been created in which Eagle reads the data.
@@ -57,22 +61,18 @@ Step 3: Install Eagle service and three monitoring topologies, including HdfsAud
 
 * Option 2: start with eagle Ambari plugin
 
-    1. `/usr/hdp/current/eagle/bin/eagle-ambari.sh`
-
-    2. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
-
-    3. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
+    1. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
 
         ![AddService](/images/docs/AddService.png "AddService")
         ![Eagle Services](/images/docs/EagleServiceSuccess.png "Eagle Services")
 
-    4. Add Policies and meta data required by running the below script.
+    2. Add Policies and meta data required by running the below script.
 
             cd eagle
             examples/sample-sensitivity-resource-create.sh
             examples/sample-policy-create.sh
 
-You have successfully installed Eagle and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
+Up to now, you have successfully installed Eagle and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
 Login account is `admin/secret`
 
 ### **Q & A**
