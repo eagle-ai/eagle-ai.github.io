@@ -35,9 +35,9 @@ documentations:
   - category: User Profiles
     links:
       - title: Offline Training
-        url: /docs/userprofileoverview.html
+        url: /docs/offlineUserProfiles.html
       - title: Online Processing
-        url: /docs/machinelearning.html
+        url: /docs/onlineUserProfiles.html
   - category: Data Classification
     links:
       - title: HDFS

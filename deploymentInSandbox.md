@@ -47,25 +47,7 @@ Step 2: Extract Eagle tarball package
         tar -zxvf eagle-0.1.0-bin.tar.gz
         mv eagle-0.1.0 eagle
 
-Step 3: edit configuration files
-
-* edit conf/eagle-service.conf
-
-        # hbase configuration: zookeeper.znode.parent
-    	# default is "/hbase-unsecure"
-    	zookeeper-znode-parent="/hbase-unsecure"
-
-* edit conf/sandbox-hdfsAuditLog-application.conf, here are some important properties.
-
-        # make sure this topic has been created
-        "topic" : "sandbox_hdfs_audit_log"
-
-* edit conf/sandbox-hiveQueryLog-application.conf
-
-        "RMEndPoints" : "http://localhost:8088/",
-        "HSEndPoint" : "http://localhost:19888/",
-
-Step 4: Install Eagle services in sandbox
+Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
 
 * Option 1: start with eagle command line
 
@@ -88,7 +70,7 @@ Step 4: Install Eagle services in sandbox
             examples/sample-sensitivity-resource-create.sh
             examples/sample-policy-create.sh
 
-Now Eagle is installed and Here is [Eagle UI](http://sandbox.hortonworks.com:9099/eagle-service) and [Eagle topology UI](http://sandbox.hortonworks.com:8744).
+Now Eagle is installed and Here is [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744).
 
 ### **Q & A**
 
