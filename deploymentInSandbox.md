@@ -37,9 +37,9 @@ permalink: /docs/deploymentInSandbox.html
 
 ######Step 2: Copy the tarball into sandbox and extract it
 
+        # extract
         tar -zxvf eagle-0.1.0-bin.tar.gz
-        mv eagle-0.1.0 eagle
-        mv eagle /usr/hdp/current
+        mv eagle-0.1.0 /usr/hdp/current/eagle
 
 ######Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
 
