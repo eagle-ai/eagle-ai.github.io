@@ -18,11 +18,11 @@ Eagle requires you to have access on Hadoop CLI, where you have full permissions
 
 
 ##### Prepare the audit log data for Eagle (Only for HDFSAuditLog Monitoring)
-> 1. Make sure a Kafka topic has been created for importing audit log. Here is an example command.
+> 1. Create a Kafka topic for importing audit log. Here is an example command to create topic named sandbox_hdfs_audit_log.
 >
          cd <kafka-home>
          bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
-> 2. Please refer to [here](/docs/importHDFSAuditLog.html) on how to populate log data into kafka.
+> 2. Populate audit log into the Kafka topic created above, and refer to [here](/docs/importHDFSAuditLog.html) on How to do it.
 
 
 ### **Steps of installing Eagle**
