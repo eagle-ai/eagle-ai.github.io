@@ -10,13 +10,13 @@ permalink: /docs/deploymentInSandbox.html
 ##### Environment
 > To install eagle on a sandbox you need to run a HDP sandbox image in a virtual machine with 8GB memory recommended.
 >
-> 1. Get a [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install) vmware or virtualbox 
-> 2. Get [Hortonworks Sandbox](http://hortonworks.com/products/hortonworks-sandbox/#install) v 2.2.4
+> 1. Get Virtual Box or VMware [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install)  
+> 2. Get [Hortonworks Sandbox v 2.2.4](http://hortonworks.com/products/hortonworks-sandbox/#archive)
 
-##### Start dependent services Storm, HBase & Kafka via Ambari UI. Take Storm as an example.
+##### Start dependent services Storm, HBase & Kafka via Ambari UI. Showing Storm as an example below.
 ![Restart Services](/images/docs/startStorm.png "Services")
 
-##### Add namenode log4j Kafka appender (For HDFS), and other option Logstash is [here](/docs/importHDFSAuditLog.html)
+##### Add namenode log4j Kafka appender (For HDFS) following the steps below, There is also an option to use [logstash](/docs/importHDFSAuditLog.html).
 >
 > 1. Configure Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and add a log4j appender called "KAFKA_HDFS_AUDIT" to hdfs audit logging.
 >
@@ -35,40 +35,42 @@ permalink: /docs/deploymentInSandbox.html
 > 3. Edit Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and append the following command to it.
 >
         export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:<eagle-home>/lib/log4jkafka/lib/*
-> 4. restart the namenode
+> 4. Restart the namenode
 > 5. Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` when Kafka is started
 >
         /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
 
 
-### Steps of Eagle Installation
+### Eagle Installation Steps
 
 Step 1: Download Eagle tarball
 
-* Option 1: build form source code [eagle github](https://github.xyz.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
+* Option 1: Download eagle jar from [here](http://xyz.com).
+
+* Option 2: Build form source code [eagle github](https://github.xyz.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
 
         mvn clean install -DskipTests=true
 
-* Option 2: Download eagle jar from [here](http://xyz.com).
-
 Step 2: Copy the tarball into sandbox and extract it
 
-        # extract
+        #extract
         tar -zxvf eagle-0.1.0-bin.tar.gz
         mv eagle-0.1.0 /usr/hdp/current/eagle
 
 Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
 
-* Option 1: start with eagle command line
+* Option 1: Start Eagle Service using command line
 
       cd /usr/hdp/current/eagle
       example/eagle-sandbox-starter.sh
 
-* Option 2: start with [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
+* Option 2: Start Eagle Service using [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
 
 Step 4: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744) with login account `admin/secret`.
-(If the network is NAT, it's necessary to add service port 9099 to the forwarding ports)
+(If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
 ![Forwarding Port](/images/docs/eagleService.png)
+
+You have now successfully installed Eagle. You can try creating new policies on HDFS and Hive data sets and generate alerts.
 
 Step 5: Stop Services
 
