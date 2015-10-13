@@ -5,7 +5,7 @@ permalink: /docs/offlineUserProfiles.html
 ---
 
 This document will introduce how to start the offline processing on user profiles. Assume Eagle has been installed and [Eagle service](http://sandbox.hortonworks.com:9099/eagle-service)
-is started. 
+is started.
 
 
 ### Steps of Starting offline processing

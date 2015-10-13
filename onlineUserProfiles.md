@@ -9,11 +9,11 @@ is started. Two options to start the topology are provided
 
 ###Option 1: Command line
 
-Step 2: submit userProfiles topology if it's not on [topology UI](http://sandbox.hortonworks.com:8744)
+Step 1: submit userProfiles topology if it's not on [topology UI](http://sandbox.hortonworks.com:8744)
 
     bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf --topology userprofile-topology start
 
-###Option 2: Ambari
+###Option 2: Ambari 
 
 
 
