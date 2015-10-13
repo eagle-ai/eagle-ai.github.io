@@ -7,7 +7,7 @@ permalink: /docs/offlineUserProfiles.html
 This document will introduce how to start the offline processing on user profiles. Assume Eagle has been installed and [Eagle service](http://sandbox.hortonworks.com:9099/eagle-service)
 is started. Two options are provided.
 
-###Option 1: Command line
+###Option 1: command line
 
 Step 1: Start Spark if not started
 ![Start Spark](/images/docs/startSpark2.png)

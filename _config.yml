@@ -28,6 +28,8 @@ documentations:
         url: /docs/importHDFSAuditLog.html
       - title: Install Eagle Ambari Plugin
         url: /docs/ambariPluginInstall.html
+      - title: Installation Q & A
+        url: /docs/installationQA.html
   - category: Policy Management
     links:
       - title: HDFS Policies

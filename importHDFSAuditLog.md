@@ -97,7 +97,6 @@ Step 4: restart the namenode
 
 Step 5: Validate if it works
 
-* Check name node is correctly started without log4j related exception.
 * Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` with Kafka command line `bin/kafka-console-consumer.sh`
 
 
