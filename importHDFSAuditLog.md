@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "How to import log data into Kafka"
+title:  "How to stream log data into Kafka"
 permalink: /docs/importHDFSAuditLog.html
 ---
 
@@ -73,7 +73,8 @@ Step 4: Check whether logs are flowing into the kafka topic specified by `topic_
 
 Notice that if you use ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
 
-Step 1: Configure $HADOOP_CONF_DIR/log4j.properties, and add a log4j appender called "KAFKA_HDFS_AUDIT".
+Step 1: Configure $HADOOP_CONF_DIR/log4j.properties, and add a log4j appender called "KAFKA_HDFS_AUDIT". Here are example configurations for
+sandbox.
 
         log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
         log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
@@ -89,13 +90,13 @@ Step 2: Edit $HADOOP_CONF_DIR/hadoop-env.sh, and add the reference to KAFKA_HDFS
 
         -Dhdfs.audit.logger=INFO,DRFAAUDIT,KAFKA_HDFS_AUDIT
 
-Step 3: Add logstash kafka jars into Hadoop classpath by appending the following command to $HADOOP_CONF_DIR/hadoop-env.sh
+Step 3: Add logstash kafka jars into Hadoop classpath by appending the following command to $HADOOP_CONF_DIR/hadoop-env.sh.
 
         export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/path/to/eagle/lib/log4jkafka/lib/*
 
-Step 4: restart the namenode
+Step 4: restart the namenode.
 
-Step 5: Validate if it works
+Step 5: Validate if it works.
 
 * Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` with Kafka command line `bin/kafka-console-consumer.sh`
 

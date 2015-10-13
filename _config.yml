@@ -24,7 +24,7 @@ documentations:
         url: /docs/deploymentInSandbox.html
       - title: Deploy Eagle in the Production
         url: /docs/deploymentInProduction.html
-      - title: Import log data into Kafka
+      - title: Stream Log Data into Kafka
         url: /docs/importHDFSAuditLog.html
       - title: Install Eagle Ambari Plugin
         url: /docs/ambariPluginInstall.html
