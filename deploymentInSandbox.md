@@ -10,7 +10,7 @@ permalink: /docs/deploymentInSandbox.html
 > To install eagle on a sandbox you need to run a HDP sandbox image in a virtual machine with 8GB memory recommended.
 >
 > 1. Get a [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install) vmware or virtualbox 
-> 2. Get [Hortonworks Sandbox](http://hortonworks.com/products/hortonworks-sandbox/#install) v 2.2.4 or later.
+> 2. Get [Hortonworks Sandbox](http://hortonworks.com/products/hortonworks-sandbox/#install) v 2.2.4
 
 ##### Add namenode log4j Kafka appender (For HDFS), and other option Logstash is [here](/docs/importHDFSAuditLog.html)
 >
@@ -69,4 +69,21 @@ Step 3: Install Eagle service and three monitoring topologies, including HdfsAud
 * Option 2: start with [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
 
 Step 4: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744) with login account `admin/secret`.
+(If the network is NAT, it's necessary to add service port 9099 to the forwarding ports)
+
+
+### Simple Demo on Alerting
+
+* HDFS Audit log
+
+        hdfs dfs -ls /demo/data
+
+* Hive Query Log
+
+        su hive
+        hive
+        set hive.execution.engine=mr;
+        use xademo;
+        select a.phone_number from customer_details a, call_detail_records b where a.phone_number=b.phone_number;
+
 

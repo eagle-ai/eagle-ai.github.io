@@ -1,8 +1,11 @@
 ---
 layout: doc
-title:  "Installation Q & A"
+title:  "Frequently Asked Questions"
 permalink: /docs/installationQA.html
 ---
+
+
+### Installation
 
 Q1. Not able to access storm worker log via browser
 
@@ -21,5 +24,11 @@ A2: kafka broker are binding to host sandbox.hortonworks.com
 
 Q3. Cannot visit eagle service url http://localhost:9099 through the browser
 
-A3: If your network is NAT, then you need to add forwarding port 9099 for eagle service. Or you should check if HBase is alive
+A3: If your network is NAT, then you need to add forwarding port 9099 for eagle service, or you should check if HBase is alive
+
+
+### Policies
+
+
+
 
