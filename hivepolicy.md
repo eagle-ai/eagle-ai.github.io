@@ -13,6 +13,7 @@ Example Policy: Create a policy to alert when a user is trying to select PHONE_N
 #### Step 1: 
 
 > Select Source as Hive and Stream as Hive Query Log
+![Hive Policies](/images/docs/HivePolicy1.png)
 
 #### Step 2
 > Eagle support a variety of properties for match critera where users can set different values. Eagle also supports window functions to extend policies with time functions.
@@ -24,9 +25,11 @@ Example Policy: Create a policy to alert when a user is trying to select PHONE_N
 	(Eagle supports wildcarding for property values for example /tmp/*)
 
 	Sensitivity Type = PHONE_NUMBER
+	
+![Hive Policies](/images/docs/HivePolicy2.png)
 
 #### Step 3
 
 > Name your policy and select de-duplication options if you need to avoid getting duplicate alerts within a particular time window. You have an option to configure email notifications for the alerts.
-
+![Hive Policies](/images/docs/HivePolicy3.png)
 

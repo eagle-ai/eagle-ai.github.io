@@ -14,6 +14,8 @@ Example Policy: Create a policy to alert when a user is trying to delete a file 
 
 > Select Source as HDFS and Stream as HDFS Audit Log
 
+![HDFS Policies](/images/docs/HDFSPolicy2.png)
+
 #### Step 2
 > Eagle support a variety of properties for match critera where users can set different values. Eagle also supports window functions to extend policies with time functions.
 
@@ -26,8 +28,10 @@ Example Policy: Create a policy to alert when a user is trying to delete a file 
 	sensitivity type = Address
 	(Eagle supports classifying data in HDFS with different sensitivity types. Users can use these sensitivity types to create policies)
 
+![HDFS Policies](/images/docs/HDFSPolicy4.png)
+
 #### Step 3
 
 > Name your policy and select de-duplication options if you need to avoid getting duplicate alerts within a particular time window. You have an option to configure email notifications for the alerts.
 
-
+![HDFS Policies](/images/docs/HDFSPolicy5.png)
