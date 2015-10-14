@@ -26,7 +26,7 @@ permalink: /docs/deploymentInSandbox.html
         log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
         log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
         log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
-        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=sync
+        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
         #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
         #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
 > 2. Edit Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
@@ -72,17 +72,6 @@ Step 4: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-servi
 
 You have now successfully installed Eagle. You can try creating new policies on HDFS and Hive data sets and generate alerts.
 
-Step 5: Stop Services
-
-        # stop Eagle service
-        bin/eagle-service.sh stop
-
-        # stop topologies
-        bin/eagle-topology.sh --topology sandbox-hdfsAuditLog-topology stop
-        bin/eagle-topology.sh --topology sandbox-hiveQueryRunning-topology stop
-        bin/eagle-topology.sh --topology sandbox-userprofile-topology stop
-
-<br />
 
 ### Demo on Alerting
 
@@ -97,5 +86,17 @@ Step 5: Stop Services
         set hive.execution.engine=mr;
         use xademo;
         select a.phone_number from customer_details a, call_detail_records b where a.phone_number=b.phone_number;
+
+### Stop Services
+
+* stop Eagle service
+
+        bin/eagle-service.sh stop
+
+* stop topologies
+
+        bin/eagle-topology.sh --topology sandbox-hdfsAuditLog-topology stop
+        bin/eagle-topology.sh --topology sandbox-hiveQueryRunning-topology stop
+        bin/eagle-topology.sh --topology sandbox-userprofile-topology stop
 
 
