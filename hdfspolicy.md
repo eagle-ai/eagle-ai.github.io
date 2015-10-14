@@ -5,25 +5,29 @@ permalink: /docs/hdfspolicy.html
 
 ---
 
-### Creating a HDFS Policy 
+### Creating a Policy for HDFS 
 In this example we will go thru the steps for creating the following HDFS policy.
 
-Policy: I would like to set an alert when a user is trying to delete a file 
+Example Policy: Create a policy to alert when a user is trying to delete a file with sensitive data
 
-##### Step 1
-To create policy on HDFS
+#### Step 1: 
 
-> Select HDFS as a source and HDFS Audit log as a stream
+> Select Source as HDFS and Stream as HDFS Audit Log
 
-##### Step 2
-> We support a variety of properties for match critera where users can set different values. 
+#### Step 2
+> Eagle support a variety of properties for match critera where users can set different values. Eagle also supports window functions to extend policies with time functions.
 
-* command = delete
+	command = delete 
+	(Eagle currently supports the following commands open, delete, copy, append, copy from local, get, move, mkdir, create, list, change permissions)
+	
+	source = /tmp/private 
+	(Eagle supports wildcarding for property values for example /tmp/*)
 
-* source = /tmp/private
+	sensitivity type = Address
+	(Eagle supports classifying data in HDFS with different sensitivity types. Users can use these sensitivity types to create policies)
 
-##### Step 3
+#### Step 3
 
-> Give a name to your policy and select de-duplication option if you need to avoid getting duplicates within a particular window. You have an option to configure email notifications for the alerts.
+> Name your policy and select de-duplication options if you need to avoid getting duplicate alerts within a particular time window. You have an option to configure email notifications for the alerts.
 
 
