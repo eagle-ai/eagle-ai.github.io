@@ -26,7 +26,7 @@ permalink: /docs/deploymentInSandbox.html
         log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
         log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
         log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
-        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=sync
+        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
         #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
         #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
 > 2. Edit Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
