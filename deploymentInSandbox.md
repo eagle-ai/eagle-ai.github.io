@@ -14,6 +14,9 @@ permalink: /docs/deploymentInSandbox.html
 > 2. Get [Hortonworks Sandbox v 2.2.4](http://hortonworks.com/products/hortonworks-sandbox/#archive)
 
 ##### Dependent services
+> * Grant root as HBase superuser
+![add superuser](/images/docs/hbaseSuperuser.png)
+
 > * Start Storm, HBase & Kafka via Ambari UI. Showing Storm as an example below.
 ![Restart Services](/images/docs/startStorm.png "Services")
 
