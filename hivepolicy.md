@@ -25,7 +25,7 @@ Example Policy: Create a policy to alert when a user is trying to select PHONE_N
 	(Eagle supports wildcarding for property values for example /tmp/*)
 
 	Sensitivity Type = PHONE_NUMBER
-	
+
 ![Hive Policies](/images/docs/HivePolicy2.png)
 
 #### Step 3
