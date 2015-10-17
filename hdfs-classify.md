@@ -8,10 +8,10 @@ Data classification in Eagle provides the ability to classify HDFS and Hive data
 
 For example: You can mark a particular folder/file which contains sensitivity data like address with a sensitive label. Once you have this information you can create policies using this label.
 
-### Browsing HDFS
+#### Browsing HDFS
 ![HDFS classification](/images/docs/hdfsBrowse.png)
 
-### Add Sensitivity
+#### Add Sensitivity
 
 To add the sensitive info to files/directories, there are two ways.
 
@@ -27,7 +27,7 @@ To add the sensitive info to files/directories, there are two ways.
 ![HDFS classification](/images/docs/hdfsMark2.png)
 ![HDFS classification](/images/docs/hdfsMark3.png)
 
-### Delete Sensitivity
+#### Delete Sensitivity
 
 * Option 1
 

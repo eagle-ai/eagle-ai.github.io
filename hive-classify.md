@@ -10,26 +10,27 @@ Data classification in Eagle provides the ability to classify HDFS and Hive data
 For example: You can label a particular table, column or columns which contains sensitivity data like address, phone number with sensitivity definitions. Once you have this information you can create policies using this label.
 
 
-### Browsing Hive
+#### Browsing Hive Sensitivity 
+
 ![Hive classification](/images/docs/hiveBrowse.png)
 
-### Add Sensitivity
+#### Add Sensitivity
 
 To add the sensitive info to files/directories, there are two ways.
 
-* Option 1: Import json file/content
+* **Option 1**: Import json file/content
 
-![Hive classification](/images/docs/hiveImport.png)
-![Hive classification](/images/docs/hiveImport2.png)
-![Hive classification](/images/docs/hiveImport3.png)
+	![Hive classification](/images/docs/hiveImport.png)
+	![Hive classification](/images/docs/hiveImport2.png)
+	![Hive classification](/images/docs/hiveImport3.png)
 
-* Option 2: Classify from the UI
+* **Option 2**: Classify from the UI
 
-![Hive classification](/images/docs/hiveMark.png)
-![Hive classification](/images/docs/hiveMark2.png)
-![Hive classification](/images/docs/hiveMark3.png)
+	![Hive classification](/images/docs/hiveMark.png)
+	![Hive classification](/images/docs/hiveMark2.png)
+	![Hive classification](/images/docs/hiveMark3.png)
 
-### Delete Sensitivity
+#### Delete Sensitivity
 
 * Option 1
 
