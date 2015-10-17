@@ -66,25 +66,31 @@ Step 1: edit configuration files
 
         # Here are some importance configurations.
 
+        ## envContextConfig
         # TODO: change mode to cluster
         "mode" : "cluster"
 
-        # TODO: make sure the kafka topic same as your topic that have been created
-        "topic" : "sandbox_hdfs_audit_log",
+        ## dataSourceConfig
+        "zkConnection" : "localhost:2181"
+        # TODO: only for HDFS
+        "transactionZKServers" : "localhost"
+        # TODO: only for HDFS, make sure the kafka topic same as your topic that have been created
+        "topic" : "sandbox_hdfs_audit_log"
+        # TODO: only for Hive
+        "RMEndPoints" : ""
+        # TODO: only for Hive
+        "HSEndPoint" : ""
 
-        # TODO: update site
+        ## eagleProps
         "site" : "sandbox",
 
-        # Eagle service host
-        "eagle.service.host" : "localhost",
-
-        # Eagle service port
-        "eagleServicePort" : 9099,
+        ## eagleService
+        "host" : "localhost",
+        "port" : 9099,
 
         # SMTP server
-        "mail.host" : "mx.xyz.com",
-        "mail.smtp.port":"25",
-
+        "mailHost" : "mx.xyz.com",
+        "mailSmtpPort":"25",
 
 Step 2: Start Eagle services
 
@@ -110,7 +116,7 @@ Step 2: Start Eagle services
   Here are some examples
 
         # start HDFS audilt log monitoring
-        bin/eagle-topology.sh --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/apollo-phx-hdfsAuditLog-application.conf start
+        bin/eagle-topology.sh --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/sandbox-hdfsAuditLog-application.conf start
 
         # start Hive Query Log Monitoring
         bin/eagle-topology.sh --main eagle.security.hive.jobrunning.HiveJobRunningMonitoringMain --config conf/sandbox-hiveQueryLog-application.conf start

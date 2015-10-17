@@ -27,7 +27,7 @@ Step 1: Download Eagle tarball
 
 * Option 1: Download eagle jar from [here](http://xyz.com).
 
-* Option 2: Build form source code [eagle github](https://github.xyz.com/eagle/eagle/tree/release1.0), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
+* Option 2: Build form source code [eagle github](https://github.com/eBay/Eagle), and eagle-xxx-bin.tar.gz will be generated under ./eagle-assembly/target
 
         mvn clean install -DskipTests=true
 
@@ -42,17 +42,17 @@ Step 3: Install Eagle service and three monitoring topologies, including HdfsAud
 * Option 1: Start Eagle Service using command line
 
       cd /usr/hdp/current/eagle
-      example/eagle-sandbox-starter.sh
+      examples/eagle-sandbox-starter.sh
 
 * Option 2: Start Eagle Service using [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
 
-Step 4: Check [Eagle service UI](http://sandbox.hortonworks.com:9099/eagle-service) and [topology UI](http://sandbox.hortonworks.com:8744) with login account `admin/secret`.
+Step 4: Check [Eagle service UI](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
 ![Forwarding Port](/images/docs/eagleService.png)
 
 Step 5: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/importHDFSAuditLog.html).
 
-1. Configure Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and add a log4j appender called "KAFKA_HDFS_AUDIT" to hdfs audit logging.
+1. Configure Advanced hadoop-log4j via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and add a log4j appender called "KAFKA_HDFS_AUDIT" to hdfs audit logging.
 
         log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
         log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
@@ -68,8 +68,8 @@ Step 5: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafk
         -Dhdfs.audit.logger=INFO,DRFAAUDIT,KAFKA_HDFS_AUDIT
 3. Edit Advanced hadoop-env via [Ambari UI](http://localhost:8080/#/main/services/HDFS/configs), and append the following command to it.
 
-        export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:<eagle-home>/lib/log4jkafka/lib/*
-4. Restart the namenode
+        export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/usr/hdp/current/eagle/lib/log4jkafka/lib/*
+4. Save the changes and restart the namenode
 5. Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` when Kafka is started
 
         /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
