@@ -17,8 +17,8 @@ is started.
 
 	* Option 1: command line
 
-	      cd <eagle-home>/bin
-	      bin/eagle-userprofile-scheduler.sh --site sandbox start
+	      $ cd <eagle-home>/bin
+	      $ bin/eagle-userprofile-scheduler.sh --site sandbox start
 
 	* Option 2: start via Ambari
 	![Click "ops"](/images/docs/UserProfile.png)

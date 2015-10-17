@@ -96,33 +96,33 @@ Eagle requires you to have access on Hadoop CLI, where you have full permissions
 
     * Start eagle service
 
-          su eagle
-          cd <eagle-home>
+          $ su eagle
+          $ cd <eagle-home>
 
           # create HBase tables for the first installation
-          bin/eagle-service-init.sh
+          $ bin/eagle-service-init.sh
 
           # start eagle service
-          bin/eagle-service.sh start
+          $ bin/eagle-service.sh start
 
     * Start an eagle topology
 
           # import metadata for the first installation
-          bin/eagle-topology-init.sh
+          $ bin/eagle-topology-init.sh
 
           # start eagle topology
-          bin/eagle-topology.sh --jar <topologyJar> --main <mainClass> --config <path-to-config> start
+          $ bin/eagle-topology.sh --jar <topologyJar> --main <mainClass> --config <path-to-config> start
 
         Here are some examples
 
           # start HDFS audilt log monitoring
-          bin/eagle-topology.sh --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/sandbox-hdfsAuditLog-application.conf start
+          $ bin/eagle-topology.sh --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/sandbox-hdfsAuditLog-application.conf start
 
           # start Hive Query Log Monitoring
-          bin/eagle-topology.sh --main eagle.security.hive.jobrunning.HiveJobRunningMonitoringMain --config conf/sandbox-hiveQueryLog-application.conf start
+          $ bin/eagle-topology.sh --main eagle.security.hive.jobrunning.HiveJobRunningMonitoringMain --config conf/sandbox-hiveQueryLog-application.conf start
 
           # start User Profiles
-          bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf start
+          $ bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf start
 
 * **Step 3**: Check [Eagle Service UI](http://localhost:9099/eagle-service) and [Storm Topology UI](http://localhost:8744) with default username/password: `admin/secret`.
 

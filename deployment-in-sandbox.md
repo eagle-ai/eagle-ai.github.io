@@ -30,20 +30,20 @@ permalink: /docs/deployment-in-sandbox.html
 
     * **Option 2**: Build form source code [eagle github](https://github.com/eBay/Eagle), and eagle-xxx-bin.tar.gz will be generated under `./eagle-assembly/target`
 
-          mvn clean install -DskipTests=true
+          $ mvn clean install -DskipTests=true
 
 * **Step 2**: Copy the tarball into sandbox and extract it
 
       #extract
-      tar -zxvf eagle-0.1.0-bin.tar.gz
-      mv eagle-0.1.0 /usr/hdp/current/eagle
+      $ tar -zxvf eagle-0.1.0-bin.tar.gz
+      $ mv eagle-0.1.0 /usr/hdp/current/eagle
 
 * **Step 3**: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
 
     * **Option 1**: Start Eagle Service using command line
 
-          cd /usr/hdp/current/eagle
-          examples/eagle-sandbox-starter.sh
+          $ cd /usr/hdp/current/eagle
+          $ examples/eagle-sandbox-starter.sh
 
     * **Option 2**: Start Eagle Service using [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
 
@@ -76,7 +76,7 @@ permalink: /docs/deployment-in-sandbox.html
     4. Save the changes and restart the namenode
     5. Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` when Kafka is started
 
-            /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
+            $ /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
 
 
 You have now successfully installed Eagle. You can try creating new policies on HDFS and Hive data sets and generate alerts.
@@ -99,11 +99,11 @@ You have now successfully installed Eagle. You can try creating new policies on 
 
 * Stop eagle service
 
-      bin/eagle-service.sh stop
+      $ bin/eagle-service.sh stop
 
 * Stop eagle topologies
 
-      bin/eagle-topology.sh --topology sandbox-hdfsAuditLog-topology stop
-      bin/eagle-topology.sh --topology sandbox-hiveQueryRunning-topology stop
-      bin/eagle-topology.sh --topology sandbox-userprofile-topology stop
+      $ bin/eagle-topology.sh --topology sandbox-hdfsAuditLog-topology stop
+      $ bin/eagle-topology.sh --topology sandbox-hiveQueryRunning-topology stop
+      $ bin/eagle-topology.sh --topology sandbox-userprofile-topology stop
 
