@@ -10,19 +10,19 @@ install a namenode log4j Kafka appender. In the following part, we show HDFS aud
 
 ### Logstash-kafka
 
-Step 1: Create a Kafka Topic named sandbox_hdfs_audit_log
+* **Step 1**: Create a Kafka Topic named sandbox_hdfs_audit_log
 
-        cd <kafka-home>
-        bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
+      cd <kafka-home>
+      bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 
-Step 2: Install Logstash-kafka
+* **Step 2**: Install Logstash-kafka
 
-* For Logstash 1.5.x, logstash-kafka has been intergrated into [logstash-input-kafka](https://github.com/logstash-plugins/logstash-input-kafka) and [logstash-output-kafka](https://github.com/logstash-plugins/logstash-output-kafka),
-and released with the 1.5 version of Logstash. So you can directly use it.
+    * For Logstash 1.5.x, logstash-kafka has been intergrated into [logstash-input-kafka](https://github.com/logstash-plugins/logstash-input-kafka) and [logstash-output-kafka](https://github.com/logstash-plugins/logstash-output-kafka),
+    and released with the 1.5 version of Logstash. So you can directly use it.
 
-* For Logstash 1.4.x, a user should install [logstash-kafka](https://github.com/joekiller/logstash-kafka) firstly. Notice that this version **does not support partition\_key\_format**.
+    * For Logstash 1.4.x, a user should install [logstash-kafka](https://github.com/joekiller/logstash-kafka) firstly. Notice that this version **does not support partition\_key\_format**.
 
-Step 3: Create a logstash configuration file under ${LOGSTASH_HOME}/conf. Here is a sample.
+* **Step 3**: Create a logstash configuration file under ${LOGSTASH_HOME}/conf. Here is a sample.
 
         input {
             file {
@@ -65,50 +65,45 @@ Step 3: Create a logstash configuration file under ${LOGSTASH_HOME}/conf. Here i
             }
         }
 
-Step 4: Start Logstash
+* **Step 4**: Start Logstash
 
-        cd path/to/logstash
-        bin/logstash -f conf/sample.conf
+      bin/logstash -f conf/sample.conf
 
-Step 5: Check whether logs are flowing into the kafka topic specified by `topic_id`
-
-
+* **Step 5**: Check whether logs are flowing into the kafka topic specified by `topic_id`
 
 ### Log4j Kafka Appender
 
-Notice that if you use ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
+> Notice that if you use ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
 Here is an example configuration.
 
-Step 1: Create a Kafka Topic named sandbox_hdfs_audit_log
+* **Step 1**: Create a Kafka Topic named sandbox_hdfs_audit_log
 
-        cd <kafka-home>
-        bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
+      cd <kafka-home>
+      bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 
-Step 2: Configure $HADOOP_CONF_DIR/log4j.properties, and add a log4j appender called "KAFKA_HDFS_AUDIT".
+* **Step 2**: Configure $HADOOP_CONF_DIR/log4j.properties, and add a log4j appender called "KAFKA_HDFS_AUDIT".
 
-        log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
-        log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
-        log4j.appender.KAFKA_HDFS_AUDIT.BrokerList=sandbox.hortonworks.com:6667
-        log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
-        log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
-        log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
-        log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=sync
-        #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
-        #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
+      log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
+      log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
+      log4j.appender.KAFKA_HDFS_AUDIT.BrokerList=sandbox.hortonworks.com:6667
+      log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
+      log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
+      log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
+      log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=sync
+      #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
+      #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
 
-Step 3: Edit $HADOOP_CONF_DIR/hadoop-env.sh, and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
+* **Step 3**: Edit $HADOOP_CONF_DIR/hadoop-env.sh, and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
 
-        -Dhdfs.audit.logger=INFO,DRFAAUDIT,KAFKA_HDFS_AUDIT
+      -Dhdfs.audit.logger=INFO,DRFAAUDIT,KAFKA_HDFS_AUDIT
 
-Step 4: Add logstash kafka jars into Hadoop classpath by appending the following command to $HADOOP_CONF_DIR/hadoop-env.sh.
+* **Step 4**: Add logstash kafka jars into Hadoop classpath by appending the following command to $HADOOP_CONF_DIR/hadoop-env.sh.
 
-        export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/path/to/eagle/lib/log4jkafka/lib/*
+      export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/path/to/eagle/lib/log4jkafka/lib/*
 
-Step 5: restart the namenode.
+* **Step 5**: restart the namenode.
 
-Step 6: Validate if it works.
-
-* Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` with Kafka command line `bin/kafka-console-consumer.sh`
+* **Step 6**: Validate if it works: check whether logs are flowing into Topic `sandbox_hdfs_audit_log` with Kafka command line `bin/kafka-console-consumer.sh`
 
 
 

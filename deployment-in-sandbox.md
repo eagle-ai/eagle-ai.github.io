@@ -7,22 +7,24 @@ permalink: /docs/deployment-in-sandbox.html
 
 ### Pre-requisites
 
-#### Environment
-To install eagle on a sandbox you need to run a HDP sandbox image in a virtual machine with 8GB memory recommended.
+* **Environment**
 
-1. Get Virtual Box or VMware [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install)  
-2. Get [Hortonworks Sandbox v 2.2.4](http://hortonworks.com/products/hortonworks-sandbox/#archive)
+    To install eagle on a sandbox you need to run a HDP sandbox image in a virtual machine with 8GB memory recommended.
 
-#### Dependent services
-1. Grant root as HBase superuser
-![add superuser](/images/docs/hbaseSuperuser.png)
+    1. Get Virtual Box or VMware [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install)  
+    2. Get [Hortonworks Sandbox v 2.2.4](http://hortonworks.com/products/hortonworks-sandbox/#archive)
 
-2. Start Storm, HBase & Kafka via Ambari UI. Showing Storm as an example below.
-![Restart Services](/images/docs/startStorm.png "Services")
+* **Dependent services**
+
+    1. Grant root as HBase superuser
+    ![add superuser](/images/docs/hbaseSuperuser.png)
+
+    2. Start Storm, HBase & Kafka via Ambari UI. Showing Storm as an example below.
+    ![Restart Services](/images/docs/startStorm.png "Services")
 
 ### Eagle Installation Steps
 
-* Step 1: Download Eagle tarball
+* **Step 1**: Download Eagle tarball
 
     * **Option 1**: Download eagle jar from [here](http://xyz.com).
 
@@ -30,13 +32,13 @@ To install eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 
           mvn clean install -DskipTests=true
 
-* Step 2: Copy the tarball into sandbox and extract it
+* **Step 2**: Copy the tarball into sandbox and extract it
 
       #extract
       tar -zxvf eagle-0.1.0-bin.tar.gz
       mv eagle-0.1.0 /usr/hdp/current/eagle
 
-* Step 3: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
+* **Step 3**: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
 
     * **Option 1**: Start Eagle Service using command line
 
@@ -45,11 +47,11 @@ To install eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 
     * **Option 2**: Start Eagle Service using [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
 
-* Step 4: Check [Eagle service UI](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
+* **Step 4**: Check [Eagle service UI](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
 ![Forwarding Port](/images/docs/eagleService.png)
 
-* Step 5: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/importHDFSAuditLog.html).
+* **Step 5**: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/importHDFSAuditLog.html).
 
     1. Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add a log4j appender called "KAFKA_HDFS_AUDIT" to hdfs audit logging.
 
