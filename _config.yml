@@ -1,6 +1,6 @@
 # Site settings
 title: Eagle
-email: hchen9@ebay.com
+email: cn.haochen@gmail.com
 description: Secure Hadoop in Real Time
 
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -21,30 +21,30 @@ documentations:
   - category: Installation
     links:
       - title: Deploy Eagle in Sandbox
-        url: /docs/deploymentInSandbox.html
+        url: /docs/deployment-in-sandbox.html
       - title: Deploy Eagle in the Production
-        url: /docs/deploymentInProduction.html
+        url: /docs/deployment-in-production.html
       - title: Stream Log Data into Kafka
-        url: /docs/importHDFSAuditLog.html
+        url: /docs/import-hdfs-auditLog.html
       - title: Install Eagle Ambari Plugin
-        url: /docs/ambariPluginInstall.html
+        url: /docs/ambari-plugin-install.html
       - title: Frequently Asked Questions
         url: /docs/FAQ.html
   - category: Policy Management
     links:
       - title: HDFS Policies
-        url: /docs/hdfspolicy.html
+        url: /docs/hdfs-policy.html
       - title: Hive Policies
-        url: /docs/hivepolicy.html
+        url: /docs/hive-policy.html
   - category: User Profiles
     links:
       - title: Offline Training
-        url: /docs/offlineUserProfiles.html
+        url: /docs/offline-user-profiles.html
       - title: Online Processing
-        url: /docs/onlineUserProfiles.html
+        url: /docs/online-user-profiles.html
   - category: Data Classification
     links:
       - title: HDFS
-        url: /docs/hdfsclassify.html
+        url: /docs/hdfs-classify.html
       - title: Hive
-        url: /docs/hiveclassify.html
+        url: /docs/hive-classify.html

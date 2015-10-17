@@ -61,6 +61,7 @@ html[xmlns] .clearfix{display:block;}
   }
   #sidebar .nav>li>a {
     /***color: #ddd;***/
+    color: #4184E
   }
   
   .sidenavli:hover {

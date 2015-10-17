@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Apache Eagle"
+title:  "Eagle"
 date:   2015-09-23 19:24:33
 categories: documentation
 ---
