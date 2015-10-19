@@ -14,7 +14,7 @@ layout: page
         {% for doc in site.documentations %} 
         <li class="heading">{{ doc.category }}</li>
         {% for link in doc.links %}
-          <li class="sidenavli"><a href="{{ link.url }}" id="{{link.id}}">{{ link.title }}</a></li>
+          <li class="sidenavli  {% if link.url == page.permalink %}current{% endif %}"><a href="{{ link.url }}" data-permalink="{{ page.permalink }}" id="{{link.id}}">{{ link.title }}</a></li>
         {% endfor %}
         <li class="divider"></li>
       {% endfor %}

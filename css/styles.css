@@ -62,12 +62,18 @@ html[xmlns] .clearfix{display:block;}
     color: #126acb;
   }
 
-  .#sidebar ul.nav > li:hover {
-    text-decoration: none;
-    color: #008CBA;  
-	  margin-right: 20px;
-	  background-color:#efefef;
-  }
+#sidebar ul.nav > li.current {
+  text-decoration: none;
+  color: #008CBA;  
+  background-color:#efefef;
+}
+
+.#sidebar ul.nav > li:hover {
+  text-decoration: none;
+  color: #008CBA;  
+  margin-right: 20px;
+  background-color:#efefef;
+}
 
   #sidebar li.divider {
     margin: 16px 20px 16px 0px;
