@@ -45,10 +45,8 @@ img{border:0; max-width:100%;}
 html[xmlns] .clearfix{display:block;}
 * html .clearfix{height:1%;}
 
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300);
+@import url(/fonts/google-font-titillium-web.css);
 
-
-	
 #sidebar {
     padding-top:0;
   }
@@ -59,21 +57,21 @@ html[xmlns] .clearfix{display:block;}
   #sidebar .nav>li:first-child {
     border-top:0;
   }
-  #sidebar .nav>li>a {
+  #sidebar ul.nav > li >a {
     /***color: #ddd;***/
-    color: #4184E
+    color: #4285f4;
   }
-  
-  .sidenavli:hover {
+
+  .#sidebar ul.nav > li:hover {
     text-decoration: none;
     color: #008CBA;  
-	margin-right: 20px;
-	background-color:#efefef;
+	  margin-right: 20px;
+	  background-color:#efefef;
   }
-  
+
   #sidebar li.divider {
     margin: 16px 20px 16px 0px;
-}
+  }
   
 .divider{
 	border-top: 1px solid;
@@ -84,7 +82,8 @@ html[xmlns] .clearfix{display:block;}
 }
 
 #sidebar li.heading {
-    color: #008CBA;
+    /*color: #008CBA;*/
+    color: #4285f4;
     font-weight: bold;
     text-transform: uppercase;
 }
