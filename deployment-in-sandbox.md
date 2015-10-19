@@ -50,7 +50,7 @@ permalink: /docs/deployment-in-sandbox.html
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
 ![Forwarding Port](/images/docs/eagleService.png)
 
-* **Step 5**: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/importHDFSAuditLog.html).
+* **Step 5**: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/import-hdfs-auditLog.html).
 
     1. Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add a log4j appender called "KAFKA_HDFS_AUDIT" to hdfs audit logging.
 
