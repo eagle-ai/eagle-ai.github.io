@@ -37,14 +37,14 @@ permalink: /docs/deployment-in-sandbox.html
       $ tar -zxvf eagle-0.1.0-bin.tar.gz
       $ mv eagle-0.1.0 /usr/hdp/current/eagle
 
-* **Step 3**: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
+* **Step 3**: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/online-user-profiles.html)
 
     * **Option 1**: Start Eagle Service using command line
 
           $ cd /usr/hdp/current/eagle
           $ examples/eagle-sandbox-starter.sh
 
-    * **Option 2**: Start Eagle Service using [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
+    * **Option 2**: Start Eagle Service using [Eagle Ambari plugin](/docs/ambari-plugin-install.html)
 
 * **Step 4**: Check [Eagle service UI](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
