@@ -11,7 +11,7 @@ each data source, a connection configuration is required.
 This document has two parts. The first part is about how to add a new site; the second part shows how to add the configuration for
 each data source.
 
-**Notice**: by default, Site "sandbox" is provided with three configured data sources.
+> **Notice**: by default, Site "sandbox" is provided with three configured data sources.
 
 ### **Part 1: Add Site**
 
