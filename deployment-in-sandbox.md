@@ -29,10 +29,10 @@ permalink: /docs/deployment-in-sandbox.html
 
     * **Option 1**: Download eagle jar from [here](http://xyz.com).
 
-    * **Option 2**: Build form source code [eagle github](https://github.com/eBay/Eagle), and eagle-xxx-bin.tar.gz will be generated under `./eagle-assembly/target`
-
+    * **Option 2**: Build form source code [eagle github](https://github.com/eBay/Eagle). After successful build, ‘eagle-xxx-bin.tar.gz’ will be generated under `./eagle-assembly/target`
+          
           $ mvn clean install -DskipTests=true
-
+          
 * **Step 2**: Copy the tarball into sandbox and extract it
 
       #extract
@@ -52,9 +52,10 @@ permalink: /docs/deployment-in-sandbox.html
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
 ![Forwarding Port](/images/docs/eagle-service.png)
 
-* **Step 5**: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/import-hdfs-auditLog.html).
+* **Step 5**: To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/import-hdfs-auditLog.html).
 
-    1. Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add a log4j appender called "KAFKA_HDFS_AUDIT" to hdfs audit logging.
+    1. Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
+
 
             log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
             log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
@@ -66,16 +67,24 @@ permalink: /docs/deployment-in-sandbox.html
             #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
             #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
 
-    2. Edit Advanced hadoop-env via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
+
+	     ![HDFS LOG4J Configuration](/images/docs/hdfs-log4j-conf.png "hdfslog4jconf")	
+
+    2. Save Changes.
+
+    3. Edit Advanced hadoop-env via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add the reference to KAFKA_HDFS_AUDIT to HADOOP_NAMENODE_OPTS.
 
             -Dhdfs.audit.logger=INFO,DRFAAUDIT,KAFKA_HDFS_AUDIT
 
-    3. Edit Advanced hadoop-env via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and append the following command to it.
+        ![HDFS Environment Configuration](/images/docs/hdfs-env-conf.png "hdfsenvconf")
+	
+    4. Edit Advanced hadoop-env via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and append the following command to it.
 
             export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/usr/hdp/current/eagle/lib/log4jkafka/lib/*
+	
+    5. Save the changes and restart the namenode
 
-    4. Save the changes and restart the namenode
-    5. Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` when Kafka is started
+    6. Check whether logs are flowing into Topic `sandbox_hdfs_audit_log` when Kafka is started
 
             $ /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
 
@@ -88,6 +97,8 @@ You have now successfully installed Eagle. You can try creating new policies on 
 
       $ hdfs dfs -cat /tmp/private
 
+  You should see an alert for policy name “viewPrivate” in [Eagle service UI](http://localhost:9099/eagle-service) . Under Alerts page. 
+
 * Hive Query Log
 
       $ su hive
@@ -95,6 +106,8 @@ You have now successfully installed Eagle. You can try creating new policies on 
       > set hive.execution.engine=mr;
       > use xademo;
       > select a.phone_number from customer_details a, call_detail_records b where a.phone_number=b.phone_number;
+
+  You should see an alert for policy name “queryPhoneNumber” in [Eagle service UI](http://localhost:9099/eagle-service) . Under Alerts page. 
 
 ### Stop Services
 
