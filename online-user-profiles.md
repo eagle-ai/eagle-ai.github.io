@@ -15,6 +15,6 @@ is started. Two options to start the topology are provided.
 
 * **Option 2**: Ambari
 	
-	![Online userProfiles](/images/docs/onlineUserProfile.png)
+	![Online userProfiles](/images/docs/online-userprofile.png)
 
 

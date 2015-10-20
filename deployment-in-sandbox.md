@@ -15,11 +15,11 @@ permalink: /docs/deployment-in-sandbox.html
 
 * **Dependent services**
 
-    1. Grant root as HBase superuser
-    ![add superuser](/images/docs/hbaseSuperuser.png)
+    1. Grant root as HBase superuser via Ambari
+    ![add superuser](/images/docs/hbase-superuser.png)
 
     2. Start Storm, HBase & Kafka via Ambari UI. Showing Storm as an example below.
-    ![Restart Services](/images/docs/startStorm.png "Services")
+    ![Restart Services](/images/docs/start-storm.png "Services")
 
 ### Eagle Installation Steps
 
@@ -48,7 +48,7 @@ permalink: /docs/deployment-in-sandbox.html
 
 * **Step 4**: Check [Eagle service UI](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
-![Forwarding Port](/images/docs/eagleService.png)
+![Forwarding Port](/images/docs/eagle-service.png)
 
 * **Step 5**: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/import-hdfs-auditLog.html).
 

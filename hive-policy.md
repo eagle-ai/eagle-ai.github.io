@@ -12,7 +12,7 @@ In this example we will go thru the steps for creating the following Hive policy
 
 * **Step 1**:  Select Source as Hive and Stream as Hive Query Log
 
-	![Hive Policies](/images/docs/HivePolicy1.png)
+	![Hive Policies](/images/docs/hive-policy1.png)
 
 * **Step 2**: Eagle support a variety of properties for match critera where users can set different values. Eagle also supports window functions to extend policies with time functions.
 
@@ -24,9 +24,9 @@ In this example we will go thru the steps for creating the following Hive policy
 
 	  Sensitivity Type = PHONE_NUMBER
 
-	![Hive Policies](/images/docs/HivePolicy2.png)
+	![Hive Policies](/images/docs/hive-policy2.png)
 
 * **Step 3**: Name your policy and select de-duplication options if you need to avoid getting duplicate alerts within a particular time window. You have an option to configure email notifications for the alerts.
 
-	![Hive Policies](/images/docs/HivePolicy3.png)
+	![Hive Policies](/images/docs/hive-policy3.png)
 

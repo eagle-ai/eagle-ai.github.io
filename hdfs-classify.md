@@ -1,39 +1,47 @@
 ---
 layout: doc
-title:  "HDFS Classification"
+title:  "Data Classification"
 permalink: /docs/hdfs-classify.html
 ---
 
-Data classification in Eagle provides the ability to classify HDFS and Hive data with different levels of sensitivity. For both HDFS and Hive, a user can add, delete, and browse the resources and add the sensitivity information.
+Eagle Data classification provides the ability to classify HDFS and Hive data with different levels of sensitivity.
+For both HDFS and Hive, a user can add, delete, and browse the resources and add the sensitivity information.
+
+This document has two parts. The first part is about how to add/remove sensitivity to files/directories; the second part shows the application
+in policy definition. Showing HDFS as an example.
+
+**WARNING**: please mark sure the site (on the upper right corner) have been correctly configured on [setup page](/docs/setup.html) AT FIRST.
+
+#### **Part 1: Sensitivity Edit**
+
+* add the sensitive mark to files/directories.
+
+    * Option 1: Import json file/content
+
+    ![HDFS classification](/images/docs/hdfs-import1.png)
+    ![HDFS classification](/images/docs/hdfs-import2.png)
+    ![HDFS classification](/images/docs/hdfs-import3.png)
+
+    * Option 2: Label sensitivity files directly (**recommended**)
+
+    ![HDFS classification](/images/docs/hdfs-mark1.png)
+    ![HDFS classification](/images/docs/hdfs-mark2.png)
+    ![HDFS classification](/images/docs/hdfs-mark3.png)
+
+* remove sensitive mark on files/directories
+
+    * Option 1
+
+    ![HDFS classification](/images/docs/hdfs-delete1.png)
+    ![HDFS classification](/images/docs/hdfs-delete2.png)
+
+    * Option 2
+
+    ![HDFS classification](/images/docs/hdfs-remove.png)
+
+#### **Part 2: Sensitivity Usage in Policy Definition**
 
 For example: You can mark a particular folder/file which contains sensitivity data like address with a sensitive label. Once you have this information you can create policies using this label.
+the following policy monitors all the operations to resources with sensitivity type "PRIVATE".
+![sensitivity type policy](/images/docs/sensitivity-policy.png)
 
-#### Browsing HDFS
-![HDFS classification](/images/docs/hdfsBrowse.png)
-
-#### Add Sensitivity
-
-To add the sensitive info to files/directories, there are two ways.
-
-* Option 1: Import json file/content
-
-![HDFS classification](/images/docs/hdfsImport.png)
-![HDFS classification](/images/docs/hdfsImport2.png)
-![HDFS classification](/images/docs/hdfsImport3.png)
-
-* Option 2: Label sensitivity files directly from the UI
-
-![HDFS classification](/images/docs/hdfsMark.png)
-![HDFS classification](/images/docs/hdfsMark2.png)
-![HDFS classification](/images/docs/hdfsMark3.png)
-
-#### Delete Sensitivity
-
-* Option 1
-
-![HDFS classification](/images/docs/hdfsDelete.png)
-![HDFS classification](/images/docs/hdfsDelete2.png)
-
-* Option 2
-
-![HDFS classification](/images/docs/hdfsRemove.png)

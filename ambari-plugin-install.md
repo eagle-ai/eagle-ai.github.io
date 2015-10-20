@@ -27,8 +27,8 @@ Assume Eagle package has been copied and exacted under /usr/hdp/current/eagle.
 
 4. Add Eagle Service to Ambari. Click on "Add Service" on Ambari Main page
 
-    ![AddService](/images/docs/AddService.png "AddService")
-    ![Eagle Services](/images/docs/EagleServiceSuccess.png "Eagle Services")
+    ![AddService](/images/docs/add-service.png "AddService")
+    ![Eagle Services](/images/docs/eagle-service-success.png "Eagle Services")
 
 5. Add Policies and meta data required by running the below script.
 

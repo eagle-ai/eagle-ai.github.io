@@ -44,7 +44,7 @@ documentations:
         url: /docs/online-user-profiles.html
   - category: Data Classification
     links:
-      - title: HDFS
+      - title: Site Management
+        url: /docs/setup.html
+      - title: Classfication
         url: /docs/hdfs-classify.html
-      - title: Hive
-        url: /docs/hive-classify.html

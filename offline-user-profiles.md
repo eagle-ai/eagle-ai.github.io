@@ -11,7 +11,7 @@ is started.
 ### Steps of starting offline processing
 
 * **Step 1**: Start Spark if not started
-![Start Spark](/images/docs/startSpark2.png)
+![Start Spark](/images/docs/start-spark.png)
 
 * **Step 2**: start offline scheduler
 
@@ -21,12 +21,12 @@ is started.
 	      $ bin/eagle-userprofile-scheduler.sh --site sandbox start
 
 	* Option 2: start via Ambari
-	![Click "ops"](/images/docs/UserProfile.png)
+	![Click "ops"](/images/docs/offline-userprofile.png)
 
 * **Step 3**: generate a model
 
-	![Click "ops"](/images/docs/step1.png)
-	![Click "Update Now"](/images/docs/step2.png)
-	![Click "Confirm"](/images/docs/step3.png)
-	![Check](/images/docs/step4.png)
+	![Click "ops"](/images/docs/userprofile1.png)
+	![Click "Update Now"](/images/docs/userprofile2.png)
+	![Click "Confirm"](/images/docs/userprofile3.png)
+	![Check](/images/docs/userprofile4.png)
 
