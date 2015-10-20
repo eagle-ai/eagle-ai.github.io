@@ -20,7 +20,7 @@ The following is an example which creates a new site "Demo", and add two data so
 
 ### **Part 2: Add Configuration**
 
-Different sites need different configuration. Here are example configurations for Site "sandbox"
+Different sites need different configuration. Here are example configurations for sandbox
 ![hdfs setup](/images/docs/hdfs-setup.png)
 ![hdfs setup](/images/docs/hive-setup.png)
 ![hdfs setup](/images/docs/userprofile-setup.png)
