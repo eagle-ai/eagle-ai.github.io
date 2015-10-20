@@ -15,10 +15,12 @@ permalink: /docs/deployment-in-sandbox.html
 
 * **Dependent services**
 
-    1. Grant root as HBase superuser via Ambari
+    1. Launch Ambari to manage the Hadoop environment in sandbox
+       * Enable Ambari in sandbox http://127.0.0.1:8000 (Click on Enable Button)
+       * Login to Ambari UI http://127.0.0.1:8080/ with username and password as "admin"
+    2. Grant root as HBase superuser via Ambari
     ![add superuser](/images/docs/hbase-superuser.png)
-
-    2. Start Storm, HBase & Kafka via Ambari UI. Showing Storm as an example below.
+    3. Start Storm, HBase & Kafka Ambari. Showing Storm as an example below.
     ![Restart Services](/images/docs/start-storm.png "Services")
 
 ### Eagle Installation Steps

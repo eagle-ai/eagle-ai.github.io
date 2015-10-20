@@ -10,19 +10,19 @@ For both HDFS and Hive, a user can add, delete, and browse the resources and add
 This document has two parts. The first part is about how to add/remove sensitivity to files/directories; the second part shows the application
 in policy definition. Showing HDFS as an example.
 
-**WARNING**: please mark sure the site (on the upper right corner) have been correctly configured on [setup page](/docs/setup.html) AT FIRST.
+> **WARNING**: please mark sure the site (on the upper right corner) have been correctly configured on [setup page](/docs/setup.html) AT FIRST.
 
 #### **Part 1: Sensitivity Edit**
 
 * add the sensitive mark to files/directories.
 
-    * Option 1: Import json file/content
+    * **Option 1**: Import json file/content
 
     ![HDFS classification](/images/docs/hdfs-import1.png)
     ![HDFS classification](/images/docs/hdfs-import2.png)
     ![HDFS classification](/images/docs/hdfs-import3.png)
 
-    * Option 2: Label sensitivity files directly (**recommended**)
+    * **Option 2**: Label sensitivity files directly (**recommended**)
 
     ![HDFS classification](/images/docs/hdfs-mark1.png)
     ![HDFS classification](/images/docs/hdfs-mark2.png)
@@ -30,12 +30,12 @@ in policy definition. Showing HDFS as an example.
 
 * remove sensitive mark on files/directories
 
-    * Option 1
+    * **Option 1**
 
     ![HDFS classification](/images/docs/hdfs-delete1.png)
     ![HDFS classification](/images/docs/hdfs-delete2.png)
 
-    * Option 2
+    * **Option 2**
 
     ![HDFS classification](/images/docs/hdfs-remove.png)
 
