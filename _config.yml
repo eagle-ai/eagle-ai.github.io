@@ -1,12 +1,12 @@
 # Site settings
 title: Eagle
 email: cn.haochen@gmail.com
-description: Secure Hadoop in Real Time
+description: Eagle - Secure Hadoop in Real Time
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://goeagle.io" # the base hostname & protocol for your site
-twitter_username: eagle
-github_username:  eagle
+# twitter_username: eagle
+# github_username:  eagle
 
 # Build settings
 markdown: kramdown
