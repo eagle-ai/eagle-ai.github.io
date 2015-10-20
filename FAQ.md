@@ -34,7 +34,7 @@ permalink: /docs/FAQ.html
 
 	> Storm in sandbox has only two slots (workers) to run topologies by default. If want to run more than two topologies, a user should add extra slots in the
 configurations and restart Storm
-	![Add slots](/images/docs/stormConf.png)
+	![Add slots](/images/docs/storm-slot.png)
 
 
 
