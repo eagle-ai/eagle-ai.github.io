@@ -37,20 +37,20 @@ permalink: /docs/deployment-in-sandbox.html
       $ tar -zxvf eagle-0.1.0-bin.tar.gz
       $ mv eagle-0.1.0 /usr/hdp/current/eagle
 
-* **Step 3**: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/onlineUserProfiles.html)
+* **Step 3**: Install Eagle service and three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/online-user-profiles.html)
 
     * **Option 1**: Start Eagle Service using command line
 
           $ cd /usr/hdp/current/eagle
           $ examples/eagle-sandbox-starter.sh
 
-    * **Option 2**: Start Eagle Service using [Eagle Ambari plugin](/docs/ambariPluginInstall.html)
+    * **Option 2**: Start Eagle Service using [Eagle Ambari plugin](/docs/ambari-plugin-install.html)
 
 * **Step 4**: Check [Eagle service UI](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
 ![Forwarding Port](/images/docs/eagleService.png)
 
-* **Step 5**: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/importHDFSAuditLog.html).
+* **Step 5**: (Optional) To enable the alerting function of HDFSAuditLog, a log4j Kafka appender need to be installed to stream audit log into Kafka. Another option Logstash is [here](/docs/import-hdfs-auditLog.html).
 
     1. Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add a log4j appender called "KAFKA_HDFS_AUDIT" to hdfs audit logging.
 
