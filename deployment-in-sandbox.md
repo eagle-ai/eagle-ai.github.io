@@ -25,7 +25,7 @@ permalink: /docs/deployment-in-sandbox.html
 
 * **Step 1**: Download Eagle tarball
 
-    * **Option 1**: Download eagle jar from [here](http://xyz.com).
+    * **Option 1**: Download eagle jar from [here](http://66.211.190.194/eagle-0.1.0.tar.gz).
 
     * **Option 2**: Build form source code [eagle github](https://github.com/eBay/Eagle), and eagle-xxx-bin.tar.gz will be generated under `./eagle-assembly/target`
 
