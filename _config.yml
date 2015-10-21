@@ -17,7 +17,9 @@ documentations:
       - title: What is Eagle
         url: /docs/index.html
       - title: Use Cases
-        url: /docs/usecase.html        
+        url: /docs/usecase.html
+      - title: Frequently Asked Questions
+        url: /docs/FAQ.html
   - category: Installation
     links:
       - title: Deploy Eagle in Sandbox
@@ -28,8 +30,8 @@ documentations:
         url: /docs/import-hdfs-auditLog.html
       - title: Install Eagle Ambari Plugin
         url: /docs/ambari-plugin-install.html
-      - title: Frequently Asked Questions
-        url: /docs/FAQ.html
+      - title: Topology Configuration
+        url: /docs/configuration.html
   - category: Policy Management
     links:
       - title: HDFS Policies
