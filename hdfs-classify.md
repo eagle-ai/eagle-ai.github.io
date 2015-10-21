@@ -5,10 +5,10 @@ permalink: /docs/hdfs-classify.html
 ---
 
 Eagle Data classification provides the ability to classify HDFS and Hive data with different levels of sensitivity.
-For both HDFS and Hive, a user can add, delete, and browse the resources and add the sensitivity information.
+For both HDFS and Hive, a user can browse the resources and add/remove the sensitivity information.
 
 This document has two parts. The first part is about how to add/remove sensitivity to files/directories; the second part shows the application
-in policy definition. Showing HDFS as an example.
+of sensitivity in policy definition. Showing HDFS as an example.
 
 > **WARNING**: please mark sure the site (on the upper right corner) have been correctly configured on [setup page](/docs/setup.html) AT FIRST.
 
