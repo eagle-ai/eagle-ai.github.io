@@ -19,10 +19,8 @@ In this example we will go thru the steps for creating the following Hive policy
 	  command = Select 
 	  (Eagle currently supports the following commands DDL statements Create, Drop, Alter, Truncate, Show)
 		
-	  source = /tmp/private
-	  (Eagle supports wildcarding for property values for example /tmp/*)
-
-	  Sensitivity Type = PHONE_NUMBER
+	  sensitivity type = PHONE_NUMBER
+      (Eagle supports classifying data in Hive with different sensitivity types. Users can use these sensitivity types to create policies)
 
 	![Hive Policies](/images/docs/hive-policy2.png)
 
