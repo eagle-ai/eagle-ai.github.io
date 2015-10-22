@@ -1,7 +1,7 @@
 ---
 layout: doc
 title:  "Site Management"
-permalink: /docs/setup.html
+permalink: /docs/tutorial/setup.html
 ---
 
 Eagle identifies different data platforms as different sites, such as sandbox, datacenter1, datacenter2. In each site,

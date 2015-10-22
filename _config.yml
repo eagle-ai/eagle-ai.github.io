@@ -12,14 +12,20 @@ url: "http://goeagle.io" # the base hostname & protocol for your site
 markdown: kramdown
 
 documentations:
-  - category: Overview
+  - category: Getting Started
     links:
-      - title: What is Eagle
+      - title: Introduction
         url: /docs/index.html
-      - title: Use Cases
-        url: /docs/usecase.html
-      - title: Frequently Asked Questions
+      - title: Quick Start
+        url: /docs/quick-start.html
+      - title: Ecosystem
+        url: /docs/ecosystem.html
+      - title: FAQ
         url: /docs/FAQ.html
+      - title: Events and Meetups
+        url: /docs/events.html
+      - title: Terminology
+        url: /docs/terminology.html
   - category: Installation
     links:
       - title: Deploy Eagle in Sandbox
@@ -30,23 +36,25 @@ documentations:
         url: /docs/import-hdfs-auditLog.html
       - title: Install Eagle Ambari Plugin
         url: /docs/ambari-plugin-install.html
-      - title: Topology Configuration
+      - title: Configuration
         url: /docs/configuration.html
-  - category: Policy Management
-    links:
-      - title: HDFS Policies
-        url: /docs/hdfs-policy.html
-      - title: Hive Policies
-        url: /docs/hive-policy.html
-  - category: User Profiles
-    links:
-      - title: Offline Training
-        url: /docs/offline-user-profiles.html
-      - title: Online Processing
-        url: /docs/online-user-profiles.html
-  - category: Data Classification
-    links:
-      - title: Site Management
-        url: /docs/setup.html
-      - title: Classfication
-        url: /docs/hdfs-classify.html
+  - category: Tutorial
+    links: 
+      - title: Site Management Tutorial
+        url: /docs/tutorial/setup.html
+      - title: Eagle Policy Tutorial
+        url: /docs/tutorial/policy.html
+      - title: User Profile Tutorial
+        url: /docs/tutorial/userprofile.html
+      - title: Data Classification Tutorial
+        url: /docs/tutorial/classification.html
+  - category: Advanced
+    links: 
+      - title: Policy API Design
+        url: /docs/alert-api.html
+      - title: Alert API Design
+        url: /docs/alert-api.html
+      - title: Query API Design
+        url: /docs/userprofile.html
+      - title: User Profile Design
+        url: /docs/userprofile.html

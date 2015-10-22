@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Eagle Topology Configuration"
+title:  "Configuration"
 permalink: /docs/configuration.html
 ---
 
