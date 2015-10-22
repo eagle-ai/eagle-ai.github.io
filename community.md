@@ -27,7 +27,7 @@ permalink: /docs/community.html
 * [Adunuthula, Seshu](https://github.com/seshuad)
 * [Arun Manoharan](https://github.com/armanoharan)
 * [Edward Zhang (张勇)](https://github.com/yonzhang)
-* [Hao Chen（陈浩）](https://github.com/yonzhang)
+* [Hao Chen（陈浩）](https://github.com/haoch)
 * [Chaitali Gupta](https://github.com/chaitaligupta)
 * [Libin Sun（孙立斌）](https://github.com/sunlibin)
 * [Jilin Jiang（将吉麟）](https://github.com/zombiej)
