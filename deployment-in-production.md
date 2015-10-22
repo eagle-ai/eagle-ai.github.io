@@ -5,9 +5,21 @@ permalink: /docs/deployment-in-production.html
 ---
 
 
-Eagle requires you to have access on Hadoop CLI, where you have full permissions to HDFS, Storm, HBase and Kafka. To make things easier, we strongly recommend you to [start eagle on a sandbox](/docs/deployment-in-sandbox.html).
+This page outlines the steps for manually deploying Eagle in the production environment. For a quick start, we strongly recommend you to [start eagle on a sandbox](/docs/deployment-in-sandbox.html).
 
-### Pre-requisites
+
+Here's the main content of this page:
+
+* Pre-requisites
+   * Environment
+   * Stream HDFS audit log data into Kafka
+* Install Steps
+   * Edit Configure files
+   * Install and start Eagle services
+* Stop Services
+
+
+### **Pre-requisites**
 
 * **Environment**
 
@@ -16,7 +28,7 @@ Eagle requires you to have access on Hadoop CLI, where you have full permissions
     * Kafka: 0.8.x or later
     * Java: 1.7.x
 
-* **Prepare the audit log data for Eagle (Only for HDFSAuditLog Monitoring)**
+* **Stream HDFS audit log data (Only for HDFSAuditLog Monitoring)**
 
     1. Create a Kafka topic for importing audit log. Here is an example command to create topic sandbox_hdfs_audit_log.
 
@@ -26,9 +38,9 @@ Eagle requires you to have access on Hadoop CLI, where you have full permissions
     2. Populate audit log into the Kafka topic created above, and refer to [here](/docs/importHDFSAuditLog.html) on How to do it.
 
 
-### Steps of installing Eagle
+### **Install Steps**
 
-* **Step 1**: Edit configuration files
+* **Edit configuration files**:
 
     * Edit `bin/eagle-env.sh`
 
@@ -62,37 +74,11 @@ Eagle requires you to have access on Hadoop CLI, where you have full permissions
           # default is "/hbase"
           zookeeper-znode-parent="/hbase"
 
-    * Create a configuration file for each type of Eagle topology under conf/, and please refer to the [sample versions](https://github.xyz.com/eagle/eagle/tree/master/eagle-assembly/src/main/conf).
+    * Create a configuration file for each type of Eagle topology under conf/, and please refer to the [sample versions](https://github.com/eBay/Eagle/tree/master/eagle-assembly/src/main/conf).
+      For more detailed information on configuration, please refer to [this page](/docs/configuration.html)
 
-          # Here are some importance configurations.
 
-          ## envContextConfig
-          # TODO: change mode to cluster
-          "mode" : "cluster"
-
-          ## dataSourceConfig
-          "zkConnection" : "localhost:2181"
-          # TODO: only for HDFS
-          "transactionZKServers" : "localhost"
-          # TODO: only for HDFS, make sure the kafka topic same as your topic that have been created
-          "topic" : "sandbox_hdfs_audit_log"
-          # TODO: only for Hive
-          "RMEndPoints" : ""
-          # TODO: only for Hive
-          "HSEndPoint" : ""
-
-          ## eagleProps
-          "site" : "sandbox",
-
-          ## eagleService
-          "host" : "localhost",
-          "port" : 9099,
-
-          # SMTP server
-          "mailHost" : "mx.xyz.com",
-          "mailSmtpPort":"25",
-
-* **Step 2**: Start Eagle services
+* **Install and start Eagle services**
 
     * Start eagle service
 
@@ -105,25 +91,32 @@ Eagle requires you to have access on Hadoop CLI, where you have full permissions
           # start eagle service
           $ bin/eagle-service.sh start
 
-    * Start an eagle topology
+    * Start eagle topologies
 
           # import metadata for the first installation
           $ bin/eagle-topology-init.sh
 
-          # start eagle topology
-          $ bin/eagle-topology.sh --jar <topologyJar> --main <mainClass> --config <path-to-config> start
+          # start HDFS audilt log monitoring (Optional)
+          $ bin/eagle-topology.sh --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/custom-hdfsAuditLog-application.conf start
 
-        Here are some examples
+          # start Hive Query Log Monitoring (Optional)
+          $ bin/eagle-topology.sh --main eagle.security.hive.jobrunning.HiveJobRunningMonitoringMain --config conf/custom-hiveQueryLog-application.conf start
 
-          # start HDFS audilt log monitoring
-          $ bin/eagle-topology.sh --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/sandbox-hdfsAuditLog-application.conf start
-
-          # start Hive Query Log Monitoring
-          $ bin/eagle-topology.sh --main eagle.security.hive.jobrunning.HiveJobRunningMonitoringMain --config conf/sandbox-hiveQueryLog-application.conf start
-
-          # start User Profiles
-          $ bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf start
-
-* **Step 3**: Check [Eagle Service UI](http://localhost:9099/eagle-service) and [Storm Topology UI](http://localhost:8744) with default username/password: `admin/secret`.
+          # start User Profiles (Optional)
+          $ bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/custom-userprofile-topology.conf start
 
 
+You have now successfully installed Eagle. You can visit [Eagle Service UI](http://localhost:9099/eagle-service) with username/password `admin/secret`, and check
+Storm topology http://localhost:8744.
+
+### **Stop Services**
+
+* Stop eagle service
+
+      $ bin/eagle-service.sh stop
+
+* Stop eagle topologies
+
+      $ bin/eagle-topology.sh --topology custom-hdfsAuditLog-topology stop
+      $ bin/eagle-topology.sh --topology custom-hiveQueryRunning-topology stop
+      $ bin/eagle-topology.sh --topology custom-userprofile-topology stop
