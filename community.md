@@ -37,5 +37,8 @@ permalink: /docs/community.html
 
 ### Project History
 
-* **Oct 20th, 2015** Eagle was officially open sourced by [eBay Inc](http://www.ebay.com).
+* **Oct 20th, 2015** Eagle was officially open sourced by [eBay Inc.](http://www.ebay.com).
 
+### Credits
+
+* Thanks [eBay Inc.](http://www.ebay.com) to donated this project to open source community, first announement at [eBay Techblog](#).
