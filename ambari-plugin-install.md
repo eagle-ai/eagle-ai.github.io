@@ -21,7 +21,9 @@ Assume Eagle package has been copied and exacted under /usr/hdp/current/eagle.
 
 1. Start dependent services Storm, Spark, HBase & Kafka via Ambari.
 
-2. `/usr/hdp/current/eagle/bin/eagle-ambari.sh install`
+2. Install Eagle Ambari plugin
+
+       $ /usr/hdp/current/eagle/bin/eagle-ambari.sh install
 
 3. Restart [Ambari](http://127.0.0.1:8000/) click on disable and enable Ambari back.
 
