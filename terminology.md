@@ -8,3 +8,7 @@ permalink: /docs/terminology.html
 * policy
 * data source
 * stream
+* data activity monitoring
+* user profile
+* data classification
+* `TODO`

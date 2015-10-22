@@ -18,14 +18,14 @@ documentations:
         url: /docs/index.html
       - title: Quick Start
         url: /docs/quick-start.html
-      - title: Ecosystem
-        url: /docs/ecosystem.html
-      - title: FAQ
-        url: /docs/FAQ.html
-      - title: Events and Meetups
-        url: /docs/events.html
       - title: Terminology
         url: /docs/terminology.html
+      - title: Ecosystem
+        url: /docs/ecosystem.html
+      - title: Community
+        url: /docs/community.html
+      - title: FAQ
+        url: /docs/FAQ.html
   - category: Installation
     links:
       - title: Deploy Eagle in Sandbox

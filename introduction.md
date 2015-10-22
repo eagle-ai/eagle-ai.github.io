@@ -6,7 +6,7 @@ permalink: /docs/index.html
 
 ### Welcome to Eagle
 
-> " Eagle is an Open Source Monitoring solution for Hadoop to instantly detect access to sensitive data, recognize attacks, malicious activities and block access in real time. "
+> Eagle is an Open Source Monitoring solution for Hadoop to instantly detect access to sensitive data, recognize attacks, malicious activities and block access in real time. 
 
 ### Key Qualities
 
