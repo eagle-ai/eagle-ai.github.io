@@ -90,7 +90,7 @@ Here is an example configuration for both non-ambari and ambari environments.
       log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
       log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
       log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
-      log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=sync
+      log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
       #log4j.appender.KAFKA_HDFS_AUDIT.BatchSize=1
       #log4j.appender.KAFKA_HDFS_AUDIT.QueueSize=1
 
