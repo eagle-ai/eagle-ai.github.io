@@ -60,6 +60,7 @@ html[xmlns] .clearfix{display:block;}
   #sidebar ul.nav > li >a {
     /***color: #ddd;***/
     color: #126acb;
+    padding: 5px 15px;
   }
 
 #sidebar ul.nav > li.current {
