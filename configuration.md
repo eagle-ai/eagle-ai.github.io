@@ -7,91 +7,68 @@ permalink: /docs/configuration.html
 Eagle requires you to create a configuration file under `conf/` directory for each topology first. This page will give detailed
 description of Eagle topology configuration.
 
-The typical topology configuration file in Eagle consists of five parts:
-
-* envContextConfig
-* dataSourceConfig
-* alertExecutorConfigs
-* eagleProps
-* dynamicConfigSource
-
-### **envContextConfig**
-
-* Common
-
-    Property Name               | Default             | Description
-    --------------------------- | ------------------- | ------------
-    env                         | Content Cell        | Content Cell
-    mode                        | Content Cell        | Content Cell
-    topologyName                | Content Cell        | Content Cell
-    stormConfigFile             | Content Cell        | Content Cell
-    kafkaMsgConsumer            | Content Cell        | Content Cell
-    hdfsAuditLogAlertExecutor   | Content Cell        | Content Cell
-
-### **dataSourceConfig**
+Eagle currently supports to customize configurations for three kinds of topologies:
 
 * HDFS
-
-    Property Name               | Default                                               | Description
-    --------------------------- | ----------------------------------------------------  | ------------
-    topic                       | sandbox_hdfs_audit_log                                | Content Cell
-    zkConnection                | 127.0.0.1:2181                                        | Content Cell
-    zkConnectionTimeoutMS       | 15000                                                 | Content Cell
-    fetchSize                   | 1048586                                               | Content Cell
-    deserializerClass           | HdfsAuditLogKafkaDeserializer                         | Content Cell
-    transactionZKServers        | 127.0.0.1                                             | Content Cell
-    transactionZKPort           | 2181                                                  | Content Cell
-    transactionZKRoot           | /consumers                                            | Content Cell
-    consumerGroupId             | eagle.hdfsaudit.consumer                              | Content Cell
-    transactionStateUpdateMS    | 2000                                                  | Content Cell
-
 * HIVE
+* UserProfile
 
-    Property Name               | Default                             | Description
-    --------------------------- | ----------------------------------- | ------------
-    flavor                      | stormrunning                        | Content Cell
-    zkQuorum                    | localhost:2181                      | Content Cell
-    zkRoot                      | /jobrunning                         | Content Cell
-    zkSessionTimeoutMs          | 15000                               | Content Cell
-    zkRetryTimes                | 3                                   | Content Cell
-    zkRetryInterval             | 2000                                | Content Cell
-    RMEndPoints                 | http://localhost:8088/              | Content Cell
-    HSEndPoint                  | http://localhost:19888/             | Content Cell
-    partitionerCls              | eagle.job.DefaultJobPartitionerImpl | Content Cell
 
-### **alertExecutorConfigs**
+#### HdfsAuditLog
 
-* Common
+ Class            ||| Property Name        ||| Description
+ -----------------||| -------------        ||| -----------
+ envContextConfig |||   env                ||| currently only Storm is supported. Default is storm
+                  |||   mode               ||| local or cluster
+                  |||   topologyName       ||| in the format {site}-{topology-name}, submitted as Storm topology name
+                  |||   stormConfigFile    ||| a storm configuration file for override some properties
+                  |||  parallelismConfig  ||| parallelism for both kafka consumer and alert executors
+dataSourceConfig  |||  topic              ||| Kafka topic for audit log streaming, make sure it exists
+                  ||| zkConnection        ||| ZooKeeper connection string, you can also specify multiple hosts in the form hostname1:port1,hostname2:port2,hostname3:port3
+                  |||zkConnectionTimeoutMS     ||| timeout
+                  |||   fetchSize         ||| default value
+                  |||   deserializerClass ||| default value
+                  |||transactionZKServers ||| ZooKeeper servers, you can also specify multiple hosts in the form hostname1,hostname2,hostname3
+                  ||| transactionZKPort   ||| ZooKeeper connection port
+                  |||   transactionZKRoot ||| ZooKeeper chroot path for Eagle
+                  ||| consumerGroupId     ||| default is eagle.hdfsaudit.consumer
+                  ||| transactionStateUpdateMS   ||| default is 2000
+alertExecutorConfigs ||| parallelism             ||| default is 1
+                  |||   partitioner              ||| default value is eagle.alert.policy.DefaultPolicyPartitioner
+                  |||   needValidation           ||| true or false
+eagleProps        |||   site                     ||| site name, such as sandbox, datacenter1, datacenter2
+                  |||   dataSource               ||| hdfsAuditLog
+                  |||   dataJoinPollIntervalSec  ||| time interval for retrieving data from HBase
+                  |||   mailHost                 ||| SMTP server
+                  |||   mailSmtpPort             ||| SMTP server port, default is 25
+                  |||   mailDebug                ||| true or false
+                  |||   eagleService.host        ||| tomcat server host, default is localhost
+                  |||   eagleService.port        ||| 9099
+                  |||   eagleService.username    ||| admin
+                  |||   eagleService.password    ||| secret
+ dynamicConfigSource ||| enabled                 ||| true or false, default is true
+                     |||   initDelayMillis       ||| default is 0
+                     |||   delayMillis           ||| default is 30000
 
-    Property Name               | Default             | Description
-    --------------------------- | ------------------- | ------------
-    parallelism                 | 1                 | Content Cell
-    partitioner                 | eagle.alert.policy.DefaultPolicyPartitioner       | Content Cell
-    needValidation              | true        | Content Cell
 
-### **eagleProps**
+#### HiveQueryLog
 
-* Common
+ Class            ||| Property Name           ||| Description
+ -----------------||| -------------           ||| -----------
+ envContextConfig |||  same as HDF            |||
+ dataSourceConfig |||  flavor                 ||| stormrunning
+ |||   zkQuorum                               ||| ZooKeeper connection string,  you can also specify multiple hosts in the form hostname1:port1,hostname2:port2,hostname3:port3
+ |||   zkRoot                                 ||| ZooKeeper chroot path for Eagle to store data, default is /jobrunning
+ |||   zkSessionTimeoutMs                     ||| ZooKeeper session timeout, default is 15000
+ |||   zkRetryTimes                           ||| ZooKeeper retry times, default is 3
+ |||   zkRetryInterval                        ||| default is 2000
+ |||   RMEndPoints                            ||| Resource manager, default is http://localhost:8088/
+ |||   HSEndPoint                             ||| History server, default is http://localhost:19888/
+ |||   partitionerCls                         ||| eagle.job.DefaultJobPartitionerImpl
+ alertExecutorConfigs ||| same as HDFS        |||
+ eagleProps           ||| same as HDFS        |||
+ dynamicConfigSource  ||| same as HDFS        |||
 
-    Property Name               | Default             | Description
-    --------------------------- | ------------------- | ------------
-    site                        | sandbox        | Content Cell
-    dataSource                 | hdfsAuditLog        | Content Cell
-    dataJoinPollIntervalSec                | 30        | Content Cell
-    mailHost                    |         | Content Cell
-    mailSmtpPort            | 25       | Content Cell
-    mailDebug   | true       | Content Cell
-    eagleService.host                | localhost        | Content Cell
-    eagleService.port                    |  9099       | Content Cell
-    eagleService.username            | admin       | Content Cell
-    eagleService.password      | secret       | Content Cell
 
-### **dynamicConfigSource**
-
-* Common
-
-    Property Name               | Default             | Description
-    --------------------------- | ------------------- | ------------
-    enabled                     | true       | Content Cell
-    initDelayMillis             | 0       | Content Cell
-    delayMillis                 | 30000        | Content Cell
+#### UserProfile
+Please refer to the HDFS part

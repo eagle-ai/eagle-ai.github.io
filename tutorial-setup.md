@@ -20,7 +20,29 @@ The following is an example which creates a new site "Demo", and add two data so
 
 ### **Part 2: Add Configuration**
 
-Different sites need different configuration. Here are example configurations for sandbox
-![hdfs setup](/images/docs/hdfs-setup.png)
+Different sites need different configurations. Here are example configurations for sandbox
+* HDFS Audit Log
+
+        {"hdfsEndpoint":"hdfs://sandbox.hortonworks.com:8020"}
+
+  ![hdfs setup](/images/docs/hdfs-setup.png)
+
+* Hive Query Log
+
+        {
+          "accessType": "metastoredb_jdbc",
+          "password": "hive",
+          "user": "hive",
+          "jdbcDriverClassName": "com.mysql.jdbc.Driver",
+          "jdbcUrl": "jdbc:mysql://sandbox.hortonworks.com/hive?createDatabaseIfNotExist=true"
+        }
+
 ![hdfs setup](/images/docs/hive-setup.png)
+
+* UserProfile
+
+        {
+          "features": "getfileinfo,open,listStatus,setTimes,setPermission,rename,mkdirs,create,setReplication,contentSummary,delete,setOwner,fsck"
+        }
+
 ![hdfs setup](/images/docs/userprofile-setup.png)
