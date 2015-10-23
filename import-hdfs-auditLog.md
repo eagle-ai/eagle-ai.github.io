@@ -75,9 +75,12 @@ install a **namenode log4j Kafka appender**.
 ### Log4j Kafka Appender
 
 > Notice that if you use ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
+
 Here is an example configuration for both non-ambari and ambari environments.
 
-* **Step 1**: Create a Kafka Topic named sandbox_hdfs_audit_log if not
+* **Step 1**: Create a Kafka Topic if not
+
+    Here is a example Kafka command for creating topic "sandbox_hdfs_audit_log"
 
       cd <kafka-home>
       bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log

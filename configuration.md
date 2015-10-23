@@ -16,58 +16,59 @@ Eagle currently supports to customize configurations for three kinds of topologi
 
 #### HdfsAuditLog
 
- Class            ||| Property Name      ||| Default             ||| Description
- -----------------||| -------------      ||| -------             ||| -----------
- envContextConfig |||   env              ||| storm               ||| currently only Storm support
-                  |||   mode             ||| cluster             ||| local or cluster
-                  |||   topologyName     ||| sandbox-hdfsAuditLog-topology      ||| format as {site}-{topology-name}, submitted as Storm topology name
-                  |||   stormConfigFile            ||| security-auditlog-storm.yaml       ||| ***
-                  |||  parallelismConfig          ||| 1                 ||| parallelism for both kafka consumer and alert executors
-dataSourceConfig  |||  topic              ||| sandbox_hdfs_audit_log      ||| Kafka topic for audit log streaming, make sure it's created
-                  ||| zkConnection        ||| 127.0.0.1:2181              ||| ZooKeeper connection string, you can also specify multiple hosts in the form hostname1:port1,hostname2:port2,hostname3:port3
-                  |||zkConnectionTimeoutMS||| 15000                       ||| timeout
-                  |||   fetchSize         ||| 1048586                     ||| default value
-                  |||   deserializerClass |||                             ||| default value
-                  |||transactionZKServers ||| 127.0.0.1                   ||| ZooKeeper servers, you can also specify multiple hosts in the form hostname1,hostname2,hostname3
-                  ||| transactionZKPort   ||| 2181                        ||| ZooKeeper connection port
-                  |||   transactionZKRoot ||| /consumers                  ||| ZooKeeper chroot path for Eagle
-                  ||| consumerGroupId     ||| eagle.hdfsaudit.consumer    ||| default value
-                  ||| transactionStateUpdateMS ||| 2000           ||| ****
-alertExecutorConfigs ||| parallelism                 ||| 1                   ||| ***
- |||   partitioner                 |||    ||| default value
- |||   needValidation              ||| true        ||| ***
- eagleProps  ||| site                        ||| sandbox        ||| site name, such as sandbox, datacenter1, datacenter2
- |||   dataSource                 ||| hdfsAuditLog        ||| only three data sources hdfsAuditLog, HiveQueryLog, userProfile are supported
- |||   dataJoinPollIntervalSec    ||| 30        ||| time interval for retrieving data from HBase
- |||   mailHost                   |||           ||| SMTP server
- |||   mailSmtpPort               ||| 25        ||| SMTP server port
- |||   mailDebug                 ||| true       ||| ***
- |||   eagleService.host          ||| localhost   |||  tomcat server host
- |||   eagleService.port          |||  9099       ||| tomcat server port
- |||   eagleService.username      ||| admin       ||| default value
- |||   eagleService.password      ||| secret      ||| default value
- dynamicConfigSource ||| enabled  ||| true       ||| ***
- |||   initDelayMillis             ||| 0       |||  ***
- |||   delayMillis                 ||| 30000   ||| ***
+ Class            ||| Property Name        ||| Description
+ -----------------||| -------------        ||| -----------
+ envContextConfig |||   env                ||| currently only Storm is supported. Default is storm
+                  |||   mode               ||| local or cluster
+                  |||   topologyName       ||| in the format {site}-{topology-name}, submitted as Storm topology name
+                  |||   stormConfigFile    ||| a storm configuration file for override some properties
+                  |||  parallelismConfig  ||| parallelism for both kafka consumer and alert executors
+dataSourceConfig  |||  topic              ||| Kafka topic for audit log streaming, make sure it exists
+                  ||| zkConnection        ||| ZooKeeper connection string, you can also specify multiple hosts in the form hostname1:port1,hostname2:port2,hostname3:port3
+                  |||zkConnectionTimeoutMS     ||| timeout
+                  |||   fetchSize         ||| default value
+                  |||   deserializerClass ||| default value
+                  |||transactionZKServers ||| ZooKeeper servers, you can also specify multiple hosts in the form hostname1,hostname2,hostname3
+                  ||| transactionZKPort   ||| ZooKeeper connection port
+                  |||   transactionZKRoot ||| ZooKeeper chroot path for Eagle
+                  ||| consumerGroupId     ||| default is eagle.hdfsaudit.consumer
+                  ||| transactionStateUpdateMS   ||| default is 2000
+alertExecutorConfigs ||| parallelism             ||| default is 1
+                  |||   partitioner              ||| default value is eagle.alert.policy.DefaultPolicyPartitioner
+                  |||   needValidation           ||| true or false
+eagleProps        |||   site                     ||| site name, such as sandbox, datacenter1, datacenter2
+                  |||   dataSource               ||| hdfsAuditLog
+                  |||   dataJoinPollIntervalSec  ||| time interval for retrieving data from HBase
+                  |||   mailHost                 ||| SMTP server
+                  |||   mailSmtpPort             ||| SMTP server port, default is 25
+                  |||   mailDebug                ||| true or false
+                  |||   eagleService.host        ||| tomcat server host, default is localhost
+                  |||   eagleService.port        ||| 9099
+                  |||   eagleService.username    ||| admin
+                  |||   eagleService.password    ||| secret
+ dynamicConfigSource ||| enabled                 ||| true or false, default is true
+                     |||   initDelayMillis       ||| default is 0
+                     |||   delayMillis           ||| default is 30000
 
 
 #### HiveQueryLog
 
- Class            ||| Property Name      ||| Default             ||| Description
- -----------------||| -------------      ||| -------             ||| -----------
- envContextConfig |||  same as HDFS      |||                     |||
- dataSourceConfig |||  flavor            ||| stormrunning        ||| ****
- |||   zkQuorum                   ||| localhost:2181                     ||| ZooKeeper connection string,  you can also specify multiple hosts in the form hostname1:port1,hostname2:port2,hostname3:port3
- |||   zkRoot                     ||| /jobrunning                        ||| ZooKeeper chroot path for Eagle to store data
- |||   zkSessionTimeoutMs         ||| 15000                              ||| ZooKeeper session timeout
- |||   zkRetryTimes               ||| 3                                  ||| ZooKeeper retry times
- |||   zkRetryInterval            ||| 2000                               ||| ****
- |||   RMEndPoints                ||| http://localhost:8088/             ||| ****
- |||   HSEndPoint                 ||| http://localhost:19888/            ||| ****
- |||   partitionerCls             |||    ||| eagle.job.DefaultJobPartitionerImpl
- alertExecutorConfigs ||| same as HDFS      |||                     |||
- eagleProps           ||| same as HDFS      |||                     |||
- dynamicConfigSource  ||| same as HDFS      |||                     |||
+ Class            ||| Property Name           ||| Description
+ -----------------||| -------------           ||| -----------
+ envContextConfig |||  same as HDF            |||
+ dataSourceConfig |||  flavor                 ||| stormrunning
+ |||   zkQuorum                               ||| ZooKeeper connection string,  you can also specify multiple hosts in the form hostname1:port1,hostname2:port2,hostname3:port3
+ |||   zkRoot                                 ||| ZooKeeper chroot path for Eagle to store data, default is /jobrunning
+ |||   zkSessionTimeoutMs                     ||| ZooKeeper session timeout, default is 15000
+ |||   zkRetryTimes                           ||| ZooKeeper retry times, default is 3
+ |||   zkRetryInterval                        ||| default is 2000
+ |||   RMEndPoints                            ||| Resource manager, default is http://localhost:8088/
+ |||   HSEndPoint                             ||| History server, default is http://localhost:19888/
+ |||   partitionerCls                         ||| eagle.job.DefaultJobPartitionerImpl
+ alertExecutorConfigs ||| same as HDFS        |||
+ eagleProps           ||| same as HDFS        |||
+ dynamicConfigSource  ||| same as HDFS        |||
 
 
 #### UserProfile
+Please refer to the HDFS part

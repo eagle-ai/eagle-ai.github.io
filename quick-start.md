@@ -39,8 +39,10 @@ Learn more about how to define policy, please refer to tutorial: [Policy Managem
 
 ### Step 4: Test policy and check alerting
 
+We show two examples to validate the sample policies defined in sandbox.
+
 **Example 1** (HDFSAuditLog): check sample policy “viewPrivate” on [Eagle web](http://localhost:9099/eagle-service) by importing hdfs audit log into Kafka
-topic `sandbox_hdfs_audit_log`
+topic `sandbox_hdfs_audit_log`, created by Eagle install script for sandbox.
 
   * **Option 1**: manually import a sample log into Kafka console producer
 
