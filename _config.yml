@@ -50,11 +50,7 @@ documentations:
         url: /docs/tutorial/classification.html
   - category: Advanced
     links: 
-      - title: Policy API Design
-        url: /docs/alert-api.html
-      - title: Alert API Design
-        url: /docs/alert-api.html
-      - title: Query API Design
-        url: /docs/userprofile.html
-      - title: User Profile Design
-        url: /docs/userprofile.html
+      - title: Policy Management REST API
+        url: /docs/policy-management-api.html
+      - title: User Profile Machine Learning
+        url: /docs/user-profile-ml.html

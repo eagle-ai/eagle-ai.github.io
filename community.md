@@ -8,7 +8,9 @@ permalink: /docs/community.html
 
 ### Issue Tracker
 
-[https://github.com/eBay/Eagle/issues](https://github.com/eBay/Eagle/issues)
+`Coming soon ... `
+
+_Currently please use [https://github.com/eBay/Eagle/issues](https://github.com/eBay/Eagle/issues) for issue tracking_
 <br/>
 
 ### Events and Meetups
@@ -24,8 +26,6 @@ permalink: /docs/community.html
 
 **Initial Commiters**
 
-* [Adunuthula, Seshu](https://github.com/seshuad)
-* [Arun Manoharan](https://github.com/armanoharan)
 * [Edward Zhang (张勇)](https://github.com/yonzhang)
 * [Hao Chen（陈浩）](https://github.com/haoch)
 * [Chaitali Gupta](https://github.com/chaitaligupta)
@@ -33,6 +33,8 @@ permalink: /docs/community.html
 * [Jilin Jiang（将吉麟）](https://github.com/zombiej)
 * [Qingwen Zhao（赵晴雯）](https://github.com/qingwen220)
 * [Hemanth Dendukuri](https://github.com/hdendukuri)
+* [Arun Manoharan](https://github.com/armanoharan)
+* [Adunuthula, Seshu](https://github.com/seshuad)
 <br/>
 
 ### Project History
@@ -41,4 +43,4 @@ permalink: /docs/community.html
 
 ### Credits
 
-* Thanks [eBay Inc.](http://www.ebay.com) to donated this project to open source community, first announement at [eBay Techblog](#).
+* Thanks [eBay Inc.](http://www.ebay.com) to donated this project to open source community, first announement at [eBay Techblog](http://www.ebaytechblog.com/2015/10/23/eagle-is-your-hadoop-data-secured/).
