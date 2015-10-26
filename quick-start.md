@@ -4,7 +4,12 @@ title:  "Quick Start"
 permalink: /docs/quick-start.html
 ---
 
-This is a tutorial-style guide for users to install Eagle, create self-defined policies and checking alert.
+This is a tutorial-style guide for users to have a quick image of Eagle. The main content are
+
+* Step 1: Download/Build tarball
+* Step 2: Install Eagle
+* Step 3: Define policy with Eagle web
+* Step 4: Test policy and check alerting
 
 ### Step 1: Download/Build tarball
 
@@ -41,21 +46,13 @@ Learn more about how to define policy, please refer to tutorial: [Policy Managem
 
 We show two examples to validate the sample policies defined in sandbox.
 
-**Example 1** (HDFSAuditLog): check sample policy “viewPrivate” on [Eagle web](http://localhost:9099/eagle-service) by importing hdfs audit log into Kafka
-topic `sandbox_hdfs_audit_log`, created by Eagle install script for sandbox.
+**Example 1** (HDFSAuditLog): validate sample policy “viewPrivate” on [Eagle web](http://localhost:9099/eagle-service) by running a HDFS command
 
-  * **Option 1**: manually import a sample log into Kafka console producer
-
-        $ /usr/hdp/current/kafka-broker/bin/kafka-console-producer.sh --broker-list sandbox.hortonworks.com:6667 --topic sandbox_hdfs_audit_log
-        2015-07-27 20:26:46,881 INFO FSNamesystem.audit: allowed=true ugi=root (auth:SIMPLE) ip=/127.0.0.1 cmd=open src=/tmp/private dst=nul perm=null proto=rpc
-  * **Option 2**: install [a namenode log4j Kafka appender](/docs/import-hdfs-auditLog.html) to stream hdfs audit log into Kafka automatically, and then run below command
-
-        # install a log4j Kafka appender first
-        $ hdfs dfs -cat /tmp/private
+      $ hdfs dfs -cat /tmp/private
 
   You should see an alert for policy name “viewPrivate” in [Eagle web](http://localhost:9099/eagle-service) . Under Alerts page.
 
-**Example 2** (HiveQueryLog): check sample policy “queryPhoneNumber” in [Eagle web](http://localhost:9099/eagle-service) by submitting a hive job
+**Example 2** (HiveQueryLog): validate sample policy “queryPhoneNumber” in [Eagle web](http://localhost:9099/eagle-service) by submitting a hive job
 
       $ su hive
       $ hive

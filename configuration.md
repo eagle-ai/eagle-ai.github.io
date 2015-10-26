@@ -18,10 +18,10 @@ Eagle currently supports to customize configurations for three kinds of topologi
 
  Class            ||| Property Name        ||| Description
  -----------------||| -------------        ||| -----------
- envContextConfig |||   env                ||| currently only Storm is supported. Default is storm
+ envContextConfig |||   env                ||| currently only Storm is supported.
                   |||   mode               ||| local or cluster
-                  |||   topologyName       ||| in the format {site}-{topology-name}, submitted as Storm topology name
-                  |||   stormConfigFile    ||| a storm configuration file for override some properties
+                  |||   topologyName       ||| in the format {site}-{topology-name}
+                  |||   stormConfigFile    ||| a storm configuration file for overriding some Storm properties
                   |||  parallelismConfig  ||| parallelism for both kafka consumer and alert executors
 dataSourceConfig  |||  topic              ||| Kafka topic for audit log streaming, make sure it exists
                   ||| zkConnection        ||| ZooKeeper connection string, you can also specify multiple hosts in the form hostname1:port1,hostname2:port2,hostname3:port3

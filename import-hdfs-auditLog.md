@@ -4,14 +4,14 @@ title:  "How to stream hdfs log data into Kafka"
 permalink: /docs/import-hdfs-auditLog.html
 ---
 
-As Eagle consumes the data via Kafka topics in some applications, such as HDFS audit log monitoring, a user needs to populate its data into a Kafka topic.
+As Eagle consumes the data via Kafka topics in some topologies, such as HDFS audit log. To enable the full function of monitoring, a user needs to stream its data into a Kafka topic.
 
 There are two ways to do that. The first one is **Logstash**, which naturally supports Kafka as the output plugin; the second one is to
 install a **namenode log4j Kafka appender**.
 
 ### Logstash-kafka
 
-* **Step 1**: Create a Kafka Topic named sandbox_hdfs_audit_log if not
+* **Step 1**: Create a Kafka Topic as the streaming input. Here is an example command to creat topic 'sandbox_hdfs_audit_log'
 
       cd <kafka-home>
       bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
@@ -74,13 +74,9 @@ install a **namenode log4j Kafka appender**.
 
 ### Log4j Kafka Appender
 
-> Notice that if you use ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
+> Notice that if you use Ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
 
-Here is an example configuration for both non-ambari and ambari environments.
-
-* **Step 1**: Create a Kafka Topic if not
-
-    Here is a example Kafka command for creating topic "sandbox_hdfs_audit_log"
+* **Step 1**: Create a Kafka topic. Here is a example Kafka command for creating Topic "sandbox_hdfs_audit_log"
 
       cd <kafka-home>
       bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log

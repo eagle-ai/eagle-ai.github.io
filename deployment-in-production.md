@@ -5,7 +5,7 @@ permalink: /docs/deployment-in-production.html
 ---
 
 
-This page outlines the steps for manually deploying Eagle in the production environment. For a quick start, we strongly recommend you to [start eagle on a sandbox](/docs/deployment-in-sandbox.html).
+This page outlines the steps for manually deploying Eagle in the production environment. For a quick start, we strongly recommend you to [start Eagle in a sandbox](/docs/deployment-in-sandbox.html).
 
 
 Here's the main content of this page:
@@ -51,7 +51,7 @@ Here's the main content of this page:
           export EAGLE_NIMBUS_HOST=localhost
 
           # TODO: EAGLE_SERVICE_HOST, default is `hostname -f`
-          export EAGLE_SERVICE_HOST=`hostname -f`
+          export EAGLE_SERVICE_HOST=localhost
 
           # TODO: EAGLE_SERVICE_PORT, default is 9099
           export EAGLE_SERVICE_PORT=9099
@@ -106,8 +106,11 @@ Here's the main content of this page:
           $ bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/custom-userprofile-topology.conf start
 
 
-You have now successfully installed Eagle. You can visit [Eagle Service UI](http://localhost:9099/eagle-service) with username/password `admin/secret`, and check
-Storm topology http://localhost:8744.
+You have now successfully installed Eagle. Now you can
+
+* visit [Eagle web](http://localhost:9099/eagle-service) with username/password `admin/secret`, and check
+[Storm topologies](http://localhost:8744).
+* try a simple demo on [Quick Starer](/docs/quick-start.html).
 
 ### **Stop Services**
 
