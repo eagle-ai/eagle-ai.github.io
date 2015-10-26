@@ -51,7 +51,7 @@ documentations:
         url: /docs/tutorial/classification.html
   - category: Advanced
     links: 
-      - title: Policy Management REST API
-        url: /docs/policy-management-api.html
+      - title: Eagle Architecture Highlights
+        url: /docs/architecture-highlights.html
       - title: User Profile Machine Learning
         url: /docs/user-profile-ml.html
