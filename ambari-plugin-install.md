@@ -9,13 +9,11 @@ Assume Eagle package has been copied and exacted under /usr/hdp/current/eagle.
 
 ### Pre-requisites
 
-**Prepare the audit log data for Eagle (from HDFS)**
-
 1. Create a Kafka topic if you have not. Here is an example command.
 
        $ /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 
-2. Populate log data to the kafka topic, and refer to [here](/docs/importHDFSAuditLog.html) on how to do it .
+2. Stream HDFS log data to Kafka, and refer to [here](/docs/importHDFSAuditLog.html) on how to do it .
 
 ### Installation Steps
 
