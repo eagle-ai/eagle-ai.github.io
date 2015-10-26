@@ -17,7 +17,7 @@ permalink: /docs/index.html
 * **Open source**: Eagle is built ground up using open source standards and various products from the big data space. We decided to open source Eagle to help the community and looking forward for your feedback, collaboration and support.
 * **Extensibility**: Eagle is designed with extensibility in mind. You can integrate Eagle with existing data classification tools and monitoring tools easily.
 
-### User Cases
+### Use Cases
 
 Eagle data activity monitoring is currently deployed at eBay for monitoring the data access activities in a 2500 node hadoop cluster with plans of extending it to other hadoop clusters covering 10,000 nodes by end of this year. We have wide range of policies to detect and prevent data loss, data copy to unsecured location, sensitive data access from unauthorized zones etc. The flexibility of creating policies in eagle allows us to expand further and add more complex policies.
 
