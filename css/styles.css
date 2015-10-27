@@ -108,3 +108,16 @@ html[xmlns] .clearfix{display:block;}
 .page-main-content h1{
   text-align: left
 }
+
+.social-buttons > a{
+  color:white;
+  margin:auto 2px;
+}
+
+.social-buttons > a:hover{
+  color: #126acb;
+}
+
+.social-buttons > a > i{
+  font-size: 1.2em;
+}
