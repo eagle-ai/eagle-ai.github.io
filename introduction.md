@@ -14,7 +14,7 @@ permalink: /docs/index.html
 * **Scalability**: At eBay Eagle is deployed on multiple large hadoop clusters with petabytes of data and 800M access events everyday.
 * **Ease of Use**: Usability is one of our core design principles. It takes only a few minutes to get started with Eagle sandbox. We have made it easy to get started with good examples and policies can be added with few clicks.
 * **User Profiles**: Eagle provides capabilities to create user profiles based on the user behaviour in hadoop. We have out of the box machine learning algorithms that you can leverage to build models with different HDFS features and get alerted on anomalies. 
-* **Open source**: Eagle is built ground up using open source standards and various products from the big data space. We decided to open source Eagle to help the community and looking forward for your feedback, collaboration and support.
+* **Open Source**: Eagle is built ground up using open source standards and various products from the big data space. We decided to open source Eagle to help the community and looking forward for your feedback, collaboration and support.
 * **Extensibility**: Eagle is designed with extensibility in mind. You can integrate Eagle with existing data classification tools and monitoring tools easily.
 
 ### Use Cases
@@ -23,7 +23,7 @@ Eagle data activity monitoring is currently deployed at eBay for monitoring the 
 
 Some other typical use cases:
 
-* Monitor data access traffic on hadoop
+* Monitor data access traffic on Hadoop
 * Discover intrusions and security breach
 * Discover and prevent sensitive data loss 
 * Policy based detection and alerting 
