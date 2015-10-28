@@ -121,3 +121,16 @@ html[xmlns] .clearfix{display:block;}
 .social-buttons > a > i{
   font-size: 1.2em;
 }
+
+.page-main-content h2{
+  margin:5px auto;
+}
+
+.page-main-content  td{
+  padding: 3px;
+}
+
+
+.page-main-content h3{
+  margin:5px auto;
+}
