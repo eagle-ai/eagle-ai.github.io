@@ -160,11 +160,11 @@ Eagle 策略引擎默认支持WSO2的Siddhi CEP引擎和机器学习引擎，以
 ## 关于作者
 [陈浩](https://github.com/haoch)，Apache Eagle Committer 和 PMC 成员，eBay 分析平台基础架构部门高级软件工程师，负责Eagle的产品设计、技术架构、核心实现以及开源社区推广等。
 
-感谢来自Apache Eagle社区和eBay公司的联合作者们对本文的贡献：
+感谢以下来自Apache Eagle社区和eBay公司的联合作者们对本文的贡献：
 
 * [张勇](https://github.com/yonzhang)，Apache Eagle Committer和PMC，eBay 资深架构师
 * [孙立斌](https://github.com/sunlibin)，Apache Eagle Committer和PMC，eBay 软件工程师
-* [蒋吉林](https://github.com/zombiej)，Apache Eagle Committer和PMC，eBay 软件工程师
+* [蒋吉麟](https://github.com/zombiej)，Apache Eagle Committer和PMC，eBay 软件工程师
 * [赵晴雯](https://github.com/qingwen220)，Apache Eagle Committer和PMC，eBay 软件工程师
 
 eBay 分析平台基础架构部（Analytics Data Infrastructure）是eBay的全球数据及分析基础架构部门，负责eBay在数据库、数据仓库、Hadoop、商务智能以及机器学习等各个数据平台开发、管理等,支持eBay全球各部门运用高端的数据分析解决方案作出及时有效的作业决策，为遍布全球的业务用户提供数据分析解决方案。
