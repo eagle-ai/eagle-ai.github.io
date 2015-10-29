@@ -168,6 +168,6 @@ eBay 分析平台基础架构部（Analytics Data Infrastructure）是eBay的全
 * Apache Eagle 源码：[http://github.com/ebay/eagle](http://github.com/ebay/eagle)
 * Apache Eagle 项目：[http://incubator.apache.org/projects/eagle.html](http://incubator.apache.org/projects/eagle.html)
 
+<hr />
 
-
-
+_本文来自Apache Eagle网站：[http://goeagle.io](http://goeagle.io)，转载请注明出处和来源。_
