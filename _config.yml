@@ -53,5 +53,7 @@ documentations:
     links: 
       - title: Eagle Architecture Highlights
         url: /docs/architecture-highlights.html
+      - title: Policy API Design
+        url: /docs/policy-api.html
       - title: User Profile Machine Learning
         url: /docs/user-profile-ml.html
