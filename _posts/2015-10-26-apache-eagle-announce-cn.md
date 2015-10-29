@@ -2,7 +2,7 @@
 layout: post
 title:  "Apache Eagle 正式发布：分布式实时Hadoop数据安全方案"
 date:   2015-10-26 19:24:33
-author: Hao Chen
+author: Hao Chen, Edward Zhang, Libin Sun, Jilin Jiang, Qingwen Zhao
 categories: post
 ---
 
