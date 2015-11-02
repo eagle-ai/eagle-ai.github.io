@@ -175,6 +175,13 @@ eBay 分析平台基础架构部（Analytics Data Infrastructure）是eBay的全
 * Apache Eagle 源码：[http://github.com/ebay/eagle](http://github.com/ebay/eagle)
 * Apache Eagle 项目：[http://incubator.apache.org/projects/eagle.html](http://incubator.apache.org/projects/eagle.html)
 
+## 引用链接
+* **CSDN**: [http://www.csdn.net/article/2015-10-29/2826076](http://www.csdn.net/article/2015-10-29/2826076)
+* **OSCHINA**: [http://www.oschina.net/news/67515/apache-eagle](http://www.oschina.net/news/67515/apache-eagle)
+* **China Hadoop Summit**: [http://mp.weixin.qq.com/s?...](http://mp.weixin.qq.com/s?__biz=MzA4MTkyODIzMA==&mid=400298495&idx=1&sn=954031ba8065481c31a3464e2c8a26a5&scene=1&srcid=1102zgGQzedckCmNrfRwounA&uin=MjYyNzgwNDQwMA%3D%3D&key=04dce534b3b035efe14d53fcf6e7062a63179003551e59fad5cf8584703fcaa38779cc4c93cbf931c25f6b34cb2d7653&devicetype=iMac+MacBookPro11%2C3+OSX+OSX+10.10.5+build(14F1021)&version=11020201&lang=en&pass_ticket=TC%2Bod2ZeFnhmci%2Bi4%2BxTTVD6moUrNFX8RXppzoQSa%2BXO3C7evUDs6njeYbsYyCFD)
+* **Apache Kylin**: [http://mp.weixin.qq.com/s?...](http://mp.weixin.qq.com/s?__biz=MzAwODE3ODU5MA==&mid=400287781&idx=1&sn=343b2b29a37f8ed53a7ecb0465faf515&scene=0&uin=MjYyNzgwNDQwMA%3D%3D&key=04dce534b3b035ef73f964362ac4c43d452ab1b208eb357c488dfcd7d69209e060cfe01e9b146752517d2096f6751370&devicetype=iMac+MacBookPro11%2C3+OSX+OSX+10.10.5+build(14F1021)&version=11020201&lang=en&pass_ticket=TC%2Bod2ZeFnhmci%2Bi4%2BxTTVD6moUrNFX8RXppzoQSa%2BXO3C7evUDs6njeYbsYyCFD)
+
+
 <hr />
 
 _本文来自Apache Eagle网站：[http://goeagle.io](http://goeagle.io)，转载请注明出处和来源。_
