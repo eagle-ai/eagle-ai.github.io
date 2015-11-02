@@ -106,7 +106,7 @@ HEADERS           |||    "Content-Type:application/json"
 
 Delete policy by encodedRowkey
 
-URL               |||    http://phxapdes0004.stratus.phx.ebay.com:8080/eagle-service/rest/entities/delete?serviceName=AlertDefinitionService&byId=true  
+URL               |||    http://host:port/eagle-service/rest/entities/delete?serviceName=AlertDefinitionService&byId=true  
 METHOD            |||    POST  
 HEADERS           |||    "Content-Type:application/json"  
                   |||    "Authorization:Basic encodedusrpwd"  (encodedusrpwd is base64 encoded string for "user:password")  
@@ -181,7 +181,7 @@ HEADERS           |||    "Content-Type:application/json"
 
 Delete stream shceme by encodedRowkey
 
-URL               |||    http://phxapdes0004.stratus.phx.ebay.com:8080/eagle-service/rest/entities/delete?serviceName=AlertStreamSchemaService&byId=true  
+URL               |||    http://host:port/eagle-service/rest/entities/delete?serviceName=AlertStreamSchemaService&byId=true  
 METHOD            |||    POST  
 HEADERS           |||    "Content-Type:application/json"  
                   |||    "Authorization:Basic encodedusrpwd"  (encodedusrpwd is base64 encoded string for "user:password")  
