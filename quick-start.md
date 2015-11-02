@@ -39,7 +39,7 @@ If you want to deploy eagle in production environment, please refer to:
 
 ![](/images/docs/hdfs-policy1.png)
 
-Learn more about how to define policy, please refer to tutorial: [Policy Management](/docs/hdfs-policy.html)
+Learn more about how to define policy, please refer to tutorial: [Policy Management](/docs/policy.html)
 <br/>
 
 ### Step 4: Test policy and check alerting
