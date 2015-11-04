@@ -104,7 +104,7 @@ Here's the main content of this page:
 
 You have now successfully installed Eagle and started Eagle Services. You can
 
-* visit [Eagle web] on http://${EAGLE_SERVICE_HOST}:9099/eagle-service with username/password `admin/secret`, and check topologies on Storm UI
+* visit Eagle web on http://${EAGLE_SERVICE_HOST}:9099/eagle-service with username/password `admin/secret`, and check topologies on Storm UI
 
 * try a simple demo [Quick Starer](/docs/quick-start.html).
 
