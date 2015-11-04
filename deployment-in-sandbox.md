@@ -96,13 +96,13 @@ To stream HDFS audit log into Kafka, the final step is to install a namenode log
 
 * **Step 4**: Edit Advanced hadoop-env via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and append the following command to it.
 
-      export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/path/to/eagle/lib/log4jkafka/lib/*
+      export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/usr/hdp/current/eagle/lib/log4jkafka/lib/*
 
     ![HDFS Environment Configuration](/images/docs/hdfs-env-conf2.png "hdfsenvconf2")
 
 * **Step 5**: save the changes and restart the namenode.
 
-* **Step 6**: Check whether logs are flowing into Topic sandbox_hdfs_audit_log
+* **Step 6**: Check whether logs are flowing into topic `sandbox_hdfs_audit_log`
 
       $ /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
 

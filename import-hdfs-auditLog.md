@@ -11,19 +11,19 @@ install a **namenode log4j Kafka appender**.
 
 ### Logstash-kafka
 
-* **Step 1**: Create a Kafka Topic as the streaming input. Here is an example command to creat topic 'sandbox_hdfs_audit_log'
+* **Step 1**: Create a Kafka topic as the streaming input. Here is an example command to create a Kafka topic 'sandbox_hdfs_audit_log'
 
       cd <kafka-home>
       bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 
-* **Step 2**: Install Logstash-kafka
+* **Step 2**: Install Logstash-kafka plugin
 
     * For Logstash 1.5.x, logstash-kafka has been intergrated into [logstash-input-kafka](https://github.com/logstash-plugins/logstash-input-kafka) and [logstash-output-kafka](https://github.com/logstash-plugins/logstash-output-kafka),
     and released with the 1.5 version of Logstash. So you can directly use it.
 
     * For Logstash 1.4.x, a user should install [logstash-kafka](https://github.com/joekiller/logstash-kafka) firstly. Notice that this version **does not support partition\_key\_format**.
 
-* **Step 3**: Create a logstash configuration file under ${LOGSTASH_HOME}/conf. Here is a sample.
+* **Step 3**: Create a Logstash configuration file under ${LOGSTASH_HOME}/conf. Here is a sample.
 
         input {
             file {
@@ -76,7 +76,7 @@ install a **namenode log4j Kafka appender**.
 
 > Notice that if you use Ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
 
-* **Step 1**: Create a Kafka topic. Here is a example Kafka command for creating Topic "sandbox_hdfs_audit_log"
+* **Step 1**: Create a Kafka topic. Here is a example Kafka command for creating topic "sandbox_hdfs_audit_log"
 
       cd <kafka-home>
       bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
