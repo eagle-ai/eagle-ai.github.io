@@ -35,7 +35,7 @@ Here's the main content of this page:
            $ cd <kafka-home>
            $ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 
-    2. Populate audit log into the Kafka topic created above, and refer to [here](/docs/importHDFSAuditLog.html) on How to do it.
+    2. Populate audit log into the Kafka topic created above, and refer to [here](/docs/import-hdfs-auditLog.html) on How to do it.
 
 
 ### **Install Steps**
