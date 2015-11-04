@@ -9,8 +9,7 @@ and contains simple installation instructions for Hortonworks sandbox, and a few
 However for the complete instructions for the production deployments, please refer to [here](/docs/deployment-in-production.html).
 
 
-If you run into difficulties, first check for a solution is in the [FAQ](/docs/FQA.html) page. Otherwise, email the mailing list.
-
+If you run into difficulties, first check for a solution is in the [FAQ](/docs/FAQ.html) page. Otherwise, email the mailing list.
 
 Here's a summary of the steps for setting up Eagle in Hortonworks sandbox:
 
@@ -58,7 +57,7 @@ To install Eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 ### **Step 4: Install Eagle**
 
 The install process will prepare some HBase tables, populate metadata into these tables, and start Eagle services, such as Eagle web,
-three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/online-user-profiles.html)
+three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [User Profiles](/docs/tutorial/userprofile.html)
 
 * **Option 1**: Start Eagle Service using command line
 
