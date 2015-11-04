@@ -15,7 +15,28 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="shortcut icon" href="images/favicon.png">
-<script src="//load.sumome.com/" data-sumo-site-id="4f1f82ddde38afb72321e7c702051b89fb2ab9d54d314434184ebe0ea5b5fa37" async="async"></script>
+<script src="//load.sumome.com/" data-sumo-site-id="4f1f82ddde38afb72321e7c702051b89fb2ab9d54d314434184ebe0ea5b5fa37" async></script>
+
+  <!-- Baidu Analytics Tracking-->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?fedc55df2ea52777a679192e8f849ece";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+  <!-- Google Analytics Tracking -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68929805-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 <body>
 <!-- header start -->
@@ -62,7 +83,7 @@
     <div class="homewrapper">
       <div class="hometitle"> <img src="images/feather.png" height="60px"> </div>
       <div class="hometext">
-        <h2><b>Apache Eagle</b></h2>
+        <h2 style="font-weight:500;">Apache Eagle</h2>
         <h3>Secure Hadoop in Real Time</h3>
      </div>
     </div>
@@ -75,49 +96,9 @@
 
 <!-- team start -->
 
-<div class="workwrapper" id="about_page">
-  <div class="container">
 
-    <div class="row">
-        
-      <div class="row" style="margin-top:50px;">
-        <div class="col-md-3 workmargin">
-       
-          <h3 class="featuretext">Ease Of Use</h3>
-          <h4 class="featureexplain"> Start using Eagle in few minutes</h4>
-          <p>Eagle can be installed as an Ambari plugin. And you can use one instance of eagle to monitor multiple clusters.</p>
-        </div>
-        <div class="col-md-3 workmargin">
-        
-         <h3 class="featuretext">Policy Management</h3>
-          <h4 class="featureexplain"> Create complex monitoring policies</h4>
-          <p>Eagle offers wide variety of policies on HDFS, Hive data sets. It is easy to create and deploy policies with few clicks. </p>
-        </div>
-        <div class="col-md-3 workmargin">
-         
-         <h3 class="featuretext">Scalability</h3>
-          <h4 class="featureexplain"> Scale for Big Data </h4>
-          <p> Eagle processes access events in a scalable way to support billions of events and thousands of policies.</p>
-        </div>
-        <div class="col-md-3 workmargin">
-         
-         <h3 class="featuretext">Extensibility</h3>
-          <h4 class="featureexplain"> Eagle is extensible at all levels </h4>
-          <p>Easy to integrate with data classification and hadoop access control products. Eagle backend can support data sources other than hadoop.</p>
-        </div>
-      </div>
-    </div>
-   
-  </div>
-</div>
-
-
-<!-- team end --> 
-
-
-<div class="clear"></div>
 <!-- team start -->
-<div class="servicewrapper" id="about_page">
+<div class="workwrapper" id="about_page">
   <div class="container">
     <div class="row">
       <h2 class="sectiontile">ABOUT EAGLE</h2>
@@ -165,6 +146,49 @@
 <!-- team end -->
 
 <div class="clear"></div>
+
+<div class="servicewrapper" id="about_page">
+  <div class="container">
+
+    <div class="row">
+        
+      <div class="row" style="margin-top:50px;">
+        <div class="col-md-3 workmargin">
+       
+          <h3 class="featuretext">Ease Of Use</h3>
+          <h4 class="featureexplain"> Start using Eagle in few minutes</h4>
+          <p>Eagle can be installed as an Ambari plugin. And you can use one instance of eagle to monitor multiple clusters.</p>
+        </div>
+        <div class="col-md-3 workmargin">
+        
+         <h3 class="featuretext">Policy Management</h3>
+          <h4 class="featureexplain"> Create complex monitoring policies</h4>
+          <p>Eagle offers wide variety of policies on HDFS, Hive data sets. It is easy to create and deploy policies with few clicks. </p>
+        </div>
+        <div class="col-md-3 workmargin">
+         
+         <h3 class="featuretext">Scalability</h3>
+          <h4 class="featureexplain"> Scale for Big Data </h4>
+          <p> Eagle processes access events in a scalable way to support billions of events and thousands of policies.</p>
+        </div>
+        <div class="col-md-3 workmargin">
+         
+         <h3 class="featuretext">Extensibility</h3>
+          <h4 class="featureexplain"> Eagle is extensible at all levels </h4>
+          <p>Easy to integrate with data classification and hadoop access control products. Eagle backend can support data sources other than hadoop.</p>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+
+<!-- team end --> 
+
+
+<div class="clear"></div>
+
 <!-- diagram start -->
 
 <div class="workwrapper" id="diagram_page">
@@ -265,7 +289,7 @@
 
 <div class="clear"></div>
 <!-- team start -->
-<div class="client_wrapper">
+<div class="client_wrapper" id="community_page">
   <div class="container">
     <div class="row">
       <h2 class="sectiontile">WHO USES EAGLE</h2>
@@ -351,7 +375,7 @@
 <div class="footerwrapper">
   <div class="container">
     <div class="row">
-      <div class="col-md-12"><div style="margin-left:auto; margin-right:auto; text-align:center">Copyright &copy; 2015 <a href="#">eBay</a> | 2065 Hamilton Ave, San Jose, CA </div></div>
+      <div class="col-md-12"><div style="margin-left:auto; margin-right:auto; text-align:center">Copyright &copy; 2015 eBay | 2065 Hamilton Ave, San Jose, CA </div></div>
     </div>
   </div>
 </div>
@@ -412,17 +436,6 @@ $(window).scroll(function() {
     }
 });
 </script>
-
-<!-- Google Analytics Tracking -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-68929805-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

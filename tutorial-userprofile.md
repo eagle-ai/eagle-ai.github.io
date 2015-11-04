@@ -23,9 +23,9 @@ is started.
 
 * **Step 3**: generate a model
 
-	![Click "ops"](/images/docs/userprofile1.png)
-	![Click "Update Now"](/images/docs/userprofile2.png)
-	![Click "Confirm"](/images/docs/userprofile3.png)
+	![Click "ops"](/images/docs/userProfile1.png)
+	![Click "Update Now"](/images/docs/userProfile2.png)
+	![Click "Confirm"](/images/docs/userProfile3.png)
 	![Check](/images/docs/userprofile4.png)
 
 ### User Profile Online Detection
@@ -42,21 +42,24 @@ Two options to start the topology are provided.
 	
 	![Online userProfiles](/images/docs/online-userprofile.png)
 
-### How to test ML
+### Evaluate User Profile in Sandbox
 
-1. Download ML training and validation sample data from the [URL](http://eagle-in-one-box-awahl.ebayc3.com/ml-sample/)
-    * user1.hdfs-audit.2015-10-11-00.txt and user1.hdfs-audit.2015-10-11-01.txt are used for training
-    * validate file contains data points that you can try to test the models
-2. Copy the files (downloaded in the previous step) into a location in sandbox
-    * For example: /usr/hdp/current/eagle/lib/userprofile/data/
-3. Modify <Eagle-home>/conf/sandbox-userprofile-scheduler.conf
-    * update training-audit-path to set to the path for training data sample (the path you used for Step 1a)
-    * update detection-audit-path to set to the path for validation (the path you used for Step 1b)
+1. Prepare sample data for ML training and validation sample data
+* a. Download following sample data to be used for training 
+	* [`user1.hdfs-audit.2015-10-11-00.txt`](/data/user1.hdfs-audit.2015-10-11-00.txt) 
+	* [`user1.hdfs-audit.2015-10-11-01.txt`](/data/user1.hdfs-audit.2015-10-11-01.txt)
+* b. Downlaod [`userprofile-validate.txt`](/data/userprofile-validate.txt)file which contains data points that you can try to test the models
+
+2. Copy the files (downloaded in the previous step) into a location in sandbox 
+For example: `/usr/hdp/current/eagle/lib/userprofile/data/`
+3. Modify `<Eagle-home>/conf/sandbox-userprofile-scheduler.conf `
+update `training-audit-path` to set to the path for training data sample (the path you used for Step 1.a)
+update detection-audit-path to set to the path for validation (the path you used for Step 1.b)
 4. Run ML training program from eagle UI
-5. Produce kafka data using the contents from validate file (Step 1b)
-    * Run the command (assuming the eagle configuration uses kafka topic sandbox_hdfs_audit_log) -
+5. Produce kafka data using the contents from validate file (Step 1.b)
+Run the command (assuming the eagle configuration uses kafka topic `sandbox_hdfs_audit_log`) 
 
-		  ./kafka-console-producer.sh --broker-list sandbox.hortonworks.com:6667 --topic sandbox_hdfs_audit_log
-    * Paste few lines of data from file validate onto kafka-console-producer
-6. Check http://localhost:9099/eagle-service/#/dam/alertList for generated alerts
+		./kafka-console-producer.sh --broker-list sandbox.hortonworks.com:6667 --topic sandbox_hdfs_audit_log
 
+6. Paste few lines of data from file validate onto kafka-console-producer 
+Check [http://localhost:9099/eagle-service/#/dam/alertList](http://localhost:9099/eagle-service/#/dam/alertList) for generated alerts 

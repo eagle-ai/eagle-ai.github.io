@@ -9,8 +9,7 @@ and contains simple installation instructions for Hortonworks sandbox, and a few
 However for the complete instructions for the production deployments, please refer to [here](/docs/deployment-in-production.html).
 
 
-If you run into difficulties, first check for a solution is in the [FAQ](/docs/FQA.html) page. Otherwise, email the mailing list.
-
+If you run into difficulties, first check for a solution is in the [FAQ](/docs/FAQ.html) page. Otherwise, email the mailing list.
 
 Here's a summary of the steps for setting up Eagle in Hortonworks sandbox:
 
@@ -58,7 +57,7 @@ To install Eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 ### **Step 4: Install Eagle**
 
 The install process will prepare some HBase tables, populate metadata into these tables, and start Eagle services, such as Eagle web,
-three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [OnlineUserProfiles](/docs/online-user-profiles.html)
+three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [User Profiles](/docs/tutorial/userprofile.html)
 
 * **Option 1**: Start Eagle Service using command line
 
@@ -97,13 +96,13 @@ To stream HDFS audit log into Kafka, the final step is to install a namenode log
 
 * **Step 4**: Edit Advanced hadoop-env via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and append the following command to it.
 
-      export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/path/to/eagle/lib/log4jkafka/lib/*
+      export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:/usr/hdp/current/eagle/lib/log4jkafka/lib/*
 
     ![HDFS Environment Configuration](/images/docs/hdfs-env-conf2.png "hdfsenvconf2")
 
 * **Step 5**: save the changes and restart the namenode.
 
-* **Step 6**: Check whether logs are flowing into Topic sandbox_hdfs_audit_log
+* **Step 6**: Check whether logs are flowing into topic `sandbox_hdfs_audit_log`
 
       $ /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
 

@@ -13,7 +13,7 @@ Assume Eagle package has been copied and exacted under /usr/hdp/current/eagle.
 
        $ /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 
-2. Stream HDFS log data to Kafka, and refer to [here](/docs/importHDFSAuditLog.html) on how to do it .
+2. Stream HDFS log data to Kafka, and refer to [here](/docs/import-hdfs-auditLog.html) on how to do it .
 
 ### Installation Steps
 

@@ -4,14 +4,23 @@ title:  "Eagle Community"
 permalink: /docs/community.html
 ---
 ### Mailing Lists
-`Coming soon ... `
+
+|Name|Email|Subscribe|Unsubscribe|Archive|
+|----|-----|---------|-----------|-------|
+| User Mailling List|[user@eagle.incubator.apache.org](mailto:user@eagle.incubator.apache.org)|[subscribe](mailto:user-subscribe@eagle.incubator.apache.org)|[unsubscribe](mailto:user-unsubscribe@eagle.incubator.apache.org)| [eagle-user](http://mail-archives.apache.org/mod_mbox/eagle-user/)|
+| Developers Mailling List|[dev@eagle.incubator.apache.org](mailto:dev@eagle.incubator.apache.org)|[subscribe](mailto:dev-subscribe@eagle.incubator.apache.org)|[unsubscribe](mailto:dev-unsubscribe@eagle.incubator.apache.org)| [eagle-dev](http://mail-archives.apache.org/mod_mbox/eagle-dev/)|
+| Issues Mailling List|[issues@eagle.incubator.apache.org](mailto:issues@eagle.incubator.apache.org)|[subscribe](mailto: issues-subscribe@eagle.incubator.apache.org)|[unsubscribe](mailto:issues-unsubscribe@eagle.incubator.apache.org)| [eagle-issues](http://mail-archives.apache.org/mod_mbox/eagle-issues/)|
+| Commits Mailling List|[commits@eagle.incubator.apache.org](mailto:commits@eagle.incubator.apache.org)|[subscribe](mailto:commits-subscribe@eagle.incubator.apache.org)|[unsubscribe](mailto:commits-unsubscribe@eagle.incubator.apache.org)| [eagle-commits](http://mail-archives.apache.org/mod_mbox/eagle-commits/)|
+
 
 ### Issue Tracker
 
-`Coming soon ... `
+[https://issues.apache.org/jira/browse/EAGLE](https://issues.apache.org/jira/browse/EAGLE)
 
-_Currently please use [https://github.com/eBay/Eagle/issues](https://github.com/eBay/Eagle/issues) for issue tracking_
-<br/>
+### Social Network
+
+* **Twitter**: [@TheApacheEagle](https://twitter.com/TheApacheEagle)
+* **Wechat**: Apache_Eagle
 
 ### Events and Meetups
 
