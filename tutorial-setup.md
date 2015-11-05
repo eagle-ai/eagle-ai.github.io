@@ -4,9 +4,8 @@ title:  "Site Management"
 permalink: /docs/tutorial/setup.html
 ---
 
-Eagle identifies different data platforms as different sites, such as sandbox, datacenter1, datacenter2. In each site,
-a user can add at most three data sources as the monitoring targets: hdfsAuditLog, HiveQueryLog, and userProfiles. For
-each data source, a connection configuration is required.
+Eagle identifies different Hadoop environments as different sites, such as sandbox, datacenter1, datacenter2. In each site,
+a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
 
 This document has two parts. The first part is about how to add a new site; the second part shows how to add the configuration for
 each data source.

@@ -4,14 +4,7 @@ title:  "Deploy Eagle in Sandbox"
 permalink: /docs/deployment-in-sandbox.html
 ---
 
-This page contains information to get you started quickly with Eagle. It is aimed primarily at users hoping to try it out,
-and contains simple installation instructions for Hortonworks sandbox, and a few simple alerting examples.
-However for the complete instructions for the production deployments, please refer to [here](/docs/deployment-in-production.html).
-
-
-If you run into difficulties, first check for a solution is in the [FAQ](/docs/FAQ.html) page. Otherwise, email the mailing list.
-
-Here's a summary of the steps for setting up Eagle in Hortonworks sandbox:
+Here is the summary of the steps for setting up Eagle in Hortonworks sandbox:
 
 * Step 1: Setup sandbox image in a virtual machine
 * Step 2: Setup Hadoop environment in sandbox
@@ -54,17 +47,16 @@ To install Eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 
 <br/>
 
-### **Step 4: Install Eagle**
+### **Step 4: Install Eagle in Sandbox**
 
-The install process will prepare some HBase tables, populate metadata into these tables, and start Eagle services, such as Eagle web,
-three monitoring topologies, including HdfsAuditLog, HiveQueryLog, and [User Profiles](/docs/tutorial/userprofile.html)
+The following installation actually contains installing and setting up a sandbox site with three data sources HdfsAuditLog, HiveQueryLog, and [User Profiles](/docs/tutorial/userprofile.html)
 
-* **Option 1**: Start Eagle Service using command line
+* **Option 1**: Install Eagle using command line
 
       $ cd /usr/hdp/current/eagle
       $ examples/eagle-sandbox-starter.sh
 
-* **Option 2**: Start Eagle Service using [Eagle Ambari plugin](/docs/ambari-plugin-install.html)
+* **Option 2**: Install Eagle using [Eagle Ambari plugin](/docs/ambari-plugin-install.html)
 
 Check [Eagle web](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
 (If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
