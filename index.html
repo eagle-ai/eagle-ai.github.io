@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/misc.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/colorbox.css">
 <link rel="shortcut icon" href="images/favicon.png">
 <script src="//load.sumome.com/" data-sumo-site-id="4f1f82ddde38afb72321e7c702051b89fb2ab9d54d314434184ebe0ea5b5fa37" async></script>
 
@@ -105,6 +106,11 @@
       <div class="col-md-12">
         <p style="width:80%; margin-left:auto; margin-right:auto;"> Apache Eagle is an Open Source Monitoring solution, contributed by eBay Inc, to instantly identify access to sensitive data, recognize attacks, malicious activities in Hadoop and take actions in real time.
 </p> 
+<div class="sepline">
+ <a class='youtube' width="560" height="315"  href="https://www.youtube.com/embed/6j5jXgAgjv8"><div class="video">Watch the Intro Video</div></a> 
+ </div>
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/6j5jXgAgjv8" frameborder="0" allowfullscreen></iframe>-->
+
         <P>Eagle has been accepted as an Apache Incubator Project on Oct 26, 2015.</P>
         <p>Eagle secures Hadoop in realtime in 3 steps:</p>
       </div>
@@ -387,10 +393,12 @@
 <script src="js/jquery.singlePageNav.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/jquery.colorbox.js"></script>
 <script src="js/modernizr.min.js"></script>
 <script src="js/svg.js"></script>
 
 <script>
+$(".youtube").colorbox({iframe:true, innerWidth:728, innerHeight:410});
 
 var lastId,
     topMenu = $("#top-menu"),

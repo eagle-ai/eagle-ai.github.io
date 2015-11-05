@@ -782,3 +782,32 @@ Media Queries
 	
 .sectiontile{
 	font-weight:300;}
+
+.video{
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid #4183EF;
+  color: #4183EF;
+  padding: 0.85em 3em 0.85em 3em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin:10px auto 10px auto; font-size:16px;
+	}
+
+.video>a{
+	color:#4183EF;
+	}
+	
+.sepline::after {
+    content: " ";
+    border: solid 1px #757575;
+    display: block;
+    width: 65px;
+    margin: 30px auto;}
+
+.video:hover {
+    opacity:0.8;
+}
