@@ -11,7 +11,9 @@ install a **namenode log4j Kafka appender**.
 
 ### Logstash-kafka
 
-* **Step 1**: Create a Kafka topic as the streaming input. Here is an example command to create a Kafka topic 'sandbox_hdfs_audit_log'
+* **Step 1**: Create a Kafka topic as the streaming input.
+
+    Here is an sample Kafka command to create topic 'sandbox_hdfs_audit_log'
 
       cd <kafka-home>
       bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log

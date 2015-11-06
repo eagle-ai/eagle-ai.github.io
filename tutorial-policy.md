@@ -2,13 +2,14 @@
 layout: doc
 title:  "Policy Tutorial" 
 permalink: /docs/tutorial/policy.html
-
 ---
 
-Eagle currently supports to customize two kinds of policies:
+Eagle currently supports to customize policies for data sources for each site:
 
-* HDFS
-* HIVE
+* HDFS Audit Log
+* Hive Query Log
+
+> NOTICE: policies are classified by sites. Please select the site first when there are multiple ones.
 
 ### How to define HDFS Policy?
 In this example we will go through the steps for creating the following HDFS policy.

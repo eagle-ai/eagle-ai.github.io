@@ -10,7 +10,7 @@ For both HDFS and Hive, a user can browse the resources and add/remove the sensi
 The document has two parts. The first part is about how to add/remove sensitivity to files/directories; the second part shows the application
 of sensitivity in policy definition. Showing HDFS as an example.
 
-> **WARNING**: please mark sure the site (on the upper right corner) have been correctly configured on [setup page](/docs/tutorial/setup.html) AT FIRST.
+> **WARNING**: sensitivity is classified by sites. Please select the right site first when there are multiple ones.
 
 #### **Part 1: Sensitivity Edit**
 
