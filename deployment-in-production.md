@@ -5,8 +5,9 @@ permalink: /docs/deployment-in-production.html
 ---
 
 
-This page outlines the steps for manually deploying Eagle in the production environment.
-For a quick start, we strongly recommend you to [start Eagle in a sandbox](/docs/deployment-in-sandbox.html).
+This page outlines the steps for deploying Eagle in the production environment.
+Notice that Eagle requires you have full permissions to HBase and Storm CLI.
+
 
 Here's the main content of this page:
 
@@ -32,7 +33,7 @@ Here's the main content of this page:
     * Kafka: 0.8.x or later
     * Java: 1.7.x
 
-  >  Notice, to complete the installation, Eagle requires a system user that has full permissions to HBase and Storm CLI.
+  >  Notice,
 
 * **Stream HDFS audit log data (Only for HDFSAuditLog Monitoring)**
 
