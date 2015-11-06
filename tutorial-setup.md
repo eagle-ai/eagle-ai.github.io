@@ -7,10 +7,10 @@ permalink: /docs/tutorial/setup.html
 Eagle identifies different Hadoop environments as different sites, such as sandbox, datacenter1, datacenter2. In each site,
 a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
 
-This document has two parts. The first part is about how to add a new site; the second part shows how to add the configuration for
-each data source.
+This page shows how to setup a site completely. It has two parts. The first part is about how to add a new site on the web;
+the second part shows how to configure each data source in this site.
 
-> **Notice**: by default, Site "sandbox" is provided with three configured data sources.
+> **Notice**: the following configuration part, we uses Hortonworks sandbox as examples
 
 ### **Part 1: Add Site**
 
@@ -19,7 +19,8 @@ The following is an example which creates a new site "Demo", and add two data so
 
 ### **Part 2: Add Configuration**
 
-Different sites need different configurations. Here are example configurations for sandbox
+After create a new site, we need to configure the connection string for each data source in this site. 
+
 * HDFS Audit Log
 
         {"hdfsEndpoint":"hdfs://sandbox.hortonworks.com:8020"}

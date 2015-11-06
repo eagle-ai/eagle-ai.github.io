@@ -109,11 +109,15 @@ Here's the main content of this page:
           # start User Profiles
           $ bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/XXXX-userprofile-topology.conf start
 
-You have now successfully installed Eagle and setup a monitoring site. You can
+You have now successfully installed Eagle and setup a monitoring site. Next you can
 
-* Create more policies with Eagle web, and check topologies with Storm UI
+* Create more policies with Eagle web [tutorial](/docs/tutorial/policy.html)
 
-* Check alerting with instructions on [Quick Starer](/docs/quick-start.html).
+* Experience alerting with instructions on [Quick Starer](/docs/quick-start.html)
+
+* Enable resolver and classification functions of Eagle web [tutorial](/docs/tutorial/setup.html)
+
+* Check topologies with Storm UI
 
 ### **Stop Services**
 

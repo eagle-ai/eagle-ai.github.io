@@ -6,6 +6,8 @@ permalink: /docs/ambari-plugin-install.html
 
 Assume Eagle package has been copied and exacted under /usr/hdp/current/eagle.
 
+> **WARNING**: the following instructions work in sandbox currently.
+
 
 ### Pre-requisites
 

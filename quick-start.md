@@ -8,7 +8,7 @@ This is a tutorial-style guide for users to have a quick image of Eagle. The mai
 
 * Downloading
 * Installation
-* Demo Eagle
+* Demos
 
 ### Download/Build tarball
 
@@ -34,15 +34,15 @@ If you want to deploy eagle in production environment, please refer to:
 * [Deploy Eagle in the Production](/docs/deployment-in-production.html)
 <br/>
 
-### Demo Eagle
+### Demos
 
 * Define policy with Eagle web
-    * Step 1: Select the site which is monitored by the backend topologies
+    * Step 1: Select the site which is monitored by the backend topologies. For example "sandbox"
         ![](/images/docs/selectSite.png)
     * Step 2: Create a policy
         ![](/images/docs/hdfs-policy1.png)
 
-    Learn more about how to define policy, please refer to tutorial: [Policy Management](/docs/tutorial/policy.html)
+    Learn more about how to define policy, please refer to tutorial [Policy Management](/docs/tutorial/policy.html)
 <br/>
 
 * Test policy and check alerting

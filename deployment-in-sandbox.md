@@ -58,13 +58,10 @@ The following installation actually contains installing and setting up a sandbox
 
 * **Option 2**: Install Eagle using [Eagle Ambari plugin](/docs/ambari-plugin-install.html)
 
-Check [Eagle web](http://localhost:9099/eagle-service) and [topology UI](http://localhost:8744) with login account `admin/secret`.
-(If the network is NAT in virtual box, it's necessary to add service port 9099 to the forwarding port)
-![Forwarding Port](/images/docs/eagle-service.png)
 
 ### **Step 5: Stream HDFS audit log**
 
-To stream HDFS audit log into Kafka, the final step is to install a namenode log4j Kafka appender (another option Logstash is [here](/docs/import-hdfs-auditLog.html)).
+To stream HDFS audit log into Kafka, the last step is to install a namenode log4j Kafka appender (another option Logstash is [here](/docs/import-hdfs-auditLog.html)).
 
 * **Step 1**: Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
 
@@ -98,7 +95,16 @@ To stream HDFS audit log into Kafka, the final step is to install a namenode log
 
       $ /usr/hdp/current/kafka-broker/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic sandbox_hdfs_audit_log
 
-You have now successfully installed Eagle. To learn how to use it, please go to [Quick Start](/docs/quick-start.html).
+Now please login to Eagle web http://localhost:9099/eagle-service with account `admin/secret`, and try the sample demos on
+[Quick Starer](/docs/quick-start.html)
+
+
+  (If the NAT network is used in a virtual machine, it's required to add port 9099 to forwarding ports)
+  ![Forwarding Port](/images/docs/eagle-service.png)
+  ![login](/images/docs/login.png)
+
+
+
 
 
 
