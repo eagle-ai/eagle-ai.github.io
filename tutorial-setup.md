@@ -19,7 +19,7 @@ The following is an example which creates a new site "Demo", and add two data so
 
 ### **Part 2: Add Configuration**
 
-After create a new site, we need to configure the connection string for each data source in this site. 
+After create a new site, we need to configure the connection string for each data source in this site.
 
 * HDFS Audit Log
 
