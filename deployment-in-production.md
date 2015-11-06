@@ -34,7 +34,6 @@ Here's the main content of this page:
     * Kafka: 0.8.x or later
     * Java: 1.7.x
 
-  >  Notice,
 
 * **Stream HDFS audit log data (Only for HDFSAuditLog Monitoring)**
 
