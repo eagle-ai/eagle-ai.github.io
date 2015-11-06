@@ -6,13 +6,13 @@ permalink: /docs/deployment-in-production.html
 
 
 This page outlines the steps for deploying Eagle in the production environment.
-Notice that Eagle requires you have full permissions to HBase and Storm CLI.
+Notice that Eagle requires you have full permissions to HDFS, HBase and Storm CLI.
 
 
 Here's the main content of this page:
 
 * Pre-requisites
-   * Environment
+   * Hadoop Environment
    * Stream HDFS audit log data into Kafka
 * Installation
    * Edit Configure files
@@ -26,8 +26,9 @@ Here's the main content of this page:
 
 ### **Pre-requisites**
 
-* **Environment**
+* **Hadoop Environment**
 
+    * HDFS: 2.6.x
     * HBase: 0.98 or later
     * Storm: 0.9.3 or later
     * Kafka: 0.8.x or later

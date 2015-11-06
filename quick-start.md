@@ -14,13 +14,13 @@ This is a tutorial-style guide for users to have a quick image of Eagle. The mai
 
 * Download tarball directly from latest released [binary package](http://66.211.190.194/eagle-0.1.0.tar.gz)
 
-* Build manaly by cloning latest code from [github](https://github.com/ebay/eagle) with [Apache Maven](https://maven.apache.org/):
+* Build manually by cloning latest code from [github](https://github.com/ebay/eagle) with [Apache Maven](https://maven.apache.org/):
 
 	  $ git clone git@github.com:eBay/Eagle.git
 	  $ cd Eagle
 	  $ mvn clean package -DskipTests
 
-	After building successfully, you will get the tarball under `eagle-assembly/target/` named as `eagle-${version}.tar.gz`
+	After building successfully, you will get the tarball under `eagle-assembly/target/` named as `eagle-${version}-bin.tar.gz`
 <br/>
 
 ### Installation
