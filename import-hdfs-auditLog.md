@@ -85,10 +85,10 @@ install a **namenode log4j Kafka appender**.
 
 * **Step 2**: Configure $HADOOP_CONF_DIR/log4j.properties, and add a log4j appender "KAFKA_HDFS_AUDIT" to hdfs audit logging
 
-      log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
+      log4j.appender.KAFKA_HDFS_AUDIT=org.apache.eagle.log4j.kafka.KafkaLog4jAppender
       log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
       log4j.appender.KAFKA_HDFS_AUDIT.BrokerList=sandbox.hortonworks.com:6667
-      log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
+      log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=org.apache.eagle.log4j.kafka.hadoop.AuditLogKeyer
       log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
       log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
       log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
