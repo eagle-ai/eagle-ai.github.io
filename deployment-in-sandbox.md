@@ -38,6 +38,7 @@ To install Eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 
     * **Option 2**: Build form source code [eagle github](https://github.com/eBay/Eagle). After successful build, ‘eagle-xxx-bin.tar.gz’ will be generated under `./eagle-assembly/target`
 
+          # installed npm is required before compiling
           $ mvn clean install -DskipTests=true
 * **Copy and extract the package to sandbox**
 
@@ -65,10 +66,10 @@ To stream HDFS audit log into Kafka, the last step is to install a namenode log4
 
 * **Step 1**: Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, and add below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
 
-      log4j.appender.KAFKA_HDFS_AUDIT=eagle.log4j.kafka.KafkaLog4jAppender
+      log4j.appender.KAFKA_HDFS_AUDIT=org.apache.eagle.log4j.kafka.KafkaLog4jAppender
       log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
       log4j.appender.KAFKA_HDFS_AUDIT.BrokerList=sandbox.hortonworks.com:6667
-      log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=eagle.log4j.kafka.hadoop.AuditLogKeyer
+      log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=org.apache.eagle.log4j.kafka.hadoop.AuditLogKeyer
       log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
       log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
       log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
