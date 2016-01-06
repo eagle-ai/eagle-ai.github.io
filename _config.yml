@@ -49,6 +49,8 @@ documentations:
         url: /docs/tutorial/userprofile.html
       - title: Data Classification Tutorial
         url: /docs/tutorial/classification.html
+      - title: Eagle LDAP Tutorial
+        url: /docs/tutorial/ldap.html
   - category: Advanced
     links: 
       - title: Eagle Architecture Highlights
