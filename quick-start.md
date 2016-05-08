@@ -4,65 +4,63 @@ title:  "Quick Start"
 permalink: /docs/quick-start.html
 ---
 
-This is a tutorial-style guide for users to have a quick image of Eagle. The main content are
+Guide To Install Eagle On Hortonworks sandbox. 
 
-* Downloading
-* Installation
-* Demos
+* Prerequisite
+* Download + Patch + Build
+* Setup Hadoop Environment.
+* Install Eagle.
+* Demo
+<br/>
 
-### Download/Build tarball
+### **Prerequisite**
+* To install Eagle on a sandbox, you need to run a HDP sandbox image in a virtual machine (8GB memory recommended).
+	1. Get Virtual Box or VMware [Virtualization environment](http://hortonworks.com/products/hortonworks-sandbox/#install)
+	2. Get [Hortonworks Sandbox v 2.2.4](http://hortonworks.com/products/hortonworks-sandbox/#archive)
+* JDK 1.7  
+* NPM (On MAC OS try "brew install node") 	
+<br/>
 
-* Download tarball directly from latest released [binary package](http://66.211.190.194/eagle-0.1.0.tar.gz)
+### **Download + Patch + Build**
+* Download latest Eagle source released From Apache [[Tar]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz) , [[MD5]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.md5) 
+* Build manually with [Apache Maven](https://maven.apache.org/):
 
-* Build manually by cloning latest code from [github](https://github.com/apache/incubator-eagle) with [Apache Maven](https://maven.apache.org/):
-
-	  $ git clone git@github.com:apache/incubator-eagle.git
-	  $ cd Eagle
+	  $ tar -zxvf apache-eagle-0.3.0-incubating-src.tar.gz
+	  $ cd incubator-eagle-release-0.3.0-rc3  
+	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/incubator-eagle/pull/150.patch
+	  $ git apply 150.patch
 	  $ mvn clean package -DskipTests
 
-	After building successfully, you will get the tarball under `eagle-assembly/target/` named as `eagle-${version}-bin.tar.gz`
+	After building successfully, you will get tarball under `eagle-assembly/target/` named as `eagle-0.3.0-incubating-bin.tar.gz`
 <br/>
 
-### Installation
-The fastest way to start with Eagle is to:
-
-* [Install Eagle with Sandbox](/docs/deployment-in-sandbox.html)
-* [Install Eagle with Docker](https://issues.apache.org/jira/browse/EAGLE-3)(under development)
-
-If you want to deploy eagle in production environment, please refer to:
-
-* [Deploy Eagle in the Production](/docs/deployment-in-production.html)
+### **Setup Hadoop Environment**
+1. Launch Ambari to manage the Hadoop environment
+   * Enable Ambari in sandbox [http://127.0.0.1:8000](http://127.0.0.1:8000) (Click on Enable Button)
+   * Login to Ambari UI [http://127.0.0.1:8080](http://127.0.0.1:8080) with username and password as "admin"
+2. Grant root as HBase superuser via Ambari
+![add superuser](/images/docs/hbase-superuser.png)
+3. Start HBase,Storm & Kafka from Ambari. Showing Storm as an example below. 
+![Restart Services](/images/docs/start-storm.png "Services")
+4. If the NAT network is used in a virtual machine, its required to add port 9099 to "Port Forwarding"
+  ![Port Forwarding](/images/docs/eagle-service.png)
 <br/>
 
-### Demos
 
-* Define policy with Eagle web
-    * Step 1: Select the site which is monitored by the backend topologies. For example "sandbox"
-        ![](/images/docs/selectSite.png)
-    * Step 2: Create a policy
-        ![](/images/docs/hdfs-policy1.png)
-
-    Learn more about how to define policy, please refer to tutorial [Policy Management](/docs/tutorial/policy.html)
-<br/>
-
-* Test policy and check alerting
-
-    **Example 1** (HDFSAuditLog): validate sample policy “viewPrivate” on [Eagle web](http://localhost:9099/eagle-service) by running a HDFS command
-
-      $ hdfs dfs -cat /tmp/private
-
-    You should see an alert for policy name “viewPrivate” in [Eagle web](http://localhost:9099/eagle-service) . Under Alerts page.
-
-    **Example 2** (HiveQueryLog): validate sample policy “queryPhoneNumber” in [Eagle web](http://localhost:9099/eagle-service) by submitting a hive job
-
-      $ su hive
-      $ hive
-      > set hive.execution.engine=mr;
-      > use xademo;
-      > select a.phone_number from customer_details a, call_detail_records b where a.phone_number=b.phone_number;
-
-  You should see an alert for policy name “queryPhoneNumber” in [Eagle web](http://localhost:9099/eagle-service) . Under Alerts page.
+### **Install Eagle**
+    
+     $ scp -P 2222  /eagle-assembly/target/eagle-0.3.0-incubating-bin.tar.gz root@127.0.0.1:/root/
+     $ ssh root@127.0.0.1 -p 2222
+     $ tar -zxvf eagle-0.3.0-incubating-bin.tar.gz
+     $ mv eagle-0.3.0-incubating eagle
+     $ mv eagle /usr/hdp/current/
+     $ cd /usr/hdp/current/eagle
+     $ examples/eagle-sandbox-starter.sh
 
 <br/>
 
+### **Demos**
+* Login to Eagle UI [http://localhost:9099/eagle-service/](http://localhost:9099/eagle-service/) using username and password as "admin" and "secret"
+* [HDFS & Hive](/docs/hdfs-hive-monitoring.html)
+* [JMX Metric Monitoring](/docs/jmx-metric-monitoring.html)
 <br/>
