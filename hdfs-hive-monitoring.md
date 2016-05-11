@@ -23,13 +23,13 @@ This Guide describes the steps to install data activity monitoring of "HDFS File
  
 * **Step 1**: Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, by adding below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
 
-	       log4j.appender.KAFKA_HDFS_AUDIT=org.apache.eagle.log4j.kafka.KafkaLog4jAppender
-	       log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log<br/>
-	       log4j.appender.KAFKA_HDFS_AUDIT.BrokerList=sandbox.hortonworks.com:6667
-	       log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=org.apache.eagle.log4j.kafka.hadoop.AuditLogKeyer<br/>
-	       log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout<br/>
-	       log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n<br/>
-	       log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
+	   log4j.appender.KAFKA_HDFS_AUDIT=org.apache.eagle.log4j.kafka.KafkaLog4jAppender
+	   log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
+	   log4j.appender.KAFKA_HDFS_AUDIT.BrokerList=sandbox.hortonworks.com:6667
+	   log4j.appender.KAFKA_HDFS_AUDIT.KeyClass=org.apache.eagle.log4j.kafka.hadoop.AuditLogKeyer
+	   log4j.appender.KAFKA_HDFS_AUDIT.Layout=org.apache.log4j.PatternLayout
+	   log4j.appender.KAFKA_HDFS_AUDIT.Layout.ConversionPattern=%d{ISO8601} %p %c{2}: %m%n
+	   log4j.appender.KAFKA_HDFS_AUDIT.ProducerType=async
 
     ![HDFS LOG4J Configuration](/images/docs/hdfs-log4j-conf.png "hdfslog4jconf")
 
@@ -55,7 +55,7 @@ This Guide describes the steps to install data activity monitoring of "HDFS File
 
 * **Step 7**: Check whether logs from "/var/log/hadoop/hdfs/hdfs-audit.log" are flowing into topic `sandbox_hdfs_audit_log`
       
-    $ /usr/hdp/2.2.4.2-2/kafka/bin/kafka-console-consumer.sh --zookeeper sandbox.hortonworks.com:2181 --topic sandbox_hdfs_audit_log      
+        $ /usr/hdp/2.2.4.2-2/kafka/bin/kafka-console-consumer.sh --zookeeper sandbox.hortonworks.com:2181 --topic sandbox_hdfs_audit_log      
       
 <br/>
 
@@ -67,7 +67,7 @@ This Guide describes the steps to install data activity monitoring of "HDFS File
 	2. You should see policy with name "viewPrivate". This Policy generates alert when any user reads HDFS file name "private" under "tmp" folder.
 	3. In sandbox read restricted HDFS file "/tmp/private" by using command 
 	
-	   > hadoop fs -cat "/tmp/private"
+	   > hadoop fs -cat /tmp/private
 
 	From UI click on alert tab and you should see alert for the attempt to read restricted file.  
 * **Hive**:

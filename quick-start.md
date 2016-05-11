@@ -49,8 +49,8 @@ Guide To Install Eagle On Hortonworks sandbox.
 
 ### **Install Eagle**
     
-     $ scp -P 2222  /eagle-assembly/target/eagle-0.3.0-incubating-bin.tar.gz root@127.0.0.1:/root/
-     $ ssh root@127.0.0.1 -p 2222
+     $ scp -P 2222  eagle-assembly/target/eagle-0.3.0-incubating-bin.tar.gz root@127.0.0.1:/root/
+     $ ssh root@127.0.0.1 -p 2222 (password is hadoop)
      $ tar -zxvf eagle-0.3.0-incubating-bin.tar.gz
      $ mv eagle-0.3.0-incubating eagle
      $ mv eagle /usr/hdp/current/
