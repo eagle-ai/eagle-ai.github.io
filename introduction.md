@@ -4,9 +4,9 @@ title:  "Introduction"
 permalink: /docs/index.html
 ---
 
-### Welcome to Eagle
+### Welcome to Apache Eagle
 
-> Eagle is an Open Source Monitoring solution for Hadoop to instantly detect access to sensitive data, recognize attacks, malicious activities and block access in real time. 
+> Apache Eagle is an open source realtime analytics solution for identifying security and performance issues instantly on big data platforms e.g. Hadoop, Spark, NoSQL etc. It analyzes data activities, yarn applications, jmx metrics, and daemon logs etc., provides state-of-the-art alert engine to identify security breach, performance issues and show insights.
 
 ### Key Qualities
 
