@@ -6,14 +6,18 @@ permalink: /docs/ecosystem.html
 
 ### Eagle Core
 
-The core of eagle is the distributed real-time policy framework, including highly abstracted Streaming Programing API, CEP-based Policy Execution Engine, SQL-Like REST API based on HBase, Alert Deduplication, Alert Notification Framework and so on.
+The core of Eagle is the highly scalable real-time alert engine, including coordinator, metadata service, and policy processing topology so on. Around Eagle alert engine, community can integrate more data sources and also can write applications to listen to alerts and respond.
 
 ### Extension
+Eagle exposes a few places where community can extend Eagle existing capabilities. 
 
-Eagle supports pluggable policy execution engined like siddhi, machine learning and more, could support any types of data sources.
+* integrate more data source
 
-### Integration
-Eagle provides Ambari plugin for easily installation, can be easily intergrated into existing hadoop cluster.
+* write your own policy engine beyond CEP engine
+
+* write your own alert publisher other than email etc.
+
+* write best-practice polices and share
 
 ### User Interface
-Eagle provide highly user-friendly UI for policy management
+Eagle provide user-friendly UI for new data source onboarding, policy management and insights
