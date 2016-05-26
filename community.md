@@ -33,7 +33,7 @@ permalink: /docs/community.html
 
 ### Project Contributors
 
-**Initial Commiters**
+**Commiters**
 
 * [Edward Zhang (张勇)](https://github.com/yonzhang)
 * [Hao Chen（陈浩）](https://github.com/haoch)
@@ -44,6 +44,7 @@ permalink: /docs/community.html
 * [Hemanth Dendukuri](https://github.com/hdendukuri)
 * [Arun Manoharan](https://github.com/armanoharan)
 * [Adunuthula, Seshu](https://github.com/seshuad)
+* [Liangfei Su (苏良飞)](https://github.com/RalphSu)
 <br/>
 
 ### Project History
