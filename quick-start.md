@@ -27,8 +27,8 @@ Guide To Install Eagle On Hortonworks sandbox.
 
 	  $ tar -zxvf apache-eagle-0.3.0-incubating-src.tar.gz
 	  $ cd incubator-eagle-release-0.3.0-rc3  
-	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/incubator-eagle/pull/150.patch
-	  $ git apply 150.patch
+	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/incubator-eagle/pull/180.patch
+	  $ git apply 180.patch
 	  $ mvn clean package -DskipTests
 
 	After building successfully, you will get tarball under `eagle-assembly/target/` named as `eagle-0.3.0-incubating-bin.tar.gz`
