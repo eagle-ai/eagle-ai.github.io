@@ -19,16 +19,6 @@ jQuery(document).ready(function($) {
         $('.responsive-menu').stop(true, true).slideToggle();
     });
 
-
-    var heights = $(".well2").map(function() {
-            return $(this).height();
-        }).get(),
-
-        maxHeight = Math.max.apply(null, heights);
-
-    $(".well2").height(maxHeight);
-
-
     /************** Menu Content Opening *********************/
     $(".main_menu a, .responsive_menu a").click(function() {
         var id = $(this).attr('class');
@@ -143,12 +133,4 @@ function animationPage() {
     } else {
         $(".usecaseimage").removeClass('animated bounceIn');
     }
-
-    var modules = $(".well2").offset().top;
-    if (modules < currentPosition) {
-        $(".well2").addClass('animated bounce');
-    } else {
-        $(".well2").removeClass('animated bounce');
-    }
-
 };
