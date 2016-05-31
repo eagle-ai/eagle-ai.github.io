@@ -4,6 +4,8 @@ title:  "MapR Integration"
 permalink: /docs/mapr-integration.html
 ---
 
+*Since Eagle 0.4.0*
+
 ### Prerequisites
 
 To get maprFSAuditLog monitoring started, we need to:

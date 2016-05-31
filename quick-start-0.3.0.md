@@ -1,12 +1,10 @@
 ---
 layout: doc
 title:  "Quick Start" 
-permalink: /docs/quick-start.html
+permalink: /docs/quick-start-0.3.0.html
 ---
 
-Guide To Install Eagle 0.4.0 On Hortonworks sandbox. 
-
-[For older versions: Eagle 0.3.0 Quick Start](/docs/quick-start-0.3.0.html)
+Guide To Install Eagle 0.3.0 On Hortonworks sandbox. 
 
 * Prerequisite
 * Download + Patch + Build
@@ -24,7 +22,7 @@ Guide To Install Eagle 0.4.0 On Hortonworks sandbox.
 <br/>
 
 ### **Download + Patch + Build**
-* Download latest Eagle source released From Apache [[Tar]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz) , [[MD5]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.md5) 
+* Download Eagle 0.3.0 source released From Apache [[Tar]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz) , [[MD5]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.md5) 
 * Build manually with [Apache Maven](https://maven.apache.org/):
 
 	  $ tar -zxvf apache-eagle-0.3.0-incubating-src.tar.gz
@@ -64,5 +62,4 @@ Guide To Install Eagle 0.4.0 On Hortonworks sandbox.
 ### **Demos**
 * Login to Eagle UI [http://localhost:9099/eagle-service/](http://localhost:9099/eagle-service/) using username and password as "admin" and "secret"
 * [HDFS & Hive](/docs/hdfs-hive-monitoring.html)
-* [JMX Metric Monitoring](/docs/jmx-metric-monitoring.html)
 <br/>
