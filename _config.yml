@@ -1,7 +1,7 @@
 # Site settings
 title: Eagle
 email: cn.haochen@gmail.com
-description: Eagle - Secure Hadoop in Real Time
+description: Eagle - Analyze Big Data Platforms for Security and Performance 
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://goeagle.io" # the base hostname & protocol for your site
@@ -28,14 +28,20 @@ documentations:
         url: /docs/community.html
       - title: FAQ
         url: /docs/FAQ.html
+  - category: Download
+    links:
+      - title: Latest version
+        url: /docs/download-0.4.0.html
+      - title: Archived
+        url: /docs/download.html
   - category: Installation
     links:
       - title: Quick Starter(Eagle In Sandbox)
         url: /docs/quick-start.html
-      - title: Download
-        url: /docs/download.html
       - title: HDFS & Hive Activity Monitoring
         url: /docs/hdfs-hive-monitoring.html
+      - title: MapR Integration
+        url: /docs/mapr-integration.html
       - title: JMX URL Monitoring
         url: /docs/jmx-metric-monitoring.html
       - title: Stream Log Data into Kafka
@@ -56,6 +62,10 @@ documentations:
         url: /docs/tutorial/userprofile.html
       - title: Data Classification Tutorial
         url: /docs/tutorial/classification.html
+      - title: Topology Management
+        url: /docs/tutorial/topologymanagement.html
+      - title: Alert Notification Plugin
+        url: /docs/tutorial/notificationplugin.html
   - category: How To
     links: 
       - title: Use Metadata API

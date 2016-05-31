@@ -45,6 +45,7 @@ permalink: /docs/community.html
 * [Arun Manoharan](https://github.com/armanoharan)
 * [Adunuthula, Seshu](https://github.com/seshuad)
 * [Liangfei Su (苏良飞)](https://github.com/RalphSu)
+* [Daniel Zhou (周达)](https://github.com/DadanielZ)
 <br/>
 
 ### Project History
