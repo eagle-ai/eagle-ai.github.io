@@ -4,6 +4,8 @@ title:  "HDFS & Hive Quick Start"
 permalink: /docs/hdfs-hive-monitoring.html
 ---
 
+*Since Eagle 0.3.0*
+
 This Guide describes the steps to install data activity monitoring of "HDFS File System" & "Hive".
 
 * Prerequisite
@@ -13,7 +15,7 @@ This Guide describes the steps to install data activity monitoring of "HDFS File
 
 
 ### **Prerequisite**
-* Complete the setup from [Quick Starter(Eagle In Sandbox)](/docs/quick-start.html)	 	
+* Complete the setup from [Quick Start(Eagle In Sandbox)](/docs/quick-start.html)	 	
 <br/><br/>
 
 

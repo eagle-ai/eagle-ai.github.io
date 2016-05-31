@@ -36,7 +36,7 @@ documentations:
         url: /docs/download.html
   - category: Installation
     links:
-      - title: Quick Starter(Eagle In Sandbox)
+      - title: Quick Start(Eagle In Sandbox)
         url: /docs/quick-start.html
       - title: HDFS & Hive Activity Monitoring
         url: /docs/hdfs-hive-monitoring.html
@@ -74,6 +74,8 @@ documentations:
     links: 
       - title: Development Quick Guide
         url: /docs/development-quick-guide.html
+      - title: Development in Mac OSX
+        url: /docs/development-in-macosx.html
   - category: Advanced
     links: 
       - title: Eagle Architecture Highlights
