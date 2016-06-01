@@ -20,6 +20,8 @@ documentations:
     links:
       - title: Introduction
         url: /docs/index.html
+      - title: Use Cases
+        url: /docs/usecases.html
       - title: Terminology
         url: /docs/terminology.html
       - title: Ecosystem
@@ -62,6 +64,8 @@ documentations:
         url: /docs/tutorial/setup.html
       - title: Eagle Policy Tutorial
         url: /docs/tutorial/policy.html
+      - title: Policy Engine Capabilities 
+        url: /docs/tutorial/policy-capabilities.html
       - title: User Profile Tutorial
         url: /docs/tutorial/userprofile.html
       - title: Data Classification Tutorial
@@ -70,10 +74,8 @@ documentations:
         url: /docs/tutorial/topologymanagement.html
       - title: Alert Notification Plugin
         url: /docs/tutorial/notificationplugin.html
-  - category: How To
-    links: 
       - title: Use Metadata API
-        url: /docs/policy-api.html
+        url: /docs/metadata-api.html
   - category: Development Guide
     links: 
       - title: Development Quick Guide
@@ -82,7 +84,5 @@ documentations:
         url: /docs/development-in-macosx.html
   - category: Advanced
     links: 
-      - title: Eagle Architecture Highlights
-        url: /docs/architecture-highlights.html
       - title: User Profile Machine Learning
         url: /docs/user-profile-ml.html
