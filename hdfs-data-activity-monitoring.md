@@ -1,29 +1,29 @@
 ---
 layout: doc
-title:  "HDFS & Hive Quick Start" 
-permalink: /docs/hdfs-hive-monitoring.html
+title:  "HDFS Data Activity Monitoring Quick Start" 
+permalink: /docs/hdfs-data-activity-monitoring.html
 ---
 
 *Since Eagle 0.3.0*
 
-This Guide describes the steps to install data activity monitoring of "HDFS File System" & "Hive".
+This Guide describes the steps to enable data activity monitoring of "HDFS File System".
 
 * Prerequisite
-* Stream HDFS audit logs into Kafka.
-* Demos "HDFS File System" & "Hive" monitoring
+* Stream HDFS audit logs into Kafka
+* Demos "HDFS Data Activity Monitoring"
 <br/><br/>
 
 
 ### **Prerequisite**
-* Complete the setup from [Quick Start(Eagle In Sandbox)](/docs/quick-start.html)	 	
+* Complete the setup from [Quick Start(Eagle In Sandbox)](/docs/quick-start.html)	
 <br/><br/>
 
 
 ### **Stream HDFS audit logs into Kafka**   
  
-  Note: This section is only needed for "HDFS File System" Monitoring. For another option to stream HDFS audit logs into Kafka using Logstash [Click Here](/docs/import-hdfs-auditLog.html)
+  Note: This section describes how to configure Kafka log4j to stream audit logs into Eagle platform. For another option to stream HDFS audit logs into Kafka using Logstash [Click Here](/docs/import-hdfs-auditLog.html)
  
-* **Step 1**: Configure Advanced hadoop-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, by adding below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
+* **Step 1**: Configure Advanced hdfs-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, by adding below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
 
 	   log4j.appender.KAFKA_HDFS_AUDIT=org.apache.eagle.log4j.kafka.KafkaLog4jAppender
 	   log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
@@ -72,16 +72,4 @@ This Guide describes the steps to install data activity monitoring of "HDFS File
 	   > hadoop fs -cat /tmp/private
 
 	From UI click on alert tab and you should see alert for the attempt to read restricted file.  
-* **Hive**:
-	1. Click on menu "DAM" and select "Hive" to view Hive policy
-	2. You should see policy with name "queryPhoneNumber". This Policy generates alert when hive table with sensitivity(Phone_Number) information is queried. 
-	3. In sandbox read restricted sensitive HIVE column. ( To learn more about data sensitivity settings click [Data Classification Tutorial](/docs/tutorial/classification.html))
-	
-        $ su hive <br/>
-        $ hive <br/>
-        $ set hive.execution.engine=mr; <br/>
-        $ use xademo; <br/>
-        $ select a.phone_number from customer_details a, call_detail_records b where a.phone_number=b.phone_number; <br/>
-
-    From UI click on alert tab and you should see alert for your attempt to dfsf read restricted column.  
 <br/>

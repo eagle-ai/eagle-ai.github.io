@@ -48,6 +48,16 @@ permalink: /docs/community.html
 * [Daniel Zhou (周达)](https://github.com/DadanielZ)
 <br/>
 
+**Contributors**
+
+* [Prasad Mujumdar](https://github.com/pmujumdar)
+* [Jaspaul Chahal](https://github.com/Jashchahal)
+* [Huizhi Lu](https://github.com/pkuwm)
+* [Jijun Tang](https://github.com/r7raul1984)
+* [Michael Wu](https://github.com/anyway1021)
+* [Jing Ge](https://github.com/JingGe)
+<br/>
+
 ### Project History
 
 * **Oct 20th, 2015** Eagle was officially open sourced by [eBay Inc.](http://www.ebay.com).

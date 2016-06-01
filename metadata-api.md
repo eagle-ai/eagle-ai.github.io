@@ -1,7 +1,7 @@
 ---
 layout: doc
 title:  "Policy API"
-permalink: /docs/policy-api.html
+permalink: /docs/metadata-api.html
 ---
 
 Eagle Provide RESTful APIs for create/update/query/delete policy for alert
