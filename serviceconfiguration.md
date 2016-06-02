@@ -15,8 +15,8 @@ Eagle currently supports to customize the following configurations:
 ### Metadata store config 
 * for hbase
 
-```json
-  {
+~~~
+eagle {
 	service{
 		storage-type="hbase"
 		hbase-zookeeper-quorum="sandbox.hortonworks.com"
@@ -25,11 +25,12 @@ Eagle currently supports to customize the following configurations:
 		springActiveProfile="sandbox"
 		audit-enabled=true
 	}
-  }
-```
+      }
+~~~
 
 * for mysql
-```json
+
+~~~
 eagle {
 	service {
 		storage-type="jdbc"
@@ -43,9 +44,11 @@ eagle {
 		storage-connection-max=8
 	}
 }
-```
+~~~
+
 * for derby
-```json
+
+~~~
 eagle {
 	service {
 		storage-type="jdbc"
@@ -59,5 +62,5 @@ eagle {
 		storage-connection-max=8
 	}
 }
-```
+~~~
 <br />
