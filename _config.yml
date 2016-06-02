@@ -82,6 +82,8 @@ documentations:
         url: /docs/development-quick-guide.html
       - title: Development in Mac OSX
         url: /docs/development-in-macosx.html
+      - title: Development in Intellij 
+        url: /docs/development-in-intellij.html
   - category: Advanced
     links: 
       - title: User Profile Machine Learning
