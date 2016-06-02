@@ -63,6 +63,7 @@ Guide To Install Eagle 0.4.0 On Hortonworks sandbox.
 
 ### **Demos**
 * Login to Eagle UI [http://localhost:9099/eagle-service/](http://localhost:9099/eagle-service/) using username and password as "admin" and "secret"
-* [HDFS & Hive](/docs/hdfs-hive-monitoring.html)
-* [JMX Metric Monitoring](/docs/jmx-metric-monitoring.html)
+* [HDFS Data Activity Monitoring](/docs/hdfs-data-activity-monitoring.html)
+* [HIVE Query Activity Monitoring](/docs/hive-query-activity-monitoring.html)
+* [JMX Metrics Monitoring](/docs/jmx-metric-monitoring.html)
 <br/>

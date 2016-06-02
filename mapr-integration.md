@@ -20,74 +20,75 @@ Here are the steps to follow:
 First we need to enable data auditing at all three levels: cluster level, volume level and directory,file or table level. 
 ##### Cluster level: 
 
-```      
+~~~      
        $ maprcli audit data -cluster <cluster name> -enabled true 
                            [ -maxsize <GB, defaut value is 32. When size of audit logs exceed this number, an alarm will be sent to the dashboard in the MapR Control Service > ]
                            [ -retention <number of Days> ]
-```
+~~~
 Example:
 
-```
+~~~
         $ maprcli audit data -cluster mapr.cluster.com -enabled true -maxsize 30 -retention 30
-```
+~~~
 
 
 
 ##### Volume level:
 
-```      
+~~~      
        $ maprcli volume audit -cluster <cluster name> -enabled true 
                             -name <volume name>
                             [ -coalesce <interval in minutes, the interval of time during which READ, WRITE, or GETATTR operations on one file from one client IP address are logged only once, if auditing is enabled> ]
-```
+~~~
+
 Example:
 
-```
+~~~
         $ maprcli volume audit -cluster mapr.cluster.com -name mapr.tmp -enabled true
-```
+~~~
 
 To verify that auditing is enabled for a particular volume, use this command:
 
-```
+~~~
         $ maprcli volume info -name <volume name> -json | grep -i 'audited\|coalesce'
-```
+~~~
 and you should see something like this:
 
-```
+~~~
                         "audited":1,
                         "coalesceInterval":60
-```
+~~~
 If "audited" is '1' then auditing is enabled for this volume.
 
 
 
 ##### Directory, file, or MapR-DB table level:
 
-```
+~~~
         $ hadoop mfs -setaudit on <directory|file|table>
-```
+~~~
 
 To check whether Auditing is Enabled for a Directory, File, or MapR-DB Table, use ``$ hadoop mfs -ls``
 Example:
 Before enable the audit log on file ``/tmp/dir``, try ``$ hadoop mfs -ls /tmp/dir``, you should see something like this:
-```
+~~~
 drwxr-xr-x Z U U   - root root          0 2016-03-02 15:02  268435456 /tmp/dir
                p 2050.32.131328  mapr2.da.dg:5660 mapr1.da.dg:5660
-```
+~~~
 The second ``U`` means auditing on this file is not enabled. 
 Enable auditing with this command: 
-```
+~~~
 $ hadoop mfs -setaudit on /tmp/dir
-```
+~~~
 Then check the auditing bit with : 
-```
+~~~
 $ hadoop mfs -ls /tmp/dir
-```
+~~~
 you should see something like this:
-```
+~~~
 drwxr-xr-x Z U A   - root root          0 2016-03-02 15:02  268435456 /tmp/dir
                p 2050.32.131328  mapr2.da.dg:5660 mapr1.da.dg:5660
-```
+~~~
 We can see the previous ``U`` has been changed to ``A`` which indicates auditing on this file is enabled.
   
 ###### Important:
