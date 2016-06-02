@@ -6,7 +6,7 @@ permalink: /docs/development-in-macosx.html
 
 How to Setup Eagle Development Environment on Mac OSX
 -----------------------------------------------------
-This tutorial is based `Mac OS X`. It can be used as a reference guide for other OS like Linux or Windows as well.  To save your time of jumping back and forth between different web pages, all necessary references will be point out. 
+This tutorial is based `Mac OS X`. It can be used as a reference guide for other OS like Linux or Windows as well.  To save your time of jumping back and forth between different web pages, all necessary references will be pointed out. 
 
 ### Prerequisite
 
