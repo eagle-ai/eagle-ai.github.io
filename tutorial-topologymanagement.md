@@ -33,7 +33,7 @@ The configuration file `eagle-scheduler.conf` defines scheduler parameters, exec
     
     Some default topology properties are defined here. 
     
-Note: these configurations can be overridden in the topology configurations, which is shown below. The only difference is to add a prefix `.app`. For example, 'app.envContextConfig.jarFile' is to override 'envContextConfig.jarFile' in eagle-schedule.conf
+Note: these configurations can be overridden in the topology configurations, which is shown below. The only difference is to add a prefix `app.`. For example, 'app.envContextConfig.jarFile' is to override 'envContextConfig.jarFile' in eagle-schedule.conf
    
   
 #### Manual
@@ -63,7 +63,8 @@ Note: these configurations can be overridden in the topology configurations, whi
    
 5. Go to site page, and edit site->application and add some new configurations. Blow are some example configurations for [site=sandbox, applicatoin=hbaseSecurityLog]
    `These configurations have a higher priority than those in eagle-scheduler.conf`
-   
+
+~~~  
            classification.hbase.zookeeper.property.clientPort=2181
            classification.hbase.zookeeper.quorum=sandbox.hortonworks.com
            # platform related configurations
@@ -92,6 +93,8 @@ Note: these configurations can be overridden in the topology configurations, whi
            app.eagleProps.eagleService.port=9099
            app.eagleProps.eagleService.username=admin
            app.eagleProps.eagleService.password=secret
+~~~
+
    ![topology-configuration-1](/images/appManager/topology-configuration-1.png)
    ![topology-configuration-2](/images/appManager/topology-configuration-2.png)
    
