@@ -42,10 +42,14 @@ documentations:
         url: /docs/quick-start.html
       - title: HDFS Data Activity Monitoring
         url: /docs/hdfs-data-activity-monitoring.html
+      - title: HDFS AuthZ Activity Monitoring
+        url: /docs/hdfs-auth-activity-monitoring.html
       - title: HIVE Query Activity Monitoring
         url: /docs/hive-query-activity-monitoring.html
       - title: MapR FS Data Activity Monitoring 
         url: /docs/mapr-integration.html
+      - title: HBase AuthZ Activity Monitoring
+        url: /docs/hbase-auth-activity-monitoring.html
       - title: Hadoop JMX Metrics Monitoring
         url: /docs/jmx-metric-monitoring.html
       - title: Stream HDFS audit logs into Kafka
