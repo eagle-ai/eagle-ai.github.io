@@ -19,7 +19,7 @@ The configuration file `eagle-scheduler.conf` defines scheduler parameters, exec
 
     **appCommandLoaderEnabled**: enable application manager. **TODO**: change it to true. <br />
     **appCommandLoaderIntervalSecs**: defines the interval of the scheduler loads commands. Default value is 1 second.  <br />
-    **appHealthCheckIntervalSecs**: define the interval of health check, which tries to sync the topology execution status to Eagle. <br /><br />
+    **appHealthCheckIntervalSecs**: define the interval of health check, which tries to sync the topology execution status to Eagle. <br />
 
 * **Execution platform properties**
    
@@ -27,7 +27,7 @@ The configuration file `eagle-scheduler.conf` defines scheduler parameters, exec
     **envContextConfig.url**: execution platform http url. Default is "http://sandbox.hortonworks.com:8744".  <br />
     **envContextConfig.nimbusHost**: storm nimbus host. Default is "sandbox.hortonworks.com".  <br />
     **envContextConfig.nimbusThriftPort**: default is 6627.  
-    **envContextConfig.jarFile**: storm fat jar path. **TODO**: change "/dir-to-jar/eagle-topology-0.3.0-incubating-assembly.jar" to your own jar path. <br /><br />
+    **envContextConfig.jarFile**: storm fat jar path. **TODO**: change "/dir-to-jar/eagle-topology-0.3.0-incubating-assembly.jar" to your own jar path. <br />
 
 * **Topology default properties**
     
@@ -36,7 +36,7 @@ The configuration file `eagle-scheduler.conf` defines scheduler parameters, exec
 Note: these configurations can be overridden in the topology configurations, which is shown below. The only difference is to add a prefix `app.`. For example, 'app.envContextConfig.jarFile' is to override 'envContextConfig.jarFile' in eagle-schedule.conf
    
   
-#### Manual
+### Playbook
 
 1. Editing eagle-scheduler.conf, and start Eagle service
 

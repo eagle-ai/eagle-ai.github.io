@@ -15,7 +15,7 @@ JMX metric for hadoop namenode url [http://127.0.0.1:50070/jmx](http://127.0.0.1
 
 
 ### **Prerequisite**
-* Complete the setup from [Quick Start(Eagle In Sandbox)](/docs/quick-start.html)	
+* Complete the setup from [Setup Environment](/docs/deployment-env.html)	
 
 <br/>
 

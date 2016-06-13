@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Deploy Eagle in Sandbox"
+title:  "Get Started with Sandbox"
 permalink: /docs/deployment-in-sandbox.html
 ---
 
