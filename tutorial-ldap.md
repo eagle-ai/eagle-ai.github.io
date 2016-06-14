@@ -6,7 +6,7 @@ permalink: /docs/tutorial/ldap.html
 
 To enable Eagle LDAP authentication on the web, two steps are needed.
 
-Step 1: edit configuration under lib/tomcat/webapps/eagle-service/WEB-INF/classes/ldap.properties.
+Step 1: edit configuration under conf/ldap.properties.
 
     ldap.server=ldap://localhost:10389
     ldap.username=uid=admin,ou=system

@@ -38,47 +38,49 @@ documentations:
         url: /docs/download.html
   - category: Installation
     links:
-      - title: Quick Start(Eagle In Sandbox)
+      - title: Get Started with Sandbox
         url: /docs/quick-start.html
-      - title: HDFS Data Activity Monitoring
-        url: /docs/hdfs-data-activity-monitoring.html
-      - title: HDFS AuthZ Activity Monitoring
-        url: /docs/hdfs-auth-activity-monitoring.html
-      - title: HIVE Query Activity Monitoring
-        url: /docs/hive-query-activity-monitoring.html
-      - title: MapR FS Data Activity Monitoring 
-        url: /docs/mapr-integration.html
-      - title: HBase AuthZ Activity Monitoring
-        url: /docs/hbase-auth-activity-monitoring.html
-      - title: Hadoop JMX Metrics Monitoring
-        url: /docs/jmx-metric-monitoring.html
-      - title: Stream HDFS audit logs into Kafka
-        url: /docs/import-hdfs-auditLog.html
-      - title: Eagle Cluster Deployment
+      - title: Get Started with Docker
+        url: /docs/deployment-in-docker.html
+      - title: Setup Environment
+        url: /docs/deployment-env.html
+      - title: Setup Eagle in Production
         url: /docs/deployment-in-production.html
       - title: Eagle Topology Configuration
         url: /docs/configuration.html
       - title: Eagle Service Configuration
         url: /docs/serviceconfiguration.html
-      - title: Enable LDAP
+      - title: Eagle LDAP Authentication
         url: /docs/tutorial/ldap.html
   - category: Tutorial
     links: 
-      - title: Site Management Tutorial
+      - title: Site Management
         url: /docs/tutorial/setup.html
-      - title: Eagle Policy Tutorial
+      - title: Policy Management
         url: /docs/tutorial/policy.html
       - title: Policy Engine Capabilities 
         url: /docs/tutorial/policy-capabilities.html
-      - title: User Profile Tutorial
+      - title: HDFS Data Activity Monitoring
+        url: /docs/hdfs-data-activity-monitoring.html
+      - title: HIVE Query Activity Monitoring
+        url: /docs/hive-query-activity-monitoring.html
+      - title: HBASE Data Activity Monitoring
+        url: /docs/hbase-data-activity-monitoring.html
+      - title: MapR FS Data Activity Monitoring
+        url: /docs/mapr-integration.html
+      - title: Hadoop JMX Metrics Monitoring
+        url: /docs/jmx-metric-monitoring.html
+      - title: Stream HDFS audit logs into Kafka
+        url: /docs/import-hdfs-auditLog.html
+      - title: User Profile Feature
         url: /docs/tutorial/userprofile.html
-      - title: Data Classification Tutorial
+      - title: Data Classification Feature
         url: /docs/tutorial/classification.html
-      - title: Topology Management
+      - title: Topology Management Feature
         url: /docs/tutorial/topologymanagement.html
       - title: Alert Notification Plugin
         url: /docs/tutorial/notificationplugin.html
-      - title: Use Metadata API
+      - title: Metadata RESTful API
         url: /docs/metadata-api.html
   - category: Development Guide
     links: 

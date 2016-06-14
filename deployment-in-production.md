@@ -6,46 +6,22 @@ permalink: /docs/deployment-in-production.html
 
 
 This page outlines the steps for deploying Eagle in the production environment.
-Notice that Eagle requires you have full permissions to HDFS, HBase and Storm CLI.
-
 
 Here's the main content of this page:
 
-* Pre-requisites
-   * Hadoop Environment
-   * Stream HDFS audit log data into Kafka
-* Installation
+* Setup Cluster Environment
+* Start Eagle Service
    * Edit Configure files
    * Install metadata
-* Setup a monitoring site
-   * Create a site with Eagle web
-   * Create site related configuration files for topologies
-   * Submit topologies
+* Rock with monitoring apps
 * Stop Eagle Services
 
 
-### **Pre-requisites**
+### **Setup Cluster Environment**
+Eagle requires a setup cluster environment to run monitoring applications. For more details, please check [Environment](/docs/deployment-env.html) 
+<br/>
 
-* **Hadoop Environment**
-
-    * HDFS: 2.6.x
-    * HBase: 0.98 or later
-    * Storm: 0.9.3 or later
-    * Kafka: 0.8.x or later
-    * Java: 1.7.x
-
-
-* **Stream HDFS audit log data (Only for HDFSAuditLog Monitoring)**
-
-    1. Create a Kafka topic for importing audit log. Here is an example command to create topic sandbox_hdfs_audit_log.
-
-           $ cd <kafka-home>
-           $ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
-
-    2. Populate audit log into the Kafka topic created above, and refer to [here](/docs/import-hdfs-auditLog.html) on How to do it.
-
-
-### **Installation**
+### **Start Eagle Service**
 
 * Step 1: Edit environment related configurations:
 
@@ -61,7 +37,7 @@ Here's the main content of this page:
             export EAGLE_SERVICE_HOST=localhost
 
 
-    * Edit `conf/eagle-service.conf`
+    * Edit `conf/eagle-service.conf` to configure the database to use (for example: hbase)
 
             # TODO: hbase.zookeeper.quorum in the format host1,host2,host3,...
             # default is "localhost"
@@ -88,37 +64,24 @@ Here's the main content of this page:
         # import metadata after Eagle service is successfully started
         $ bin/eagle-topology-init.sh
 
-### **Setup a monitoring site**
-
-* Step 1: Login Eagle web http://${EAGLE_SERVICE_HOST}:9099/eagle-service with account `admin/secret`
-        ![login](/images/docs/login.png)
-* Step 2: Create a site with Eagle web
-     (Example: create a site "Demo" with two data sources to monitor)
-     ![setup a site](/images/docs/new-site.png)
-* Step 3: Create site related configuration files for topologies
-
-     Please refer to [samples](https://github.com/eBay/Eagle/tree/master/eagle-assembly/src/main/conf), and create a configuration file for each chosen datasource under $EAGLE_HOME/conf/.
-        More descriptions are [here](/docs/configuration.html)
-* Step 4: Submit topologies
-
-          # start HDFS audilt log monitoring
-          $ bin/eagle-topology.sh --main eagle.security.auditlog.HdfsAuditLogProcessorMain --config conf/XXXX-hdfsAuditLog-application.conf start
-
-          # start Hive Query Log Monitoring
-          $ bin/eagle-topology.sh --main eagle.security.hive.jobrunning.HiveJobRunningMonitoringMain --config conf/XXXX-hiveQueryLog-application.conf start
-
-          # start User Profiles
-          $ bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/XXXX-userprofile-topology.conf start
-
 You have now successfully installed Eagle and setup a monitoring site. Next you can
 
-* Create more policies with Eagle web [tutorial](/docs/tutorial/policy.html)
+* Setup a monitoring site [site management](/docs/tutorial/setup.html)
 
-* Experience alerting with instructions on [Quick Starer](/docs/quick-start.html)
+* Create more policies with Eagle web [policy management](/docs/tutorial/policy.html)
 
 * Enable resolver and classification functions of Eagle web [tutorial](/docs/tutorial/setup.html)
 
-* Check topologies with Storm UI
+
+### **Rock with monitoring apps**
+
+Currently Eagle provides several analytics solutions for identifying security on a Hadoop cluster. 
+
+* [HDFS Data Activity Monitoring](/docs/hdfs-data-activity-monitoring.html)
+* [HIVE Query Activity Monitoring](/docs/hive-query-activity-monitoring.html)
+* [HBASE Data Activity Monitoring](/docs/hbase-data-activity-monitoring.html)
+* [MapR FS Data Activity Monitoring](/docs/mapr-integration.html)
+* [Hadoop JMX Metrics Monitoring](/docs/jmx-metric-monitoring.html)
 
 ### **Stop Services**
 
@@ -126,8 +89,3 @@ You have now successfully installed Eagle and setup a monitoring site. Next you 
 
       $ bin/eagle-service.sh stop
 
-* Stop eagle topologies
-
-      $ bin/eagle-topology.sh --topology {topology-name} stop
-      $ bin/eagle-topology.sh --topology {topology-name} stop
-      $ bin/eagle-topology.sh --topology {topology-name} stop
