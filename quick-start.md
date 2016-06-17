@@ -45,7 +45,7 @@ Eagle requires a streaming environment to run various applications. For more det
 <br/>
 
 ### **Sample Application: Hive query activity monitoring in sandbox**
-After `examples/eagle-sandbox-starter.sh`, you have a sample application (topology) running on the storm (check with [storm ui](http://sandbox.hortonworks.com:8744/index.html)), and a sample policy of hive activity monitoring.
+After executing `examples/eagle-sandbox-starter.sh`, you have a sample application (topology) running on the storm (check with [storm ui](http://sandbox.hortonworks.com:8744/index.html)), and a sample policy of hive activity monitoring defined.
 
 Next you can trigger an alert by running a hive query.
 

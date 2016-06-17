@@ -55,9 +55,6 @@ Eagle requires a setup cluster environment to run monitoring applications. For m
 
         $ cd <eagle-home>
 
-        # create HBase tables
-        $ bin/eagle-service-init.sh
-
         # start Eagle web service
         $ bin/eagle-service.sh start
 
