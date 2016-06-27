@@ -42,6 +42,7 @@ permalink: /docs/community.html
 * [Jilin Jiang（将吉麟）](https://github.com/zombiej)
 * [Qingwen Zhao（赵晴雯）](https://github.com/qingwen220)
 * [Hemanth Dendukuri](https://github.com/hdendukuri)
+* [Senthil Kumar](https://github.com/senthilec566)
 * [Arun Manoharan](https://github.com/armanoharan)
 * [Adunuthula, Seshu](https://github.com/seshuad)
 * [Liangfei Su (苏良飞)](https://github.com/RalphSu)
