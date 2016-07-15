@@ -1,13 +1,13 @@
 ---
 layout: doc
-title:  "Eagle Overview" 
+title:  "Apache Eagle (incubating) Overview" 
 permalink: /docs/index.html
 ---
 
 ## Some example
 
 
-#### Eagle Web Configuration
+#### Apache Eagle (incubating) Web Configuration
 
 
 >- Sample about syntax highlight 

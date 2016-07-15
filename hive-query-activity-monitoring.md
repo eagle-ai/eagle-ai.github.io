@@ -4,7 +4,7 @@ title:  "Hive Query Activity Monitoring Quick Start"
 permalink: /docs/hive-query-activity-monitoring.html
 ---
 
-*Since Eagle 0.3.0*
+*Since Apache Eagle 0.3.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
 
 This Guide describes the steps to enable HIVE query activity monitoring.
 

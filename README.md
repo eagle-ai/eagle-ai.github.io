@@ -1,5 +1,5 @@
 # Eagle Documentation Site
-Welcome to the Eagle documentation!
+Welcome to the Apache Eagle (incubating) documentation!
 
 ## Prerequisites
 

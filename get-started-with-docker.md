@@ -4,7 +4,7 @@ title:  "Get Started with Docker"
 permalink: /docs/deployment-in-docker.html
 ---
 
-Another way to get started with Apache Eagle (called Eagle in the following) is to run with [docker](https://github.com/docker/docker) by one of following options:
+Another way to get started with Apache Eagle (incubating, called Eagle in the follwing) is to run with [docker](https://github.com/docker/docker) by one of following options:
 
 * **Option-I**: download eagle docker image and start with it.
 

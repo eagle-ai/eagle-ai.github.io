@@ -4,7 +4,7 @@ title:  "Site Management"
 permalink: /docs/tutorial/setup.html
 ---
 
-*Only For Eagle 0.3.0. Since Eagle 0.4.0, a prefix `classification.` is required for each property and the configuration becomes java properties style*
+*Only For Apache Eagle 0.3.0-incubating. Starting from Apache Eagle 0.4.0-incubating, a prefix `classification.` is required for each property and the configuration becomes java properties style. Apache Eagle (incubating) will be called Eagle in the following.*
 
 Eagle identifies different Hadoop environments as different sites, such as sandbox, datacenter1, datacenter2. In each site,
 a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.

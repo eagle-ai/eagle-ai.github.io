@@ -4,7 +4,8 @@ title:  "Quick Start"
 permalink: /docs/quick-start-0.3.0.html
 ---
 
-Guide To Install Eagle 0.3.0 On Hortonworks sandbox. 
+Guide To Install Apache Eagle 0.3.0-incubating to Hortonworks sandbox.  
+*Apache Eagle (incubating) will be called Eagle in the following.*
 
 * Prerequisite
 * Download + Patch + Build

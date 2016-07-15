@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Eagle Community" 
+title:  "Apache Eagle (incubating) Community" 
 permalink: /docs/community.html
 ---
 ### Mailing Lists

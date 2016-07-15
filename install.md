@@ -1,10 +1,10 @@
 ---
 layout: doc
-title:  "Install Eagle" 
+title:  "Install Apache Eagle (incubating)" 
 permalink: /docs/installation.html
 ---
 
-### Install Eagle Sandbox
+### Install Apache Eagle (incubating, called Eagle in the follwing) to Sandbox
 
 #### Pre-requisites
 
