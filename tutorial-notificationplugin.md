@@ -4,11 +4,11 @@ title:  "Notification Plugin"
 permalink: /docs/tutorial/notificationplugin.html
 ---
 
-*Since Eagle 0.4.0*
+*Since Apache Eagle 0.4.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
 
 ### Eagle Notification Plugins
 
-[Eagle Notification Plugin](https://cwiki.apache.org/confluence/display/EAG/Alert+notification+plugin) provides an interface for users to consume Eagle alerts. When define a policy, a user can add an arbitrary number of notification plugin instances. By default, Eagle supports three types of notification: EagleStore, Kafka and Email
+[Eagle Notification Plugin](https://cwiki.apache.org/confluence/display/EAG/Alert+notification+plugin) provides an interface for users to consume Eagle alerts. When define a policy, a user can add an arbitrary number of notification plugin instances. By default, Eagle supports three types of notification: EagleStore, Kafka and Email.
 
 * EagleStore: Alerts will be persisted into the underlying database via eagle. 
 	* no configuration is needed. 

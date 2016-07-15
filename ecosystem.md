@@ -4,9 +4,9 @@ title:  "Ecosystem"
 permalink: /docs/ecosystem.html
 ---
 
-### Eagle Core
+### Core
 
-The core of Eagle is the highly scalable real-time alert engine, including coordinator, metadata service, and policy processing topology so on. Around Eagle alert engine, community can integrate more data sources and also can write applications to listen to alerts and respond.
+The core of Apache Eagle (incubating, called Eagle in the follwing) is the highly scalable real-time alert engine, including coordinator, metadata service, and policy processing topology, so on. Around Eagle alert engine, community can integrate more data sources and also can write applications to listen to alerts and respond.
 
 ### Extension
 Eagle exposes a few places where community can extend Eagle existing capabilities. 
@@ -20,4 +20,4 @@ Eagle exposes a few places where community can extend Eagle existing capabilitie
 * write best-practice polices and share
 
 ### User Interface
-Eagle provide user-friendly UI for new data source onboarding, policy management and insights
+Eagle provide user-friendly UI for new data source onboarding, policy management and insights.

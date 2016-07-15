@@ -4,7 +4,7 @@ title:  "Get Started with Sandbox"
 permalink: /docs/deployment-in-sandbox.html
 ---
 
-Here is the summary of the steps for setting up Eagle in Hortonworks sandbox:
+Here is the summary of the steps for setting up Apache Eagle (incubating, called Eagle in the follwing) in Hortonworks sandbox:
 
 * Step 1: Setup sandbox image in a virtual machine
 * Step 2: Setup Hadoop environment in sandbox

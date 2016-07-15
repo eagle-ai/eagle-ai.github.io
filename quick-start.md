@@ -4,9 +4,9 @@ title:  "Quick Start"
 permalink: /docs/quick-start.html
 ---
 
-Guide To Install Eagle 0.4.0 On Hortonworks sandbox. 
+Guide To Install **Apache Eagle 0.4.0-incubating** On Hortonworks sandbox. 
 
-[For older versions: Eagle 0.3.0 Quick Start](/docs/quick-start-0.3.0.html)
+[For older versions: _Apache Eagle 0.3.0-incubating Quick Start_](/docs/quick-start-0.3.0.html)
 
 * Setup Environment
 * Download + Patch + Build
@@ -20,24 +20,24 @@ Eagle requires a streaming environment to run various applications. For more det
 <br/>
 
 ### **Download + Patch + Build**
-* Download latest Eagle source released From Apache [[Tar]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz) , [[MD5]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.md5) 
+* Download latest Eagle source released From Apache [[Tar]](https://dist.apache.org/repos/dist/dev/incubator/eagle/0.4.0-incubating-rc3/apache-eagle-0.4.0-incubating-src-rc3.tar.gz) (`TODO:` need to replace with new url after release), [[MD5]](https://dist.apache.org/repos/dist/dev/incubator/eagle/0.4.0-incubating-rc3/apache-eagle-0.4.0-incubating-src-rc3.tar.gz.md5) (`TODO:` need to replace with new url after release)
 * Build manually with [Apache Maven](https://maven.apache.org/):
 
-	  $ tar -zxvf apache-eagle-0.3.0-incubating-src.tar.gz
-	  $ cd incubator-eagle-release-0.3.0-rc3  
-	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/incubator-eagle/pull/180.patch
-	  $ git apply 180.patch
+	  $ tar -zxvf apache-eagle-0.4.0-incubating-src-rc3.tar.gz (`TODO:` need to replace with new tar-ball name after release)
+	  $ cd apache-eagle-0.4.0-incubating-src 
+	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/incubator-eagle/pull/268.patch
+	  $ git apply 268.patch
 	  $ mvn clean package -DskipTests
 
-	After building successfully, you will get tarball under `eagle-assembly/target/` named as `eagle-0.3.0-incubating-bin.tar.gz`
+	After building successfully, you will get a tarball under `eagle-assembly/target/` named `apache-eagle-0.4.0-incubating-bin.tar.gz`
 <br/>
 
 ### **Install Eagle**
     
-     $ scp -P 2222  eagle-assembly/target/eagle-0.3.0-incubating-bin.tar.gz root@127.0.0.1:/root/
+     $ scp -P 2222 eagle-assembly/target/apache-eagle-0.4.0-incubating-bin.tar.gz root@127.0.0.1:/root/
      $ ssh root@127.0.0.1 -p 2222 (password is hadoop)
-     $ tar -zxvf eagle-0.3.0-incubating-bin.tar.gz
-     $ mv eagle-0.3.0-incubating eagle
+     $ tar -zxvf apache-eagle-0.4.0-incubating-bin.tar.gz
+     $ mv apache-eagle-0.4.0-incubating eagle
      $ mv eagle /usr/hdp/current/
      $ cd /usr/hdp/current/eagle
      $ examples/eagle-sandbox-starter.sh

@@ -4,7 +4,7 @@ title:  "Configuration"
 permalink: /docs/configuration.html
 ---
 
-Eagle requires you to create a configuration file under `conf/` directory for each topology. This page will give detailed
+Apache Eagle (incubating, called Eagle in the follwing) requires you to create a configuration file under `conf/` directory for each topology. This page will give detailed
 description of Eagle topology configuration.
 
 Eagle currently supports to customize configurations for three kinds of topologies:
