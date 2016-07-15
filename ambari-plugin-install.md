@@ -1,10 +1,10 @@
 ---
 layout: doc
-title:  "Install Eagle Ambari Plugin"
+title:  "Install Apache Eagle (incubating) Ambari Plugin"
 permalink: /docs/ambari-plugin-install.html
 ---
 
-Assume Eagle package has been copied and exacted under /usr/hdp/current/eagle.
+Assume Eagle (incubating, called Eagle in the follwing) package has been copied and exacted under /usr/hdp/current/eagle.
 
 > **WARNING**: the following instructions work in sandbox currently.
 

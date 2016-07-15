@@ -3,14 +3,14 @@ layout: doc
 title:  "Topology Management"
 permalink: /docs/tutorial/topologymanagement.html
 ---
-*Since Eagle 0.4.0*
+*Since Apache Eagle 0.4.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
 
 > Application manager aims to manage topology status on EAGLE UI. Users can easily start/start topologies remotely or locally without any shell commands. At the same, it should be capable to sync the latest status of topologies on the execution platform (e.g., storm cluster). 
 
 This tutorial will go through all parts of application manager and then give an example to use it. 
 
 ### Design
-Application manager consists of a daemon scheduler and an execution module. The scheduler periodically loads user operations(start/stop) from database, and the execution module executes these operations. For more details, please refer to [here](https://cwiki.apache.org/confluence/display/EAG/Application+Management)
+Application manager consists of a daemon scheduler and an execution module. The scheduler periodically loads user operations(start/stop) from database, and the execution module executes these operations. For more details, please refer to [here](https://cwiki.apache.org/confluence/display/EAG/Application+Management).
 
 ### Configurations
 The configuration file `eagle-scheduler.conf` defines scheduler parameters, execution platform settings and parts of default topology configuration.

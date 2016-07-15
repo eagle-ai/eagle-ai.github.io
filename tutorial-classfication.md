@@ -4,7 +4,7 @@ title:  "Data Classification Tutorial"
 permalink: /docs/tutorial/classification.html
 ---
 
-Eagle Data classification provides the ability to classify HDFS and Hive data with different levels of sensitivity.
+Apache Eagle (incubating) Data classification provides the ability to classify HDFS and Hive data with different levels of sensitivity.
 For both HDFS and Hive, a user can browse the resources and add/remove the sensitivity information.
 
 The document has two parts. The first part is about how to add/remove sensitivity to files/directories; the second part shows the application

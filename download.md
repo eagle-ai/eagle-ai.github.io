@@ -1,10 +1,10 @@
 ---
 layout: doc
-title:  "Apache Eagle Downloads" 
+title:  "Apache Eagle (incubating) Downloads" 
 permalink: /docs/download.html
 ---
 
-### **Apache Eagle Release Archive (Source Code)** 
+### **Apache Eagle (incubating) Release Archive (Source Code)** 
 
 * #### Version: 0.3.0-incubating
 

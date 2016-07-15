@@ -1,6 +1,6 @@
 ---
 layout: doc
-title:  "Apache Eagle Downloads" 
+title:  "Apache Eagle (incubating) Downloads" 
 permalink: /docs/download-0.4.0.html
 ---
 

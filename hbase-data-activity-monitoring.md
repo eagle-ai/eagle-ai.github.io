@@ -4,6 +4,8 @@ title:  "HBase Data Activity Monitoring"
 permalink: /docs/hbase-data-activity-monitoring.html
 ---
 
+*On this page, any mention of Eagle points to Apache Eagle (incubating).*
+
 This page will introduce how to monitoring hbase data activity in the following aspects:
 
 * How to enable hBase security audit log
