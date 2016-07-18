@@ -4,7 +4,7 @@ title:  "Install Apache Eagle (incubating)"
 permalink: /docs/installation.html
 ---
 
-### Install Apache Eagle (incubating, called Eagle in the follwing) to Sandbox
+### Install Apache Eagle (incubating, called Eagle in the following) to Sandbox
 
 #### Pre-requisites
 

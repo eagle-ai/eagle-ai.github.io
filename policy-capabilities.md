@@ -6,7 +6,7 @@ permalink: /docs/tutorial/policy-capabilities.html
 
 ### CEP as first class policy engine
 
-Apache Eagle (incubating, called Eagle in the follwing) platform supports CEP engine as first class policy engine, i.e. Eagle platform runs CEP engine on top of Apache Storm and make rules be hot deployed.  
+Apache Eagle (incubating, called Eagle in the following) platform supports CEP engine as first class policy engine, i.e. Eagle platform runs CEP engine on top of Apache Storm and make rules be hot deployed.  
 Specifically Eagle platform uses WSO2 Siddhi CEP library, source code is [here](https://github.com/wso2/siddhi). 
 
 ### Policy capabilities

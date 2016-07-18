@@ -6,7 +6,7 @@ permalink: /docs/deployment-env.html
 
 ### Setup Environment
 
-Apache Eagle (incubating, called Eagle in the follwing) as an analytics solution for identifying security and performance issues instantly, relies on streaming platform `storm` + `Kafka` to meet the realtime criteria, and persistence storage to store metadata and some metrics. As for the persistence storage, it supports three types of database: `HBASE`, `Derby`, and `Mysql`
+Apache Eagle (incubating, called Eagle in the following) as an analytics solution for identifying security and performance issues instantly, relies on streaming platform `storm` + `Kafka` to meet the realtime criteria, and persistence storage to store metadata and some metrics. As for the persistence storage, it supports three types of database: `HBASE`, `Derby`, and `Mysql`
 
 To run monitoring applications, Eagle requires the following dependencies.
 

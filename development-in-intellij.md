@@ -4,7 +4,7 @@ title:  "Development in Intellij"
 permalink: /docs/development-in-intellij.html
 ---
 
-Apache Eagle (incubating, called Eagle in the follwing) can be developed in popular IDE, e.g. Intellij and Eclipse. Here we focus on development in Intellij.
+Apache Eagle (incubating, called Eagle in the following) can be developed in popular IDE, e.g. Intellij and Eclipse. Here we focus on development in Intellij.
 
 ### 1. Prepare Hadoop environment
 

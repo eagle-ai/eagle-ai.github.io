@@ -4,7 +4,7 @@ title:  "Policy Tutorial"
 permalink: /docs/tutorial/policy.html
 ---
 
-Apache Eagle (incubating, called Eagle in the follwing) currently supports to customize policies for data sources for each site:
+Apache Eagle (incubating, called Eagle in the following) currently supports to customize policies for data sources for each site:
 
 * HDFS Audit Log
 * Hive Query Log

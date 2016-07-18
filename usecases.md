@@ -8,7 +8,7 @@ permalink: /docs/usecases.html
 
 * Data activity represents how user explores data provided by big data platforms. Analyzing data activity and alerting for insecure access are fundamental requirements for securing enterprise data. As data volume is increasing exponentially with Hadoop, Hive, Spark technology, understanding data activities for every user becomes extremely hard,  let alone to alert for a single malicious event in real time among petabytes streaming data per day.
 
-* Securing enterprise data starts from understanding data activities for every user. Apache Eagle (incubating, called Eagle in the follwing) has integrated with many popular big data platforms e.g. Hadoop, Hive, Spark, Cassandra etc. With Eagle user can browse data hierarchy, mark sensitive data and then create comprehensive policy to alert for insecure data access.
+* Securing enterprise data starts from understanding data activities for every user. Apache Eagle (incubating, called Eagle in the following) has integrated with many popular big data platforms e.g. Hadoop, Hive, Spark, Cassandra etc. With Eagle user can browse data hierarchy, mark sensitive data and then create comprehensive policy to alert for insecure data access.
 
 ### Job Performance Analytics
 
