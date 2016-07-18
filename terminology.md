@@ -19,6 +19,6 @@ They are basic knowledge of Eagle which also will help to well understand Eagle.
 
 * **Data activity monitoring**: Data activity monitoring is to monitor how user exploits data in Hadoop system etc. 
 
-* **User profile**: a user profile is the historical activity model generated using machine learning algorithm which could be used for showing insights 
+* **User profile**: a user profile is the historical activity model generated using machine learning algorithm which could be used for showing insights.
 
 * **Data classification**: data classification provides the ability to classify different data sources with different levels of sensitivity.
