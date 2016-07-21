@@ -20,10 +20,10 @@ Eagle requires a streaming environment to run various applications. For more det
 <br/>
 
 ### **Download + Patch + Build**
-* Download latest Eagle source released From Apache [[Tar]](https://dist.apache.org/repos/dist/dev/incubator/eagle/0.4.0-incubating-rc3/apache-eagle-0.4.0-incubating-src-rc3.tar.gz) (`TODO:` need to replace with new url after release), [[MD5]](https://dist.apache.org/repos/dist/dev/incubator/eagle/0.4.0-incubating-rc3/apache-eagle-0.4.0-incubating-src-rc3.tar.gz.md5) (`TODO:` need to replace with new url after release)
+* Download latest Eagle source released From Apache [[Tar]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.4.0-incubating/apache-eagle-0.4.0-incubating-src.tar.gz), [[MD5]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.4.0-incubating/apache-eagle-0.4.0-incubating-src.tar.gz.md5).
 * Build manually with [Apache Maven](https://maven.apache.org/):
 
-	  $ tar -zxvf apache-eagle-0.4.0-incubating-src-rc3.tar.gz (`TODO:` need to replace with new tar-ball name after release)
+	  $ tar -zxvf apache-eagle-0.4.0-incubating-src.tar.gz
 	  $ cd apache-eagle-0.4.0-incubating-src 
 	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/incubator-eagle/pull/268.patch
 	  $ git apply 268.patch
