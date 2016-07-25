@@ -4,9 +4,9 @@ title:  "Introduction"
 permalink: /docs/index.html
 ---
 
-### Welcome to Apache Eagle
+### Welcome to Apache Eagle (incubating)
 
-> Apache Eagle is an open source analytics solution for identifying security and performance issues instantly on big data platforms e.g. Hadoop, Spark, NoSQL etc. It analyzes data activities, yarn applications, jmx metrics, and daemon logs etc., provides state-of-the-art alert engine to identify security breach, performance issues and shows insights.
+> Apache Eagle (incubating, called Eagle in the following) is an open source analytics solution for identifying security and performance issues instantly on big data platforms e.g. Hadoop, Spark, NoSQL etc. It analyzes data activities, yarn applications, jmx metrics, and daemon logs etc., provides state-of-the-art alert engine to identify security breach, performance issues and shows insights.
 
 ### Basic Analytics and Monitoring Flow
 

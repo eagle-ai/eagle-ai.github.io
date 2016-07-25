@@ -1,10 +1,10 @@
 ---
 layout: doc
-title:  "Eagle LDAP Tutorial"
+title:  "Apache Eagle (incubating) LDAP Tutorial"
 permalink: /docs/tutorial/ldap.html
 ---
 
-To enable Eagle LDAP authentication on the web, two steps are needed.
+To enable Apache Eagle (incubating, called Eagle in the following) LDAP authentication on the web, two steps are needed.
 
 Step 1: edit configuration under conf/ldap.properties.
 

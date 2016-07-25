@@ -4,7 +4,7 @@ title:  "Terminology"
 permalink: /docs/terminology.html
 ---
 
-Here are some terms we are using in Apache Eagle, please check them for your reference.
+Here are some terms we are using in Apache Eagle (incubating, called Eagle in the following), please check them for your reference.
 They are basic knowledge of Eagle which also will help to well understand Eagle.
 
 * **Site**: a site can be considered as a physical data center. Big data platform e.g. Hadoop may be deployed to multiple data centers in an enterprise. 

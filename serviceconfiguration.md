@@ -1,11 +1,11 @@
 ---
 layout: doc
-title:  "Eagle Service Configuration"
+title:  "Apache Eagle (incubating) Service Configuration"
 permalink: /docs/serviceconfiguration.html
 ---
 
-Eagle Service provides some config files for specifying metadata storage, security access to Eagle Service. This page will give detailed
-description of Eagle service configuration.
+Apache Eagle (incubating, called Eagle in the following) Service provides some config files for specifying metadata storage, security access to Eagle Service. This page will give detailed
+description of Eagle Service configuration.
 
 Eagle currently supports to customize the following configurations:
 

@@ -6,7 +6,7 @@ permalink: /docs/development-quick-guide.html
 
 ### **Source Code**
 
-Apache Eagle source code is version controlled using Git version control:
+Apache Eagle (incubating) source code is version controlled using Git version control:
 [Commits Summary](https://git-wip-us.apache.org/repos/asf?p=incubator-eagle.git) 
 
 * **Source Repo**: [https://git-wip-us.apache.org/repos/asf/incubator-eagle.git](https://git-wip-us.apache.org/repos/asf/incubator-eagle.git)

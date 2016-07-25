@@ -4,7 +4,7 @@ title:  "MapR Integration"
 permalink: /docs/mapr-integration.html
 ---
 
-*Since Eagle 0.4.0*
+*Since Apache Eagle 0.4.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
 
 ### Prerequisites
 
