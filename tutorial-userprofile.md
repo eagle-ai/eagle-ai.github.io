@@ -36,7 +36,7 @@ Two options to start the topology are provided.
 
 	submit userProfiles topology if it's not on [topology UI](http://sandbox.hortonworks.com:8744)
 
-      $ bin/eagle-topology.sh --main eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf start
+      $ bin/eagle-topology.sh --main org.apache.eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf start
 
 * **Option 2**: Ambari
 	
