@@ -47,6 +47,7 @@ permalink: /docs/community.html
 * [Adunuthula, Seshu](https://github.com/seshuad)
 * [Liangfei Su (苏良飞)](https://github.com/RalphSu)
 * [Daniel Zhou (周达)](https://github.com/DadanielZ)
+* [Michael Wu (武子扬)](https://github.com/anyway1021)
 <br/>
 
 **Contributors**
@@ -55,7 +56,6 @@ permalink: /docs/community.html
 * [Jaspaul Chahal](https://github.com/Jashchahal)
 * [Huizhi Lu](https://github.com/pkuwm)
 * [Jijun Tang](https://github.com/r7raul1984)
-* [Michael Wu](https://github.com/anyway1021)
 * [Jing Ge](https://github.com/JingGe)
 <br/>
 
