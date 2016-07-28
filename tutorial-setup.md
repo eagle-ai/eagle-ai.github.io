@@ -45,7 +45,7 @@ After creating a new site, we need to edit the configuration to connect the clus
         For Kerberos-secured cluster, you need to get a keytab file and the principal from your admin, and configure "eagle.keytab.file" and "eagle.kerberos.principal" to authenticate its access.
 
             { "eagle.keytab.file":"/EAGLE-HOME/.keytab/b_eagle.keytab_apd",
-              "eagle.kerberos.principal":"eagle@APD.EBAY.COM"
+              "eagle.kerberos.principal":"eagle@SOMEWHERE.COM"
             }
 
         If there is an exception about "invalid server principal name", you may need to check the DNS resolver, or the data transfer , such as "dfs.encrypt.data.transfer", "dfs.encrypt.data.transfer.algorithm", "dfs.trustedchannel.resolver.class", "dfs.datatransfer.client.encrypt".
