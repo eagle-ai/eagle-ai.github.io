@@ -9,7 +9,7 @@ Guide To Install Apache Eagle 0.3.0-incubating to Hortonworks sandbox.
 
 * Prerequisite
 * Download + Patch + Build
-* Setup Hadoop Environment.
+* Setup Hadoop[^HADOOP] Environment.
 * Install Eagle.
 * Demo
 <br/>
@@ -47,3 +47,11 @@ Eagle requires a streaming environment to run various applications. For more det
 * Login to Eagle UI [http://localhost:9099/eagle-service/](http://localhost:9099/eagle-service/) using username and password as "admin" and "secret"
 * [HDFS & Hive](/docs/hdfs-hive-monitoring.html)
 <br/>
+
+
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*

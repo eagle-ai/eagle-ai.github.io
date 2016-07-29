@@ -5,7 +5,7 @@ permalink: /docs/tutorial/topologymanagement.html
 ---
 *Since Apache Eagle 0.4.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
 
-> Application manager aims to manage topology status on EAGLE UI. Users can easily start/start topologies remotely or locally without any shell commands. At the same, it should be capable to sync the latest status of topologies on the execution platform (e.g., storm cluster). 
+> Application manager aims to manage topology status on EAGLE UI. Users can easily start/start topologies remotely or locally without any shell commands. At the same, it should be capable to sync the latest status of topologies on the execution platform (e.g., Storm[^STORM] cluster). 
 
 This tutorial will go through all parts of application manager and then give an example to use it. 
 
@@ -23,11 +23,11 @@ The configuration file `eagle-scheduler.conf` defines scheduler parameters, exec
 
 * **Execution platform properties**
    
-    **envContextConfig.env**: application execution platform. Default value is storm.  <br />
+    **envContextConfig.env**: application execution platform. Default value is Storm.  <br />
     **envContextConfig.url**: execution platform http url. Default is "http://sandbox.hortonworks.com:8744".  <br />
-    **envContextConfig.nimbusHost**: storm nimbus host. Default is "sandbox.hortonworks.com".  <br />
+    **envContextConfig.nimbusHost**: Storm nimbus host. Default is "sandbox.hortonworks.com".  <br />
     **envContextConfig.nimbusThriftPort**: default is 6627.  
-    **envContextConfig.jarFile**: storm fat jar path. **TODO**: change "/dir-to-jar/eagle-topology-0.3.0-incubating-assembly.jar" to your own jar path. <br />
+    **envContextConfig.jarFile**: Storm fat jar path. **TODO**: change "/dir-to-jar/eagle-topology-0.3.0-incubating-assembly.jar" to your own jar path. <br />
 
 * **Topology default properties**
     
@@ -107,4 +107,12 @@ Note: these configurations can be overridden in the topology configurations, whi
    ![stop-topology-2](/images/appManager/stop-topology-2.png)
    ![stop-topology-3](/images/appManager/stop-topology-3.png)
 
- 
+
+
+
+---
+
+#### *Footnotes*
+
+[^STORM]:*All mentions of "storm" on this page represent Apache Storm.*
+

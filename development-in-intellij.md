@@ -6,7 +6,7 @@ permalink: /docs/development-in-intellij.html
 
 Apache Eagle (incubating, called Eagle in the following) can be developed in popular IDE, e.g. Intellij and Eclipse. Here we focus on development in Intellij.
 
-### 1. Prepare Hadoop environment
+### 1. Prepare Hadoop[^HADOOP] environment
 
 Normally HDP sandbox is needed for testing Hadoop monitoring. Please reference [Quick Start](/docs/quick-start.html) for setting up HDP sandbox.
 
@@ -16,13 +16,13 @@ Please ensure following daemons are up
 
 * Datanode
 
-* HBase master/region server only needed when HBase is metadata store
+* HBase[^HBASE] master/region server only needed when HBase is metadata store
 
 * MySQL only neede when MySQL is metadata store
 
-* Zookeeper
+* Zookeeper[^ZOOKEEPER]
 
-* Kafka
+* Kafka[^KAFKA]
 
 ### 2. Start Eagle web service in Intellij
 
@@ -39,7 +39,7 @@ Run eagle-service-init.sh under eagle-assembly/src/main/bin/eagle-service-init.s
 
 * **Start Eagle service**
 
-Configure Intellij for running tomcat server with eagle-service artifacts
+Configure Intellij for running Apache Tomcat server with eagle-service artifacts
 
 ### 3. Start topology in Intellij
 
@@ -47,7 +47,7 @@ Configure Intellij for running tomcat server with eagle-service artifacts
 
 Take HDFS data activity monitoring as example, config application.conf under eagle-security/eagle-security-hdfs-securitylog/src/main/resources for eagle service endpoint, Kafka endpoint etc.
 
-* **Start Storm topology**
+* **Start Storm[^STORM] topology**
 
 Normally one data source has one correponding Storm topology, for example to monitor HDFS data activity, org.apache.eagle.security.auditlog.HdfsAuditLogProcessorMain is used for starting Storm topology and reading audit logs from Kafka.
 
@@ -58,4 +58,15 @@ Hive query activity monitoring : org.apache.eagle.security.hive.jobrunning.HiveJ
 HBase data activity monitoring: org.apache.eagle.security.hbaseHbaseAuditLogMonitoringTopology
 
 MapR FS data activity monitoring: org.apache.eagle.security.auditlog.MapRFSAuditLogProcessorMain
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*
+[^HBASE]:*All mentions of "hbase" on this page represent Apache HBase.*
+[^HIVE]:*Apache Hive.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+[^STORM]:*All mentions of "storm" on this page represent Apache Storm.*
+[^ZOOKEEPER]:*Apache ZooKeeper.*
 

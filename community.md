@@ -26,7 +26,7 @@ permalink: /docs/community.html
 
 **Conferences**
 
-* [**IEEE BigData 2015**](http://cci.drexel.edu/bigdata/bigdata2015/): [Eagle: User Profile-based Anomaly Detection in Hadoop Clusters](http://cci.drexel.edu/bigdata/bigdata2015/APaper.html) by [Chaitali Gupta](https://github.com/chaitaligupta) and [Edward Zhang](https://github.com/yonzhang) on Oct 29 - Nov 01, 2015 at [Santa Clara, CA, USA](https://www.google.com/maps/place/Santa+Clara,+CA)
+* [**IEEE BigData 2015**](http://cci.drexel.edu/bigdata/bigdata2015/): [Eagle: User Profile-based Anomaly Detection in Hadoop[^HADOOP] Clusters](http://cci.drexel.edu/bigdata/bigdata2015/APaper.html) by [Chaitali Gupta](https://github.com/chaitaligupta) and [Edward Zhang](https://github.com/yonzhang) on Oct 29 - Nov 01, 2015 at [Santa Clara, CA, USA](https://www.google.com/maps/place/Santa+Clara,+CA)
 * [**China Hadoop Summit 2015**](http://www.chinahadoop.com/english): [Hadoop Eagle - Real Time Monitoring Platform](http://www.slideshare.net/haoch/hadoop-eaglev4) by [Hao Chen](https://github.com/haoch) on July 23 - 24, 2015 at [Shanghai, China](https://www.google.com/maps/place/Shanghai,+China)
 * [**Hadoop Summit 2015**](http://2015.hadoopsummit.org/san-jose/): [Hadoop Eagle - Real Time Monitoring Framework for eBay Hadoop](http://www.slideshare.net/Hadoop_Summit/hadoop-eagle-real-time-monitoring) by [Edward Zhand](https://github.com/yonzhang) and [Hao Chen](https://github.com/haoch) on June 9 - 11, 2015 at [San Jose, CA, USA](https://www.google.com/maps/place/San+Jose,+CA)
 <br/>
@@ -66,3 +66,9 @@ permalink: /docs/community.html
 ### Credits
 
 * Thanks [eBay Inc.](http://www.ebay.com) to donated this project to open source community, first announement at [eBay Techblog](http://www.ebaytechblog.com/2015/10/23/eagle-is-your-hadoop-data-secured/).
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*

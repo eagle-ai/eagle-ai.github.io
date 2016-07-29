@@ -7,7 +7,7 @@ permalink: /docs/deployment-in-sandbox.html
 Here is the summary of the steps for setting up Apache Eagle (incubating, called Eagle in the following) in Hortonworks sandbox:
 
 * Step 1: Setup sandbox image in a virtual machine
-* Step 2: Setup Hadoop environment in sandbox
+* Step 2: Setup Hadoop[^HADOOP] environment in sandbox
 * Step 3: Download and extract a Eagle release to sandbox
 * Step 4: Install Eagle
 * Step 5: Stream HDFS audit log
@@ -22,12 +22,12 @@ To install Eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 
 ### **Step 2: Setup Hadoop environment in sandbox**
 
-1. Launch Ambari to manage the Hadoop environment
+1. Launch Ambari[^AMBARI] to manage the Hadoop environment
    * Enable Ambari in sandbox http://127.0.0.1:8000 (Click on Enable Button)
    * Login to Ambari UI http://127.0.0.1:8080/ with username and password as "admin"
-2. Grant root as HBase superuser via Ambari
+2. Grant root as HBase[^HBASE] superuser via Ambari
 ![add superuser](/images/docs/hbase-superuser.png)
-3. Start Storm, HBase & Kafka Ambari. Showing Storm as an example below.
+3. Start Storm[^STORM], HBase & Kafka[^KAFKA], Ambari. Showing Storm as an example below.
 ![Restart Services](/images/docs/start-storm.png "Services")
 
 ### **Step 3: Download and extract a Eagle release to sandbox**
@@ -103,6 +103,19 @@ Now please login to Eagle web http://localhost:9099/eagle-service with account `
   (If the NAT network is used in a virtual machine, it's required to add port 9099 to forwarding ports)
   ![Forwarding Port](/images/docs/eagle-service.png)
   ![login](/images/docs/login.png)
+
+
+
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*
+[^HBASE]:*All mentions of "hbase" on this page represent Apache HBase.*
+[^AMBARI]:*All mentions of "ambari" on this page represent Apache Ambari.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+[^STORM]:*All mentions of "storm" on this page represent Apache Storm.*
 
 
 

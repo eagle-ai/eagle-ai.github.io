@@ -6,7 +6,7 @@ permalink: /docs/hive-query-activity-monitoring.html
 
 *Since Apache Eagle 0.3.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
 
-This Guide describes the steps to enable HIVE query activity monitoring.
+This Guide describes the steps to enable HIVE[^HIVE] query activity monitoring.
 
 * Prerequisite
 * Stream HIVE query logs into Eagle platform
@@ -20,7 +20,7 @@ This Guide describes the steps to enable HIVE query activity monitoring.
 
 
 ### **Stream HIVE query logs into Eagle platform**   
-There are a couple of methods to capture HIVE query logs. As of 0.4.0, Eagle uses YARN API to periodically poll running HIVE jobs and in realtime parse query expressions. So here Eagle assumes resource manager is installed in Hadoop cluster. 
+There are a couple of methods to capture HIVE query logs. As of 0.4.0, Eagle uses YARN API to periodically poll running HIVE jobs and in realtime parse query expressions. So here Eagle assumes resource manager is installed in Hadoop[^HADOOP] cluster. 
 
 ### **Demos**
 * **Hive**:
@@ -37,3 +37,9 @@ $ select a.phone_number from customer_details a, call_detail_records b where a.p
 ~~~
 
 From UI click on alert tab and you should see alert for your attempt to read restricted column.  
+
+---
+
+#### *Footnotes*
+
+[^HIVE]:*All mentions of "hive" on this page represent Apache Hive.*

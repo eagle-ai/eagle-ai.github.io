@@ -9,7 +9,7 @@ permalink: /docs/hdfs-data-activity-monitoring.html
 This Guide describes the steps to enable data activity monitoring of "HDFS File System".
 
 * Prerequisite
-* Stream HDFS audit logs into Kafka
+* Stream HDFS audit logs into Kafka[^KAFKA]
 * Demos "HDFS Data Activity Monitoring"
 <br/><br/>
 
@@ -23,7 +23,7 @@ This Guide describes the steps to enable data activity monitoring of "HDFS File 
  
   Note: This section describes how to configure Kafka log4j to stream audit logs into Eagle platform. For another option to stream HDFS audit logs into Kafka using Logstash [Click Here](/docs/import-hdfs-auditLog.html)
  
-* **Step 1**: Configure Advanced hdfs-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>, by adding below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
+* **Step 1**: Configure Advanced hdfs-log4j via <a href="http://localhost:8080/#/main/services/HDFS/configs" target="_blank">Ambari UI</a>[^AMBARI], by adding below "KAFKA_HDFS_AUDIT" log4j appender to hdfs audit logging.
 
 	   log4j.appender.KAFKA_HDFS_AUDIT=org.apache.eagle.log4j.kafka.KafkaLog4jAppender
 	   log4j.appender.KAFKA_HDFS_AUDIT.Topic=sandbox_hdfs_audit_log
@@ -49,7 +49,7 @@ This Guide describes the steps to enable data activity monitoring of "HDFS File 
 
 * **Step 4**: save the changes 
 
-* **Step 5**: "Restart All" Storm & Kafka from Ambari.
+* **Step 5**: "Restart All" Storm[^STORM] & Kafka from Ambari.
 
 * **Step 6**: Restart name node 
 
@@ -73,3 +73,13 @@ This Guide describes the steps to enable data activity monitoring of "HDFS File 
 
 	From UI click on alert tab and you should see alert for the attempt to read restricted file.  
 <br/>
+
+
+---
+
+#### *Footnotes*
+
+[^AMBARI]:*All mentions of "ambari" on this page represent Apache Ambari.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+[^STORM]:*Apache Storm.*
+

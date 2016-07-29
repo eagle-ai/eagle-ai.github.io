@@ -6,7 +6,7 @@ permalink: /docs/tutorial/setup.html
 
 *Only For Apache Eagle 0.3.0-incubating. Starting from Apache Eagle 0.4.0-incubating, a prefix `classification.` is required for each property and the configuration becomes java properties style. Apache Eagle (incubating) will be called Eagle in the following.*
 
-Eagle identifies different Hadoop environments as different sites, such as sandbox, datacenter1, datacenter2. In each site,
+Eagle identifies different Hadoop[^HADOOP] environments as different sites, such as sandbox, datacenter1, datacenter2. In each site,
 a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
 
 #### Step 1: Add Site
@@ -50,7 +50,7 @@ After creating a new site, we need to edit the configuration to connect the clus
 
         If there is an exception about "invalid server principal name", you may need to check the DNS resolver, or the data transfer , such as "dfs.encrypt.data.transfer", "dfs.encrypt.data.transfer.algorithm", "dfs.trustedchannel.resolver.class", "dfs.datatransfer.client.encrypt".
 
-* Hive
+* Hive[^HIVE]
     * Basic
 
             {
@@ -62,7 +62,7 @@ After creating a new site, we need to edit the configuration to connect the clus
             }
 
 
-* HBase
+* HBase[^HBASE]
 
     * Basic case
 
@@ -97,3 +97,14 @@ After creating a new site, we need to edit the configuration to connect the clus
 After the configuration is ready, you can go to [classification page](/docs/tutorial/classification.html) and browse the data. If the configuration is correct, data will returned immediately.
 
 Any questions on Kerberos configuration, please first check [FAQ](/docs/FAQ.html)
+
+
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*
+[^HBASE]:*Apache HBase.*
+[^HIVE]:*Apache Hive.*
+

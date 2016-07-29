@@ -4,10 +4,10 @@ title:  "JMX Metric Monitoring"
 permalink: /docs/jmx-metric-monitoring.html
 ---
 
-JMX metric for hadoop namenode url [http://127.0.0.1:50070/jmx](http://127.0.0.1:50070/jmx) can be monitored using Apache Eagle (incubating, called Eagle in the following). Follow below steps to enable this feature in Eagle.    
+JMX metric for Apache Hadoop[^HADOOP] namenode url [http://127.0.0.1:50070/jmx](http://127.0.0.1:50070/jmx) can be monitored using Apache Eagle (incubating, called Eagle in the following). Follow below steps to enable this feature in Eagle.    
 
-1. Install Python script (To populate JMX metric values to Kafka topic periodically.)
-2. Deploy "hadoopjmx" storm topology.
+1. Install Python script (To populate JMX metric values to Kafka[^KAFKA] topic periodically.)
+2. Deploy "hadoopjmx" Storm topology.
 3. Create new site and policy in UI
 4. Validate policy alert.
 
@@ -21,7 +21,7 @@ JMX metric for hadoop namenode url [http://127.0.0.1:50070/jmx](http://127.0.0.1
 
 
 ### **Setup**
-From Hortonworks sandbox just run below setup script to Install Pyton JMX script, Create Kafka topic, update Hbase tables and deploy "hadoopjmx" storm topology. 
+From Hortonworks sandbox just run below setup script to Install Pyton JMX script, Create Kafka topic, update Apache Hbase tables and deploy "hadoopjmx" Storm topology. 
 
     $ /usr/hdp/current/eagle/examples/hadoop-metric-sandbox-starter.sh
     $ /usr/hdp/current/eagle/examples/hadoop-metric-policy-create.sh  
@@ -54,4 +54,12 @@ You should see policy with name "safeModePolicy".
 
         $ /usr/hdp/2.2.4.2-2/kafka/bin/kafka-console-producer.sh --broker-list sandbox.hortonworks.com:6667 --topic nn_jmx_metric_sandbox
         $ {"host": "localhost", "timestamp": 1457033916718, "metric": "hadoop.namenode.fsnamesystemstate.fsstate", "component": "namenode", "site": "sandbox", "value": 1.0}
+
+
+---
+
+#### *Footnotes*
+
+[^STORM]:*All mentions of "storm" on this page represent Apache Storm.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
   

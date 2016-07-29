@@ -30,14 +30,14 @@ Eagle requires a setup cluster environment to run monitoring applications. For m
             # TODO: make sure java version is 1.7.x
             export JAVA_HOME=
 
-            # TODO: Storm nimbus host. Default is localhost
+            # TODO: Apache Storm nimbus host. Default is localhost
             export EAGLE_NIMBUS_HOST=localhost
 
             # TODO: EAGLE_SERVICE_HOST, default is `hostname -f`
             export EAGLE_SERVICE_HOST=localhost
 
 
-    * Edit `conf/eagle-service.conf` to configure the database to use (for example: hbase)
+    * Edit `conf/eagle-service.conf` to configure the database to use (for example: HBase[^HBASE])
 
             # TODO: hbase.zookeeper.quorum in the format host1,host2,host3,...
             # default is "localhost"
@@ -72,10 +72,10 @@ You have now successfully installed Eagle and setup a monitoring site. Next you 
 
 ### **Rock with monitoring apps**
 
-Currently Eagle provides several analytics solutions for identifying security on a Hadoop cluster. 
+Currently Eagle provides several analytics solutions for identifying security on a Hadoop[^HADOOP] cluster. 
 
 * [HDFS Data Activity Monitoring](/docs/hdfs-data-activity-monitoring.html)
-* [HIVE Query Activity Monitoring](/docs/hive-query-activity-monitoring.html)
+* [HIVE Query Activity Monitoring](/docs/hive-query-activity-monitoring.html)[^HIVE]
 * [HBASE Data Activity Monitoring](/docs/hbase-data-activity-monitoring.html)
 * [MapR FS Data Activity Monitoring](/docs/mapr-integration.html)
 * [Hadoop JMX Metrics Monitoring](/docs/jmx-metric-monitoring.html)
@@ -85,4 +85,12 @@ Currently Eagle provides several analytics solutions for identifying security on
 * Stop eagle service
 
       $ bin/eagle-service.sh stop
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*
+[^HBASE]:*All mentions of "hbase" on this page represent Apache HBase.*
+[^HIVE]:*Apache Hive.*
 

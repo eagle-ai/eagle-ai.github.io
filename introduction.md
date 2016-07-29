@@ -6,7 +6,7 @@ permalink: /docs/index.html
 
 ### Welcome to Apache Eagle (incubating)
 
-> Apache Eagle (incubating, called Eagle in the following) is an open source analytics solution for identifying security and performance issues instantly on big data platforms e.g. Hadoop, Spark, NoSQL etc. It analyzes data activities, yarn applications, jmx metrics, and daemon logs etc., provides state-of-the-art alert engine to identify security breach, performance issues and shows insights.
+> Apache Eagle (incubating, called Eagle in the following) is an open source analytics solution for identifying security and performance issues instantly on big data platforms e.g. Hadoop[^HADOOP], Spark[^SPARK], NoSQL etc. It analyzes data activities, yarn applications, jmx metrics, and daemon logs etc., provides state-of-the-art alert engine to identify security breach, performance issues and shows insights.
 
 ### Basic Analytics and Monitoring Flow
 
@@ -18,7 +18,7 @@ Normally 3 basic steps are involved in Eagle platform: Data Integration, Alertin
 
 * Insights is for correlating alerts with raw data for user to explore root causes.
 
-Depending on data source, data integrations may use pull or push methods to stream data into Eagle platform, for example HDFS audit log can be pushed by logstash, but Hive query log can be pulled by Hive Integration application.  
+Depending on data source, data integrations may use pull or push methods to stream data into Eagle platform, for example HDFS audit log can be pushed by logstash, but Hive[^HIVE] query log can be pulled by Hive Integration application.  
 
 ### Key Qualities
 
@@ -29,3 +29,12 @@ Depending on data source, data integrations may use pull or push methods to stre
 * **Metadata Driven**: Eagle understands what policies are evaluated for what data source in what physical boxes. This thanks to Eagle metadata design and master/slave distributed computing architecture. Eagle alert engine's coordinator listens to metadata change, calculates snapshot for mapping policy to resource and then dynamically deploys snapshot onto storm spouts and bolts.
 
 * **Extensibility**: Eagle is designed with extensibility in mind. You can integrate many different data sources into Eagle platform with a few clicks.
+
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*
+[^HIVE]:*All mentions of "hive" on this page represent Apache HIVE.*
+[^SPARK]:*All mentions of "spark" on this page represent Apache Spark.*

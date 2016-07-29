@@ -10,9 +10,9 @@ Guide To Install **Apache Eagle 0.4.0-incubating** On Hortonworks sandbox.
 
 * Setup Environment
 * Download + Patch + Build
-* Setup Hadoop Environment.
+* Setup Hadoop[^HADOOP] Environment.
 * Install Eagle.
-* Sample Application: Hive query activity monitoring in sandbox
+* Sample Application: Hive[^HIVE] query activity monitoring in sandbox
 <br/>
 
 ### **Setup Environment**
@@ -45,9 +45,9 @@ Eagle requires a streaming environment to run various applications. For more det
 <br/>
 
 ### **Sample Application: Hive query activity monitoring in sandbox**
-After executing `examples/eagle-sandbox-starter.sh`, you have a sample application (topology) running on the storm (check with [storm ui](http://sandbox.hortonworks.com:8744/index.html)), and a sample policy of hive activity monitoring defined.
+After executing `examples/eagle-sandbox-starter.sh`, you have a sample application (topology) running on the Apache Storm (check with [storm ui](http://sandbox.hortonworks.com:8744/index.html)), and a sample policy of Hive activity monitoring defined.
 
-Next you can trigger an alert by running a hive query.
+Next you can trigger an alert by running a Hive query.
 
 ~~~
 $ su hive
@@ -57,3 +57,13 @@ $ use xademo;
 $ select a.phone_number from customer_details a, call_detail_records b where a.phone_number=b.phone_number;
 ~~~
 <br/>
+
+
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*Apache Hadoop.*
+[^HIVE]:*All mentions of "hive" on this page represent Apache Hive.*
+

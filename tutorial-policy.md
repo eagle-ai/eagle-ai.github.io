@@ -7,7 +7,7 @@ permalink: /docs/tutorial/policy.html
 Apache Eagle (incubating, called Eagle in the following) currently supports to customize policies for data sources for each site:
 
 * HDFS Audit Log
-* Hive Query Log
+* Hive[^HIVE] Query Log
 
 > NOTICE: policies are classified by sites. Please select the site first when there are multiple ones.
 
@@ -57,3 +57,11 @@ In this example we will go thru the steps for creating the following Hive policy
 * **Step 3**: Name your policy and select de-duplication options if you need to avoid getting duplicate alerts within a particular time window. You have an option to configure email notifications for the alerts.
 
 	![Hive Policies](/images/docs/hive-policy3.png)
+
+
+---
+
+#### *Footnotes*
+
+[^HIVE]:*All mentions of "hive" on this page represent Apache Hive.*
+

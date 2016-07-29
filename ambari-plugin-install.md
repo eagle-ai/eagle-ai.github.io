@@ -11,7 +11,7 @@ Assume Apache Eagle (incubating, called Eagle in the following) package has been
 
 ### Pre-requisites
 
-1. Create a Kafka topic if you have not. Here is an example command.
+1. Create a Kafka[^KAFKA] topic if you have not. Here is an example command.
 
        $ /usr/hdp/current/kafka-broker/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic sandbox_hdfs_audit_log
 
@@ -19,7 +19,7 @@ Assume Apache Eagle (incubating, called Eagle in the following) package has been
 
 ### Installation Steps
 
-1. Start dependent services Storm, Spark, HBase & Kafka via Ambari.
+1. Start dependent services Storm[^STORM], Spark[^SPARK], HBase[^HBASE] & Kafka via Ambari[^AMBARI].
 
 2. Install Eagle Ambari plugin
 
@@ -37,3 +37,15 @@ Assume Apache Eagle (incubating, called Eagle in the following) package has been
        $ cd <eagle-home>
        $ examples/sample-sensitivity-resource-create.sh
        $ examples/sample-policy-create.sh
+
+
+
+---
+
+#### *Footnotes*
+
+[^HBASE]:*Apache HBase.*
+[^AMBARI]:*All mentions of "ambari" on this page represent Apache Ambari.*
+[^SPARK]:*Apache Spark.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+[^STORM]:*Apache Storm.*
