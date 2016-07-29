@@ -17,7 +17,7 @@ Step 1: edit configuration under conf/ldap.properties.
     acl.adminRole=
     acl.defaultRole=ROLE_USER
 
-acl.adminRole and acl.defaultRole are two custom properties for Eagle. Eagle manages admin users with groups. If you set acl.adminRole as ROLE_{EAGLE-ADMIN-GROUP-NAME}, members in this group have admin privilege. acl.defaultRole is ROLE_USER.
+acl.adminRole and acl.defaultRole are two customized properties for Eagle. Eagle manages admin users with groups. If you set acl.adminRole as ROLE_{EAGLE-ADMIN-GROUP-NAME}, members in this group have the admin privilege. acl.defaultRole is ROLE_USER.
 
 Step 2: edit conf/eagle-service.conf, and add springActiveProfile="default"
 

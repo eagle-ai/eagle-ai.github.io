@@ -46,7 +46,7 @@ documentations:
         url: /docs/deployment-env.html
       - title: Setup Eagle in Production
         url: /docs/deployment-in-production.html
-      - title: Eagle Topology Configuration
+      - title: Eagle Application Configuration
         url: /docs/configuration.html
       - title: Eagle Service Configuration
         url: /docs/serviceconfiguration.html
@@ -55,7 +55,7 @@ documentations:
   - category: Tutorial
     links: 
       - title: Site Management
-        url: /docs/tutorial/setup.html
+        url: /docs/tutorial/site.html
       - title: Policy Management
         url: /docs/tutorial/policy.html
       - title: Policy Engine Capabilities 

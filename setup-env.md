@@ -10,21 +10,21 @@ Apache Eagle (incubating, called Eagle in the following) as an analytics solutio
 
 To run monitoring applications, Eagle requires the following dependencies.
 
-* For Streaming platform Dependencies
+* For streaming platform dependencies
 
 	* Storm: 0.9.3 or later
 	* Kafka: 0.8.x or later
 	* Java: 1.7.x
 	* NPM (On MAC OS try "brew install node") 	
 
-* For Database Dependencies (Choose one of them)
+* For database dependencies (Choose one of them)
 
 	* HBase: 0.98 or later
 		* Hadoop: 2.6.x is required
 	* Mysql
-		* Mysql installation is required
+		* Installation is required
 	* Derby
-		* No installation is required 
+		* No installation 
 		
 ### Setup Cluster in Sandbox
 To make thing easier you can try Eagle with an **all-in-one** sandbox VM, like [HDP sandbox](http://hortonworks.com/downloads/#sandbox)(HDP 2.2.4 is recommended). Next we will go with Hortonworks Sandbox 2.2.4 to setup a minimal requirement cluster with Storm and Kafka. 

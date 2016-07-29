@@ -63,16 +63,16 @@ Eagle requires a setup cluster environment to run monitoring applications. For m
 
 You have now successfully installed Eagle and setup a monitoring site. Next you can
 
-* Setup a monitoring site [site management](/docs/tutorial/setup.html)
+* Setup a monitoring site [site management](/docs/tutorial/site.html)
 
 * Create more policies with Eagle web [policy management](/docs/tutorial/policy.html)
 
-* Enable resolver and classification functions of Eagle web [tutorial](/docs/tutorial/setup.html)
+* Enable resolver and classification functions of Eagle web [data classification](/docs/tutorial/classification.html)
 
 
-### **Rock with monitoring apps**
+### **Rock with Applications**
 
-Currently Eagle provides several analytics solutions for identifying security on a Hadoop cluster. 
+Currently Eagle provides several analytics solutions for identifying security on a Hadoop cluster. For example:
 
 * [HDFS Data Activity Monitoring](/docs/hdfs-data-activity-monitoring.html)
 * [HIVE Query Activity Monitoring](/docs/hive-query-activity-monitoring.html)

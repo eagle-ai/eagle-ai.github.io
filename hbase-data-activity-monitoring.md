@@ -16,7 +16,7 @@ This page will introduce how to monitoring hbase data activity in the following 
 
 > Notice: if you are willing to use sample logs under eagle-security-hbase-security/test/resources/securityAuditLog, please skip this part.
 
-1. edit Advanced ~~hadoop-log4j~~ hbase-log4j via Ambari UI, and append below sentence to `Security audit appender`
+1. edit Advanced hbase-log4j via Ambari UI, and append below sentence to `Security audit appender`
 
         log4j.logger.SecurityLogger.org.apache.hadoop.hbase.security.access.AccessController=TRACE,RFAS
 

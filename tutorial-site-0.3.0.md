@@ -1,10 +1,8 @@
 ---
 layout: doc
 title:  "Site Management"
-permalink: /docs/tutorial/setup.html
+permalink: /docs/tutorial/site-0.3.0.html
 ---
-
-*Only For Apache Eagle 0.3.0-incubating. Starting from Apache Eagle 0.4.0-incubating, a prefix `classification.` is required for each property and the configuration becomes java properties style. Apache Eagle (incubating) will be called Eagle in the following.*
 
 Eagle identifies different Hadoop environments as different sites, such as sandbox, datacenter1, datacenter2. In each site,
 a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
@@ -17,11 +15,12 @@ The following is an example which creates a new site "Demo", and add two data so
 #### Step 2: Add Configuration
 
 After creating a new site, we need to edit the configuration to connect the cluster. 
-![hdfs setup](/images/docs/hdfs-setup.png)
-
+Here we give configuration examples for HDFS, HBASE, and Hive. 
 
 * HDFS
 
+    ![hdfs setup](/images/docs/hdfs-setup-0.3.0.png) 
+    
     * Base case
 
         You may configure the default path for Hadoop clients to connect remote hdfs namenode.
@@ -37,18 +36,20 @@ After creating a new site, we need to edit the configuration to connect the clus
              "dfs.ha.namenodes.nameservice1":"namenode1,namenode2",
              "dfs.namenode.rpc-address.nameservice1.namenode1": "hadoopnamenode01:8020",
              "dfs.namenode.rpc-address.nameservice1.namenode2": "hadoopnamenode02:8020",
-             "dfs.client.failover.proxy.provider.apollo-phx-nn-ha": "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"
+             "dfs.client.failover.proxy.provider.nameservice1": "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider"
             }
 
     * Kerberos-secured cluster
 
         For Kerberos-secured cluster, you need to get a keytab file and the principal from your admin, and configure "eagle.keytab.file" and "eagle.kerberos.principal" to authenticate its access.
 
-            { "eagle.keytab.file":"/EAGLE-HOME/.keytab/b_eagle.keytab_apd",
+            { "eagle.keytab.file":"/EAGLE-HOME/.keytab/eagle.keytab",
               "eagle.kerberos.principal":"eagle@SOMEWHERE.COM"
             }
 
         If there is an exception about "invalid server principal name", you may need to check the DNS resolver, or the data transfer , such as "dfs.encrypt.data.transfer", "dfs.encrypt.data.transfer.algorithm", "dfs.trustedchannel.resolver.class", "dfs.datatransfer.client.encrypt".
+        
+      
 
 * Hive
     * Basic
@@ -87,13 +88,8 @@ After creating a new site, we need to edit the configuration to connect the clus
                 "eagle.kerberos.principal":"eagle@EXAMPLE.COM"
             }
 
-* UserProfile
-
-        {
-          "features": "getfileinfo,open,listStatus,setTimes,setPermission,rename,mkdirs,create,setReplication,contentSummary,delete,setOwner,fsck"
-        }
 
 #### Step 3: Checking the connection
-After the configuration is ready, you can go to [classification page](/docs/tutorial/classification.html) and browse the data. If the configuration is correct, data will returned immediately.
+After the configuration is ready, you can go to [classification page](/docs/tutorial/classification-0.3.0.html) and browse the data. If the configuration is correct, data will be ready in a few seconds.
 
-Any questions on Kerberos configuration, please first check [FAQ](/docs/FAQ.html)
+Any questions on the Kerberos configuration in Eagle, please first check [FAQ](/docs/FAQ.html)

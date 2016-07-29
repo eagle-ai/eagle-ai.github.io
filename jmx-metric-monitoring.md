@@ -6,9 +6,9 @@ permalink: /docs/jmx-metric-monitoring.html
 
 JMX metric for hadoop namenode url [http://127.0.0.1:50070/jmx](http://127.0.0.1:50070/jmx) can be monitored using Apache Eagle (incubating, called Eagle in the following). Follow below steps to enable this feature in Eagle.    
 
-1. Install Python script (To populate JMX metric values to Kafka topic periodically.)
+1. Install Python script (To populate JMX metric values to Kafka topic periodically)
 2. Deploy "hadoopjmx" storm topology.
-3. Create new site and policy in UI
+3. Create new site and policy in UI.
 4. Validate policy alert.
 
 <br/>
