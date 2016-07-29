@@ -60,7 +60,7 @@ The second and crucial step is to register the configurations of the customized 
 
 Examples:
 
- 	{
+    {
        "prefix": "alertNotifications",
        "tags": {
          "notificationType": "kafka"
@@ -69,8 +69,9 @@ Examples:
        "description": "send alert to kafka bus",
        "enabled":true,
        "fields": "[{\"name\":\"kafka_broker\",\"value\":\"sandbox.hortonworks.com:6667\"},{\"name\":\"topic\"}]"
-     }
-'fields' is the configuration for notification type 'kafka'
+    }
+
+**Note**: `fields` is the configuration for notification type `kafka`
 
 How can we do that? [Here](https://github.com/apache/incubator-eagle/blob/master/eagle-assembly/src/main/bin/eagle-topology-init.sh) are Eagle other notification plugin configurations. Just append yours to it, and run this script when Eagle service is up. 
 

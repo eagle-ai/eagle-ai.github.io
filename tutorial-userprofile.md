@@ -26,7 +26,7 @@ is started.
 	![Click "ops"](/images/docs/userProfile1.png)
 	![Click "Update Now"](/images/docs/userProfile2.png)
 	![Click "Confirm"](/images/docs/userProfile3.png)
-	![Check](/images/docs/userprofile4.png)
+	![Check](/images/docs/userProfile4.png)
 
 ### User Profile Online Detection
 
