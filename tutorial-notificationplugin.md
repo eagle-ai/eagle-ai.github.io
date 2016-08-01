@@ -8,7 +8,7 @@ permalink: /docs/tutorial/notificationplugin.html
 
 ### Eagle Notification Plugins
 
-[Eagle Notification Plugin](https://cwiki.apache.org/confluence/display/EAG/Alert+notification+plugin) provides an interface for users to consume Eagle alerts. When define a policy, a user can add an arbitrary number of notification plugin instances. By default, Eagle supports three types of notification: EagleStore, Kafka and Email.
+[Eagle Notification Plugin](https://cwiki.apache.org/confluence/display/EAG/Alert+notification+plugin) provides an interface for users to consume Eagle alerts. When define a policy, a user can add an arbitrary number of notification plugin instances. By default, Eagle supports three types of notification: EagleStore, Kafka[^KAFKA] and Email.
 
 * EagleStore: Alerts will be persisted into the underlying database via eagle. 
 	* no configuration is needed. 
@@ -60,7 +60,7 @@ The second and crucial step is to register the configurations of the customized 
 
 Examples:
 
- 	{
+    {
        "prefix": "alertNotifications",
        "tags": {
          "notificationType": "kafka"
@@ -69,10 +69,16 @@ Examples:
        "description": "send alert to kafka bus",
        "enabled":true,
        "fields": "[{\"name\":\"kafka_broker\",\"value\":\"sandbox.hortonworks.com:6667\"},{\"name\":\"topic\"}]"
-     }
-'fields' is the configuration for notification type 'kafka'
+    }
+
+**Note**: `fields` is the configuration for notification type `kafka`
 
 How can we do that? [Here](https://github.com/apache/incubator-eagle/blob/master/eagle-assembly/src/main/bin/eagle-topology-init.sh) are Eagle other notification plugin configurations. Just append yours to it, and run this script when Eagle service is up. 
 
 
 
+---
+
+#### *Footnotes*
+
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*

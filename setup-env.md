@@ -6,7 +6,7 @@ permalink: /docs/deployment-env.html
 
 ### Setup Environment
 
-Apache Eagle (incubating, called Eagle in the following) as an analytics solution for identifying security and performance issues instantly, relies on streaming platform `storm` + `Kafka` to meet the realtime criteria, and persistence storage to store metadata and some metrics. As for the persistence storage, it supports three types of database: `HBASE`, `Derby`, and `Mysql`
+Apache Eagle (incubating, called Eagle in the following) as an analytics solution for identifying security and performance issues instantly, relies on streaming platform `Storm`[^STORM] + `Kafka`[^KAFKA] to meet the realtime criteria, and persistence storage to store metadata and some metrics. As for the persistence storage, it supports three types of database: `HBase`[^HBASE], `Derby`[^DERBY], and `Mysql`
 
 To run monitoring applications, Eagle requires the following dependencies.
 
@@ -20,7 +20,7 @@ To run monitoring applications, Eagle requires the following dependencies.
 * For database dependencies (Choose one of them)
 
 	* HBase: 0.98 or later
-		* Hadoop: 2.6.x is required
+		* Hadoop[^HADOOP]: 2.6.x is required
 	* Mysql
 		* Installation is required
 	* Derby
@@ -29,7 +29,7 @@ To run monitoring applications, Eagle requires the following dependencies.
 ### Setup Cluster in Sandbox
 To make thing easier you can try Eagle with an **all-in-one** sandbox VM, like [HDP sandbox](http://hortonworks.com/downloads/#sandbox)(HDP 2.2.4 is recommended). Next we will go with Hortonworks Sandbox 2.2.4 to setup a minimal requirement cluster with Storm and Kafka. 
 
-1. Launch Ambari 
+1. Launch Ambari[^AMBARI]
    * Enable Ambari in sandbox http://127.0.0.1:8000 (Click on Enable Button)
    * Login to Ambari UI http://127.0.0.1:8080/ with user:admin and password:admin
 
@@ -46,4 +46,14 @@ To make thing easier you can try Eagle with an **all-in-one** sandbox VM, like [
 
 
 
+---
+
+#### *Footnotes*
+
+[^STORM]:*All mentions of "storm" on this page represent Apache Storm.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+[^HBASE]:*All mentions of "hbase" on this page represent Apache HBase.*
+[^DERBY]:*All mentions of "derby" on this page represent Apache Derby.*
+[^HADOOP]:*Apache Hadoop.*
+[^AMBARI]:*All mentions of "ambari" on this page represent Apache Ambari.*
 

@@ -4,7 +4,7 @@ title:  "How to stream hdfs log data into Kafka"
 permalink: /docs/import-hdfs-auditLog.html
 ---
 
-As Apache Eagle (incubating) consumes the data via Kafka topics in some topologies, such as HDFS audit log. To enable the full function of monitoring, a user needs to stream its data into a Kafka topic.
+As Apache Eagle (incubating) consumes the data via Kafka[^KAFKA] topics in some topologies, such as HDFS audit log. To enable the full function of monitoring, a user needs to stream its data into a Kafka topic.
 
 There are two ways to do that. The first one is **Logstash**, which naturally supports Kafka as the output plugin; the second one is to
 install a **namenode log4j Kafka appender**.
@@ -76,7 +76,7 @@ install a **namenode log4j Kafka appender**.
 
 ### Log4j Kafka Appender
 
-> Notice that if you use Ambari, such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
+> Notice that if you use Ambari[^AMBARI], such as in sandbox, you **must** follow below steps via Ambari UI. In addition, restarting namenode is required.
 
 * **Step 1**: Create a Kafka topic. Here is a example Kafka command for creating topic "sandbox_hdfs_audit_log"
 
@@ -118,9 +118,9 @@ install a **namenode log4j Kafka appender**.
 
 
 
+---
 
+#### *Footnotes*
 
-
-
-
-
+[^AMBARI]:*all mentions of "ambari" on this page represent Apache Ambari.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*

@@ -5,7 +5,7 @@ permalink: /docs/tutorial/classification-0.3.0.html
 ---
 
 Apache Eagle (incubating) data classification feature provides the ability to classify data with different levels of sensitivity.
-Currently this feature is available ONLY for applications monitoring HDFS, Hive and HBase. For example, HdfsAuditLog, HiveQueryLog and HBaseSecurityLog. 
+Currently this feature is available ONLY for applications monitoring HDFS, Apache Hive and Apache HBase. For example, HdfsAuditLog, HiveQueryLog and HBaseSecurityLog. 
 
 The main content of this page are 
 

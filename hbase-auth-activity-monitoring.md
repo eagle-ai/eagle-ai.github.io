@@ -4,7 +4,7 @@ title:  "HBase Authorization Activity Monitoring Quick Start"
 permalink: /docs/hbase-auth-activity-monitoring.html
 ---
 
-HBase audits authorization activities in log files
+HBase[^HBASE] audits authorization activities in log files
 
 Please follow below steps to enable HBase authorization auditing in HDP sandbox and Cloudera
 
@@ -47,3 +47,8 @@ log4j.additivity.SecurityLogger=false
 log4j.logger.SecurityLogger.org.apache.hadoop.hbase.security.access.AccessController=TRACE
 ~~~
 
+---
+
+#### *Footnotes*
+
+[^HBASE]:*All mentions of "hbase" on this page represent Apache HBase.*

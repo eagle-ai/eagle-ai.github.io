@@ -6,17 +6,17 @@ permalink: /docs/hbase-data-activity-monitoring.html
 
 *On this page, any mention of Eagle points to Apache Eagle (incubating).*
 
-This page will introduce how to monitoring hbase data activity in the following aspects:
+This page will introduce how to monitoring HBase data activity in the following aspects:
 
-* How to enable hBase security audit log
-* How to add a Kafka log4j appender
+* How to enable HBase[^HBASE] security audit log
+* How to add a Kafka[^KAFKA] log4j appender
 * How to enable Eagle HBase monitoring
 
-### How to enable hBase security audit log
+### How to enable HBase security audit log
 
 > Notice: if you are willing to use sample logs under eagle-security-hbase-security/test/resources/securityAuditLog, please skip this part.
 
-1. edit Advanced hbase-log4j via Ambari UI, and append below sentence to `Security audit appender`
+1. edit Advanced hbase-log4j via Ambari[^AMBARI] UI, and append below sentence to `Security audit appender`
 
         log4j.logger.SecurityLogger.org.apache.hadoop.hbase.security.access.AccessController=TRACE,RFAS
 
@@ -97,6 +97,13 @@ Q1: found "java.lang.ClassNotFoundException: org.apache.eagle.log4j.kafka.KafkaL
 A1: 1) make sure the jars have been included in HBASE_CLASSPATH (run hbase classpath in the shell). 2) make sure this jars can be executed by other users. 3) check /etc/hbase/conf/hbase-site.xml whether there is newline between two properties. 
 
 
+---
+
+#### *Footnotes*
+
+[^HBASE]:*All mentions of "hbase" on this page represent Apache HBase.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+[^AMBARI]:*All mentions of "ambari" on this page represent Apache Ambari.*
 
 
 

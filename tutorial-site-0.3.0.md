@@ -4,8 +4,7 @@ title:  "Site Management"
 permalink: /docs/tutorial/site-0.3.0.html
 ---
 
-Eagle identifies different Hadoop environments as different sites, such as sandbox, datacenter1, datacenter2. In each site,
-a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
+Apache Eagle (incubating, called Eagle in the following) identifies different Hadoop[^HADOOP] environments as different sites, such as sandbox, datacenter1, datacenter2. In each site, a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
 
 #### Step 1: Add Site
 
@@ -51,7 +50,7 @@ Here we give configuration examples for HDFS, HBASE, and Hive.
         
       
 
-* Hive
+* Hive[^HIVE]
     * Basic
 
             {
@@ -63,7 +62,7 @@ Here we give configuration examples for HDFS, HBASE, and Hive.
             }
 
 
-* HBase
+* HBase[^HBASE]
 
     * Basic case
 
@@ -93,3 +92,13 @@ Here we give configuration examples for HDFS, HBASE, and Hive.
 After the configuration is ready, you can go to [classification page](/docs/tutorial/classification-0.3.0.html) and browse the data. If the configuration is correct, data will be ready in a few seconds.
 
 Any questions on the Kerberos configuration in Eagle, please first check [FAQ](/docs/FAQ.html)
+
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*
+[^HBASE]:*Apache HBase.*
+[^HIVE]:*Apache Hive.*
+

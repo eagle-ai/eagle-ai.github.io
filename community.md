@@ -22,7 +22,7 @@ permalink: /docs/community.html
 * **Twitter**: [@TheApacheEagle](https://twitter.com/TheApacheEagle)
 * **Wechat**: Apache_Eagle
 
-### Events and Meetups
+### Events and Meetups[^HADOOP]
 
 **Conferences**
 
@@ -66,3 +66,9 @@ permalink: /docs/community.html
 ### Credits
 
 * Thanks [eBay Inc.](http://www.ebay.com) to donated this project to open source community, first announement at [eBay Techblog](http://www.ebaytechblog.com/2015/10/23/eagle-is-your-hadoop-data-secured/).
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*

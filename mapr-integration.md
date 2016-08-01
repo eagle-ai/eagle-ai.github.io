@@ -11,7 +11,7 @@ permalink: /docs/mapr-integration.html
 To get maprFSAuditLog monitoring started, we need to:
 
 * Enable audit logs on MapR from MapR's terminal
-* Created logstash conf file to send audit logs to kafka
+* Created logstash conf file to send audit logs to Kafka[^KAFKA]
 * Initialize metadata for mapFSAuditLog and enabled the application
 
 Here are the steps to follow:   
@@ -97,7 +97,7 @@ When a directory has been enabled auditing,  directories/files located in this d
 
 
 #### Step2: Stream log data into Kafka by using Logstash
-As MapR do not have name node, instead it use CLDB service, we have to use logstash to stream log data into kafka.
+As MapR do not have name node, instead it use CLDB service, we have to use logstash to stream log data into Kafka.
 - First find out the nodes that have CLDB service
 - Then find out the location of audit log files, eg: ``/mapr/mapr.cluster.com/var/mapr/local/mapr1.da.dg/audit/``, file names should be in this format: ``FSAudit.log-2016-05-04-001.json`` 
 - Created a logstash conf file and run it, following this doc[Logstash-kafka](https://github.com/apache/incubator-eagle/blob/dev/eagle-assembly/src/main/docs/logstash-kafka-conf.md)
@@ -112,3 +112,12 @@ Have fun!!! :)
 ### Reference Links
 1. [Enable Auditing in MapR](http://doc.mapr.com/display/MapR/Enabling+Auditing)
 2. [MapR audit logs](http://doc.mapr.com/display/MapR/Audit+Logs+for+Filesystem+Operations+and+Table+Operations)
+
+
+
+---
+
+#### *Footnotes*
+
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+

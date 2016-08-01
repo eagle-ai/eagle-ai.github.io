@@ -9,7 +9,7 @@ Apache Eagle (incubating, called Eagle in the following) requires you to create 
 In this page we take the following two application as examples
 
 * HDFS Audit Log Configuration
-* Hive Query Log Configuration
+* Hive[^HIVE] Query Log Configuration
 
 
 ### HDFS Audit Log Configuration
@@ -17,13 +17,13 @@ In this page we take the following two application as examples
 
  Class            ||| Property Name    ||| Description
  -----------------||| -------------    ||| -----------
- envContextConfig |||   env            ||| currently only Storm is supported.
+ envContextConfig |||   env            ||| currently only Storm[^STORM] is supported.
                   |||   mode           ||| local or cluster
                   |||   topologyName   ||| in the format {site}-{topology-name}
                   |||   stormConfigFile    ||| a storm configuration file for overriding some Storm properties
-                  |||  parallelismConfig   ||| parallelism for both kafka consumer and alert executors
+                  |||  parallelismConfig   ||| parallelism for both Kafka[^KAFKA] consumer and alert executors
 dataSourceConfig  |||  **topic**           ||| Kafka topic for audit log streaming, make sure it exists
-                  ||| **zkConnection***    |||ZooKeeper connection string, you can also specify multiple hosts in the form hostname1:port1,hostname2:port2, ...
+                  ||| **zkConnection***    |||ZooKeeper[^ZOOKEEPER] connection string, you can also specify multiple hosts in the form hostname1:port1,hostname2:port2, ...
                   |||zkConnectionTimeoutMS ||| zookeeper connection timeout
                   |||   fetchSize          ||| kafka maximal message fetching size, default value is 1048586
                   |||   deserializerClass  ||| org.apache.eagle.security.auditlog.HdfsAuditLogKafkaDeserializer 
@@ -37,11 +37,11 @@ alertExecutorConfigs ||| parallelism             ||| default is 1
                   |||   needValidation           ||| true or false
 eagleProps        |||   **site***                ||| site name, such as sandbox, datacenter1, datacenter2
                   |||   dataSource               ||| hdfsAuditLog
-                  |||   dataJoinPollIntervalSec  ||| time interval for retrieving data from HBase
+                  |||   dataJoinPollIntervalSec  ||| time interval for retrieving data from HBase[^HBASE]
                   |||   **mailHost***                 ||| SMTP server
                   |||   **mailSmtpPort***             ||| SMTP server port, default is 25
                   |||   mailDebug                ||| true or false
-                  |||   eagleService.host        ||| tomcat server host, default is localhost
+                  |||   eagleService.host        ||| Tomcat[^TOMCAT] server host, default is localhost
                   |||   eagleService.port        ||| 9099
                   |||   eagleService.username    ||| admin
                   |||   eagleService.password    ||| secret
@@ -72,3 +72,14 @@ eagleProps        |||   **site***                ||| site name, such as sandbox,
  dynamicConfigSource  ||| same as HDFS        |||
 
 <br />
+
+---
+
+#### *Footnotes*
+
+[^HBASE]:*Apache HBase.*
+[^HIVE]:*All mentions of "hive" on this page represent Apache Hive.*
+[^KAFKA]:*All mentions of "kafka" on this page represent Apache Kafka.*
+[^STORM]:*All mentions of "storm" on this page represent Apache Storm.*
+[^TOMCAT]:*Apache Tomcat.*
+[^ZOOKEEPER]:*All mentions of "zookeeper" on this page represent Apache ZooKeeper.*

@@ -5,7 +5,7 @@ permalink: /docs/tutorial/classification.html
 ---
 
 Apache Eagle (incubating) data classification feature provides the ability to classify data with different levels of sensitivity.
-Currently this feature is available ONLY for applications monitoring HDFS, Hive and HBase. For example, HdfsAuditLog, HiveQueryLog and HBaseSecurityLog. 
+Currently this feature is available ONLY for applications monitoring HDFS, Hive[^HIVE] and HBase[^HBASE]. For example, HdfsAuditLog, HiveQueryLog and HBaseSecurityLog.
 
 The main content of this page are 
 
@@ -22,7 +22,7 @@ Here we give example configurations for HDFS, HBASE, and Hive. Suppose the clust
     
     * Base case
 
-        You may configure the default path for Hadoop clients to connect remote hdfs namenode.
+        You may configure the default path for Apache Hadoop clients to connect remote hdfs namenode.
 
             classification.fs.defaultFS=hdfs://sandbox.hortonworks.com:8020
 
@@ -120,4 +120,14 @@ You can mark a particular folder/file as "PRIVATE". Once you have this informati
 > For example: the following policy monitors all the operations to resources with sensitivity type "PRIVATE".
 
 ![sensitivity type policy](/images/docs/sensitivity-policy.png)
+
+
+
+---
+
+#### *Footnotes*
+
+[^HADOOP]:*All mentions of "hadoop" on this page represent Apache Hadoop.*
+[^HBASE]:*All mentions of "hbase" on this page represent Apache HBase.*
+[^HIVE]:*All mentions of "hive" on this page represent Apache Hive.*
 

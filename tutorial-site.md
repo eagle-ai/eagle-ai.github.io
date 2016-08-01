@@ -4,9 +4,9 @@ title:  "Site Management"
 permalink: /docs/tutorial/site.html
 ---
 
-Guide to site management for versions after **Apache Eagle 0.3.0-incubating**.
+Guide to site management for versions since **Apache Eagle 0.4.0-incubating**.
 
-[For Apache Eagle 0.3.0-incubating, Site Management is here](/docs/tutorial/site-0.3.0.html)
+[For Apache Eagle 0.3.0-incubating, see: _Site Management (0.3.0-incubating)_](/docs/tutorial/site-0.3.0.html)
 
 The main content in this page have two parts
 

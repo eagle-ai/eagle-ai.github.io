@@ -8,7 +8,7 @@ is started.
 
 ### User Profile Offline Training
 
-* **Step 1**: Start Spark if not started
+* **Step 1**: Start Apache Spark if not started
 ![Start Spark](/images/docs/start-spark.png)
 
 * **Step 2**: start offline scheduler
@@ -18,7 +18,7 @@ is started.
 	      $ cd <eagle-home>/bin
 	      $ bin/eagle-userprofile-scheduler.sh --site sandbox start
 
-	* Option 2: start via Ambari
+	* Option 2: start via Apache Ambari
 	![Click "ops"](/images/docs/offline-userprofile.png)
 
 * **Step 3**: generate a model
@@ -26,7 +26,7 @@ is started.
 	![Click "ops"](/images/docs/userProfile1.png)
 	![Click "Update Now"](/images/docs/userProfile2.png)
 	![Click "Confirm"](/images/docs/userProfile3.png)
-	![Check](/images/docs/userprofile4.png)
+	![Check](/images/docs/userProfile4.png)
 
 ### User Profile Online Detection
 
@@ -38,7 +38,7 @@ Two options to start the topology are provided.
 
       $ bin/eagle-topology.sh --main org.apache.eagle.security.userprofile.UserProfileDetectionMain --config conf/sandbox-userprofile-topology.conf start
 
-* **Option 2**: Ambari
+* **Option 2**: Apache Ambari
 	
 	![Online userProfiles](/images/docs/online-userprofile.png)
 
@@ -56,8 +56,8 @@ For example: `/usr/hdp/current/eagle/lib/userprofile/data/`
 update `training-audit-path` to set to the path for training data sample (the path you used for Step 1.a)
 update detection-audit-path to set to the path for validation (the path you used for Step 1.b)
 4. Run ML training program from eagle UI
-5. Produce kafka data using the contents from validate file (Step 1.b)
-Run the command (assuming the eagle configuration uses kafka topic `sandbox_hdfs_audit_log`) 
+5. Produce Apache Kafka data using the contents from validate file (Step 1.b)
+Run the command (assuming the eagle configuration uses Kafka topic `sandbox_hdfs_audit_log`) 
 
 		./kafka-console-producer.sh --broker-list sandbox.hortonworks.com:6667 --topic sandbox_hdfs_audit_log
 
