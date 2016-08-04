@@ -12,6 +12,6 @@ permalink: /sup/index.html
 
 > _Sinced created in August 4th, 2016, we will keep this page updated with new security-issue detections and corresponding bug fixes._
 
-### Reporting problems
+### Reporting Security Problems
 
 * The Apache Software Foundation takes a very active stance in eliminating security problems in its software products. If you have questions about how to configure or use Eagle more securely, you could send them to the [dev mailing list](mailto:dev@eagle.incubator.apache.org). If you find any security problems due to bugs in Eagle software, you could file bugs in the [bug tracker](https://issues.apache.org/jira/browse/EAGLE). The Apache Software Foundation has a dedicated [security team](http://www.apache.org/security/) which you may contact should the need arise.
