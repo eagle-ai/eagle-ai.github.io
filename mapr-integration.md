@@ -71,27 +71,35 @@ If "audited" is '1' then auditing is enabled for this volume.
 To check whether Auditing is Enabled for a Directory, File, or MapR-DB Table, use ``$ hadoop mfs -ls``
 Example:
 Before enable the audit log on file ``/tmp/dir``, try ``$ hadoop mfs -ls /tmp/dir``, you should see something like this:
+
 ~~~
 drwxr-xr-x Z U U   - root root          0 2016-03-02 15:02  268435456 /tmp/dir
                p 2050.32.131328  mapr2.da.dg:5660 mapr1.da.dg:5660
 ~~~
+
 The second ``U`` means auditing on this file is not enabled. 
 Enable auditing with this command: 
+
 ~~~
 $ hadoop mfs -setaudit on /tmp/dir
 ~~~
+
 Then check the auditing bit with : 
+
 ~~~
 $ hadoop mfs -ls /tmp/dir
 ~~~
+
 you should see something like this:
+
 ~~~
 drwxr-xr-x Z U A   - root root          0 2016-03-02 15:02  268435456 /tmp/dir
                p 2050.32.131328  mapr2.da.dg:5660 mapr1.da.dg:5660
 ~~~
+
 We can see the previous ``U`` has been changed to ``A`` which indicates auditing on this file is enabled.
   
-###### Important:
+``Important``:
 When a directory has been enabled auditing,  directories/files located in this dir won't inherit auditing, but a newly created file/dir (after enabling the auditing on this dir) in this directory will.
 
 
