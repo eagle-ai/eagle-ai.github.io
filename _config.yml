@@ -94,3 +94,8 @@ documentations:
     links: 
       - title: User Profile Machine Learning
         url: /docs/user-profile-ml.html
+supplement:
+  - category: Supplement
+    links:
+      - title: Security Updates
+        url: /sup/index.html
