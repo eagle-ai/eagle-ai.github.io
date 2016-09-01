@@ -97,5 +97,5 @@ documentations:
 supplement:
   - category: Supplement
     links:
-      - title: Security Updates
+      - title: Security
         url: /sup/index.html
