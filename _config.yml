@@ -33,7 +33,7 @@ documentations:
   - category: Download
     links:
       - title: Latest version
-        url: /docs/download-0.4.0.html
+        url: /docs/download-latest.html
       - title: Archived
         url: /docs/download.html
   - category: Installation
