@@ -20,8 +20,8 @@ permalink: /docs/download-latest.html
 	* [apache-eagle-0.4.0-incubating-src.tar.gz.sha](https://dist.apache.org/repos/dist/release/incubator/eagle/apache-eagle-0.4.0-incubating/apache-eagle-0.4.0-incubating-src.tar.gz.sha)
 	* [apache-eagle-0.4.0-incubating-src.tar.gz.asc](https://dist.apache.org/repos/dist/release/incubator/eagle/apache-eagle-0.4.0-incubating/apache-eagle-0.4.0-incubating-src.tar.gz.asc)
 * Git revision: 
-	* tag: [v0.4.0-incubating](https://github.com/apache/incubator-eagle/releases/tag/v0.4.0-incubating)
-	* commit: [eac0f27958f2ed8c6842938dad0a995a87fd0715](https://github.com/apache/incubator-eagle/commit/eac0f27958f2ed8c6842938dad0a995a87fd0715)
+	* tag: [v0.4.0-incubating](https://git-wip-us.apache.org/repos/asf?p=incubator-eagle.git;a=commit;h=refs/tags/v0.4.0-incubating)
+	* commit: [eac0f27958f2ed8c6842938dad0a995a87fd0715](https://git-wip-us.apache.org/repos/asf?p=incubator-eagle.git;a=commit;h=eac0f27958f2ed8c6842938dad0a995a87fd0715)
 
 # Previous Releases
 
