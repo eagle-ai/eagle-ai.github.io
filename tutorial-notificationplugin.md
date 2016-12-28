@@ -4,7 +4,7 @@ title:  "Notification Plugin"
 permalink: /docs/tutorial/notificationplugin.html
 ---
 
-*Since Apache Eagle 0.4.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
+*Since Apache Eagle 0.4.0-incubating. Apache Eagle will be called Eagle in the following.*
 
 ### Eagle Notification Plugins
 
@@ -73,7 +73,7 @@ Examples:
 
 **Note**: `fields` is the configuration for notification type `kafka`
 
-How can we do that? [Here](https://github.com/apache/incubator-eagle/blob/master/eagle-assembly/src/main/bin/eagle-topology-init.sh) are Eagle other notification plugin configurations. Just append yours to it, and run this script when Eagle service is up. 
+How can we do that? [Here](https://github.com/apache/eagle/blob/master/eagle-assembly/src/main/bin/eagle-topology-init.sh) are Eagle other notification plugin configurations. Just append yours to it, and run this script when Eagle service is up. 
 
 
 

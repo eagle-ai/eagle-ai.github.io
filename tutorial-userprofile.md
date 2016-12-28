@@ -3,7 +3,7 @@ layout: doc
 title:  "User Profile Tutorial"
 permalink: /docs/tutorial/userprofile.html
 ---
-This document will introduce how to start the online processing on user profiles. Assume Apache Eagle (incubating) has been installed and [Eagle service](http://sandbox.hortonworks.com:9099/eagle-service)
+This document will introduce how to start the online processing on user profiles. Assume Apache Eagle has been installed and [Eagle service](http://sandbox.hortonworks.com:9099/eagle-service)
 is started.
 
 ### User Profile Offline Training

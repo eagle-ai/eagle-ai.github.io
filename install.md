@@ -1,10 +1,10 @@
 ---
 layout: doc
-title:  "Install Apache Eagle (incubating)" 
+title:  "Install Apache Eagle" 
 permalink: /docs/installation.html
 ---
 
-### Install Apache Eagle (incubating, called Eagle in the following) to Sandbox
+### Install Apache Eagle (called Eagle in the following) to Sandbox
 
 #### Pre-requisites
 
@@ -21,7 +21,7 @@ permalink: /docs/installation.html
 
 #### Install Eagle
 
-* **Step 1**: Clone stable version from [eagle github](https://github.com/apache/incubator-eagle/releases/tag/v0.4.0-incubating)
+* **Step 1**: Clone stable version from [eagle github](https://github.com/apache/eagle/releases/tag/v0.4.0-incubating)
 >       Build project mvn clean install -DskipTests=true
 
 * **Step 2**:  Download eagle-bin-0.1.0.tar.gz package from successful build into your HDP sandbox.

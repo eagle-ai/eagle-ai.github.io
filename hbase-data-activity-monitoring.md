@@ -4,7 +4,7 @@ title:  "HBase Data Activity Monitoring"
 permalink: /docs/hbase-data-activity-monitoring.html
 ---
 
-*On this page, any mention of Eagle points to Apache Eagle (incubating).*
+*On this page, any mention of Eagle points to Apache Eagle.*
 
 This page will introduce how to monitoring HBase data activity in the following aspects:
 

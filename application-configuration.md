@@ -4,7 +4,7 @@ title:  "Application Configuration"
 permalink: /docs/configuration.html
 ---
 
-Apache Eagle (incubating, called Eagle in the following) requires you to create a configuration file under `$EAGLE_HOME/conf/` for each application. Basically, there are some common properties shared, e.g., envContextConfig, eagleProps, and dynamicConfigSource. While dataSourceConfig differs from application to application.
+Apache Eagle (called Eagle in the following) requires you to create a configuration file under `$EAGLE_HOME/conf/` for each application. Basically, there are some common properties shared, e.g., envContextConfig, eagleProps, and dynamicConfigSource. While dataSourceConfig differs from application to application.
 
 In this page we take the following two application as examples
 

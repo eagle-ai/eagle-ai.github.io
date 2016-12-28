@@ -5,7 +5,7 @@ permalink: /docs/quick-start-0.3.0.html
 ---
 
 Guide To Install Apache Eagle 0.3.0-incubating to Hortonworks sandbox.  
-*Apache Eagle (incubating) will be called Eagle in the following.*
+*Apache Eagle will be called Eagle in the following.*
 
 * Prerequisite
 * Download + Patch + Build
@@ -19,12 +19,12 @@ Eagle requires a streaming environment to run various applications. For more det
 <br/>
 
 ### **Download + Patch + Build**
-* Download Eagle 0.3.0 source released From Apache [[Tar]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz) , [[MD5]](http://www-us.apache.org/dist/incubator/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.md5) 
+* Download Eagle 0.3.0 source released From Apache [[Tar]](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz) , [[MD5]](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.md5) 
 * Build manually with [Apache Maven](https://maven.apache.org/):
 
 	  $ tar -zxvf apache-eagle-0.3.0-incubating-src.tar.gz
 	  $ cd incubator-eagle-release-0.3.0-rc3  
-	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/incubator-eagle/pull/180.patch
+	  $ curl -O https://patch-diff.githubusercontent.com/raw/apache/eagle/pull/180.patch
 	  $ git apply 180.patch
 	  $ mvn clean package -DskipTests
 

@@ -4,7 +4,7 @@ title:  "MapR Integration"
 permalink: /docs/mapr-integration.html
 ---
 
-*Since Apache Eagle 0.4.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
+*Since Apache Eagle 0.4.0-incubating. Apache Eagle will be called Eagle in the following.*
 
 ### Prerequisites
 
@@ -100,7 +100,7 @@ When a directory has been enabled auditing,  directories/files located in this d
 As MapR do not have name node, instead it use CLDB service, we have to use logstash to stream log data into Kafka.
 - First find out the nodes that have CLDB service
 - Then find out the location of audit log files, eg: ``/mapr/mapr.cluster.com/var/mapr/local/mapr1.da.dg/audit/``, file names should be in this format: ``FSAudit.log-2016-05-04-001.json`` 
-- Created a logstash conf file and run it, following this doc[Logstash-kafka](https://github.com/apache/incubator-eagle/blob/dev/eagle-assembly/src/main/docs/logstash-kafka-conf.md)
+- Created a logstash conf file and run it, following this doc[Logstash-kafka](https://github.com/apache/eagle/blob/master/eagle-assembly/src/main/docs/logstash-kafka-conf.md)
 
 
 #### Step3: Set up maprFSAuditLog applicaiton in Eagle Service

@@ -4,7 +4,7 @@ title:  "Get Started with Sandbox"
 permalink: /docs/deployment-in-sandbox.html
 ---
 
-Here is the summary of the steps for setting up Apache Eagle (incubating, called Eagle in the following) in Hortonworks sandbox:
+Here is the summary of the steps for setting up Apache Eagle (called Eagle in the following) in Hortonworks sandbox:
 
 * Step 1: Setup sandbox image in a virtual machine
 * Step 2: Setup Hadoop[^HADOOP] environment in sandbox
@@ -36,7 +36,7 @@ To install Eagle on a sandbox you need to run a HDP sandbox image in a virtual m
 
     * **Option 1**: Download eagle jar from [here](http://66.211.190.194/eagle-0.1.0.tar.gz).
 
-    * **Option 2**: Build form source code [eagle github](https://github.com/apache/incubator-eagle). After successful build, ‘eagle-xxx-bin.tar.gz’ will be generated under `./eagle-assembly/target`
+    * **Option 2**: Build form source code [eagle github](https://github.com/apache/eagle). After successful build, ‘eagle-xxx-bin.tar.gz’ will be generated under `./eagle-assembly/target`
 
           # installed npm is required before compiling
           $ mvn clean install -DskipTests=true

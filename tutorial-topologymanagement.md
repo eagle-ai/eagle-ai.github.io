@@ -3,7 +3,7 @@ layout: doc
 title:  "Topology Management"
 permalink: /docs/tutorial/topologymanagement.html
 ---
-*Since Apache Eagle 0.4.0-incubating. Apache Eagle (incubating) will be called Eagle in the following.*
+*Since Apache Eagle 0.4.0-incubating. Apache Eagle will be called Eagle in the following.*
 
 > Application manager aims to manage applications on EAGLE UI. Users can easily start/start topologies remotely or locally without any shell commands. At the same, it should be capable to sync the latest status of topologies on the execution platform (e.g., Storm[^STORM] cluster). 
 
@@ -76,7 +76,7 @@ The configuration file `eagle-scheduler.conf` defines scheduler parameters, exec
 3. Go to management page, and create a topology description. There are three required fields
     * name: topology name
     * type: topology type [CLASS, DYNAMIC]
-    * execution entry: either the class which implements interface TopologyExecutable or eagle [DSL](https://github.com/apache/incubator-eagle/blob/master/eagle-assembly/src/main/conf/sandbox-hadoopjmx-pipeline.conf) based topology definition
+    * execution entry: either the class which implements interface TopologyExecutable or eagle [DSL](https://github.com/apache/eagle/blob/master/eagle-assembly/src/main/conf/sandbox-hadoopjmx-pipeline.conf) based topology definition
    ![topology-description](/images/appManager/topology-description.png)
    
 4. Back to monitoring page, and choose the site/application to deploy the topology 

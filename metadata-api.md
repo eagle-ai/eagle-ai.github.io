@@ -4,7 +4,7 @@ title:  "Policy API"
 permalink: /docs/metadata-api.html
 ---
 
-Apache Eagle (incubating) Provide RESTful APIs for create/update/query/delete policy for alert
+Apache Eagle Provide RESTful APIs for create/update/query/delete policy for alert
 
 * Policy Definition API  
 * Stream Definition API  

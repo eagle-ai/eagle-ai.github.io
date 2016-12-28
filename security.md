@@ -1,10 +1,10 @@
 ---
 layout: supplement
-title:  "Apache Eagle (incubating) Security" 
+title:  "Apache Eagle Security" 
 permalink: /sup/index.html
 ---
 
-The Apache Software Foundation takes a very active stance in eliminating security problems in its software products. Apache Eagle (incubating) is also responsive to such issues around its features. 
+The Apache Software Foundation takes a very active stance in eliminating security problems in its software products. Apache Eagle is also responsive to such issues around its features. 
 
 If you have any concern regarding to Eagle's Security or you believe a vulnerability is discovered, don't hesitate to get connected with Aapche Security Team by sending emails to [security@apache.org](mailto:security@apache.org). In the message, you can indicate the project name is Eagle, provide a description of the issue, and you are recommended to give the way of reproducing it. The security team and eagle community will get back to you after assessing the findings.
 

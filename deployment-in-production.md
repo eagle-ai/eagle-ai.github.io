@@ -1,11 +1,11 @@
 ---
 layout: doc
-title:  "Deploy Apache Eagle (incubating) in the Production"
+title:  "Deploy Apache Eagle in the Production"
 permalink: /docs/deployment-in-production.html
 ---
 
 
-This page outlines the steps for deploying Apache Eagle (incubating, called Eagle in the following) in the production environment.
+This page outlines the steps for deploying Apache Eagle (called Eagle in the following) in the production environment.
 
 Here's the main content of this page:
 

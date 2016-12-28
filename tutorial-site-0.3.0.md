@@ -4,7 +4,7 @@ title:  "Site Management"
 permalink: /docs/tutorial/site-0.3.0.html
 ---
 
-Apache Eagle (incubating, called Eagle in the following) identifies different Hadoop[^HADOOP] environments as different sites, such as sandbox, datacenter1, datacenter2. In each site, a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
+Apache Eagle (called Eagle in the following) identifies different Hadoop[^HADOOP] environments as different sites, such as sandbox, datacenter1, datacenter2. In each site, a user can add different data sources as the monitoring targets. For each data source, a connection configuration is required.
 
 #### Step 1: Add Site
 
