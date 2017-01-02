@@ -68,6 +68,8 @@ documentations:
         url: /docs/hbase-data-activity-monitoring.html
       - title: MapR FS Data Activity Monitoring
         url: /docs/mapr-integration.html
+      - title: Cloudera FS Data Activity Monitoring
+        url: /docs/cloudera-integration.html
       - title: Hadoop JMX Metrics Monitoring
         url: /docs/jmx-metric-monitoring.html
       - title: Stream HDFS audit logs into Kafka
