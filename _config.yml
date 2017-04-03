@@ -19,7 +19,7 @@ documentations:
   - category: Getting Started
     links:
       - title: Introduction
-        url: /docs/introduction.html
+        url: /docs/index.html
       - title: Use Cases
         url: /docs/usecases.html
       - title: Terminology
@@ -105,4 +105,4 @@ documentations:
   - category: Supplement
     links:
       - title: Security
-        url: /security.html
+        url: /docs/security.html

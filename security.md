@@ -1,7 +1,7 @@
 ---
-layout: supplement
+layout: doc
 title:  "Apache Eagle Security" 
-permalink: /sup/index.html
+permalink: /docs/security.html
 ---
 
 The Apache Software Foundation takes a very active stance in eliminating security problems in its software products. Apache Eagle is also responsive to such issues around its features. 
