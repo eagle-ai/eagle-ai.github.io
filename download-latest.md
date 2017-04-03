@@ -4,9 +4,23 @@ title:  "Apache Eagle Latest Download"
 permalink: /docs/download-latest.html
 ---
 
-> Version **0.4.0-incubating** is the latest release and 0.5.0-SNAPSHOT is under active development on [master](https://github.com/apache/eagle/tree/master) branch.
+> Version `0.4.0-incubating` is the latest release and `0.5.0-SNAPSHOT` is under active development on [master](https://github.com/apache/eagle/tree/master) branch.
 >
 > You can verify your download by following these [procedures](https://www.apache.org/info/verification.html) and using these [KEYS](https://dist.apache.org/repos/dist/release/eagle/KEYS).
+
+
+# 0.5.0-SNAPSHOT
+
+> The first GA version `v0.5.0` with fantastic improvements and features is coming soon!
+
+* Build from source code:
+		
+		git clone https://github.com/apache/eagle.git
+		
+* Release notes for preview:
+	* [Eagle 0.5.0 Release Notes](https://cwiki.apache.org/confluence/display/EAG/Eagle+Version+0.5.0)
+* Documentation: 
+	* [Eagle 0.5.0 Documentations](/docs/latest/)
 
 # 0.4.0-incubating
 
