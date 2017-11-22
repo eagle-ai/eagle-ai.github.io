@@ -22,7 +22,7 @@ permalink: /docs/download.html
 * Release notes: 
 	* [Eagle 0.4.0 Release Notes](https://git-wip-us.apache.org/repos/asf?p=eagle.git;a=blob_plain;f=CHANGELOG.txt;hb=refs/tags/v0.4.0-incubating)
 * Source download: 
-	* [apache-eagle-0.4.0-incubating-src.tar.gz](http://www.apache.org/dyn/closer.cgi?path=/incubator/eagle/apache-eagle-0.4.0-incubating)
+	* [apache-eagle-0.4.0-incubating-src.tar.gz](http://www.apache.org/dyn/closer.cgi?path=/eagle/apache-eagle-0.4.0-incubating)
 	* [apache-eagle-0.4.0-incubating-src.tar.gz.md5](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.4.0-incubating/apache-eagle-0.4.0-incubating-src.tar.gz.md5)
 	* [apache-eagle-0.4.0-incubating-src.tar.gz.sha1](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.4.0-incubating/apache-eagle-0.4.0-incubating-src.tar.gz.sha1)
 	* [apache-eagle-0.4.0-incubating-src.tar.gz.asc](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.4.0-incubating/apache-eagle-0.4.0-incubating-src.tar.gz.asc)
@@ -35,7 +35,7 @@ permalink: /docs/download.html
 * Release notes: 
 	* [Eagle 0.3.0 Release Notes](https://git-wip-us.apache.org/repos/asf?p=eagle.git;a=blob_plain;f=CHANGELOG.txt;hb=refs/heads/branch-0.3)
 * Source download: 
-	* [apache-eagle-0.3.0-incubating-src.tar.gz](http://www.apache.org/dyn/closer.cgi?path=/incubator/eagle/apache-eagle-0.3.0-incubating)
+	* [apache-eagle-0.3.0-incubating-src.tar.gz](http://www.apache.org/dyn/closer.cgi?path=/eagle/apache-eagle-0.3.0-incubating)
 	* [apache-eagle-0.3.0-incubating-src.tar.gz.md5](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.md5)
 	* [apache-eagle-0.3.0-incubating-src.tar.gz.sha1](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.sha1)
 	* [apache-eagle-0.3.0-incubating-src.tar.gz.asc](https://dist.apache.org/repos/dist/release/eagle/apache-eagle-0.3.0-incubating/apache-eagle-0.3.0-incubating-src.tar.gz.asc)
